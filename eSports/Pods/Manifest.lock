@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (3.3.1)
+  - AlamofireImage (2.4.0):
+    - Alamofire (~> 3.3)
+  - DZNEmptyDataSet (1.7.3)
+  - Ji (1.2.0):
+    - Ji/Ji (= 1.2.0)
+  - Ji/Ji (1.2.0):
+    - Ji/Ji-libxml
+  - Ji/Ji-libxml (1.2.0)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage (~> 2.0)
+  - DZNEmptyDataSet
+  - Ji (~> 1.2.0)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
+  DZNEmptyDataSet: dd7cca17c1d07dfa78956859b1e70a52505678ef
+  Ji: ddebb22f9ac445db6e884b66f78ea74fb135fdb7
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: a8ea3ecd65e874201f3d54e6822f3b351712b591
+
+COCOAPODS: 1.0.0

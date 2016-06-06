@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A0975B81D05EE1A000C78F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0975B71D05EE1A000C78F5 /* AppDelegate.swift */; };
+		9A0975BA1D05EE1A000C78F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0975B91D05EE1A000C78F5 /* ViewController.swift */; };
+		9A0975BD1D05EE1A000C78F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0975BB1D05EE1A000C78F5 /* Main.storyboard */; };
+		9A0975BF1D05EE1B000C78F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A0975BE1D05EE1B000C78F5 /* Assets.xcassets */; };
+		9A0975CA1D05EE1B000C78F5 /* eSportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0975C91D05EE1B000C78F5 /* eSportsTests.swift */; };
+		B3F8549476DE6C77F0B5D9A6 /* Pods_eSports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C6798CF8AD5CA26098DEE7 /* Pods_eSports.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A0975C61D05EE1B000C78F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A0975AC1D05EE1A000C78F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A0975B31D05EE1A000C78F5;
+			remoteInfo = eSports;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42C6798CF8AD5CA26098DEE7 /* Pods_eSports.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75E3823781F07CC9C418482A /* Pods-eSports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSports.release.xcconfig"; path = "Pods/Target Support Files/Pods-eSports/Pods-eSports.release.xcconfig"; sourceTree = "<group>"; };
+		9A0975B41D05EE1A000C78F5 /* eSports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eSports.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A0975B71D05EE1A000C78F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A0975B91D05EE1A000C78F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A0975BC1D05EE1A000C78F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A0975BE1D05EE1B000C78F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A0975C01D05EE1B000C78F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A0975C51D05EE1B000C78F5 /* eSportsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eSportsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A0975C91D05EE1B000C78F5 /* eSportsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eSportsTests.swift; sourceTree = "<group>"; };
+		9A0975CB1D05EE1B000C78F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C3C10A1BFE179B6BFCC0141 /* Pods-eSports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSports.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eSports/Pods-eSports.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A0975B11D05EE1A000C78F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F8549476DE6C77F0B5D9A6 /* Pods_eSports.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A0975C21D05EE1B000C78F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72BB69B4308A2633D859A3AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C3C10A1BFE179B6BFCC0141 /* Pods-eSports.debug.xcconfig */,
+				75E3823781F07CC9C418482A /* Pods-eSports.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9A0975AB1D05EE1A000C78F5 = {
+			isa = PBXGroup;
+			children = (
+				9A0975B61D05EE1A000C78F5 /* eSports */,
+				9A0975C81D05EE1B000C78F5 /* eSportsTests */,
+				9A0975B51D05EE1A000C78F5 /* Products */,
+				72BB69B4308A2633D859A3AE /* Pods */,
+				E7AA85EC982C95B9BA77CFCA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9A0975B51D05EE1A000C78F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A0975B41D05EE1A000C78F5 /* eSports.app */,
+				9A0975C51D05EE1B000C78F5 /* eSportsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A0975B61D05EE1A000C78F5 /* eSports */ = {
+			isa = PBXGroup;
+			children = (
+				9A0975B71D05EE1A000C78F5 /* AppDelegate.swift */,
+				9A0975B91D05EE1A000C78F5 /* ViewController.swift */,
+				9A0975BB1D05EE1A000C78F5 /* Main.storyboard */,
+				9A0975BE1D05EE1B000C78F5 /* Assets.xcassets */,
+				9A0975C01D05EE1B000C78F5 /* Info.plist */,
+			);
+			path = eSports;
+			sourceTree = "<group>";
+		};
+		9A0975C81D05EE1B000C78F5 /* eSportsTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A0975C91D05EE1B000C78F5 /* eSportsTests.swift */,
+				9A0975CB1D05EE1B000C78F5 /* Info.plist */,
+			);
+			path = eSportsTests;
+			sourceTree = "<group>";
+		};
+		E7AA85EC982C95B9BA77CFCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42C6798CF8AD5CA26098DEE7 /* Pods_eSports.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A0975B31D05EE1A000C78F5 /* eSports */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A0975CE1D05EE1B000C78F5 /* Build configuration list for PBXNativeTarget "eSports" */;
+			buildPhases = (
+				F6DAC73182A166AFC458FF03 /* 📦 Check Pods Manifest.lock */,
+				9A0975B01D05EE1A000C78F5 /* Sources */,
+				9A0975B11D05EE1A000C78F5 /* Frameworks */,
+				9A0975B21D05EE1A000C78F5 /* Resources */,
+				91B4A8D5E7B0BDD44965FF95 /* 📦 Embed Pods Frameworks */,
+				491F3F07B46D21F845BDFDEB /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eSports;
+			productName = eSports;
+			productReference = 9A0975B41D05EE1A000C78F5 /* eSports.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A0975C41D05EE1B000C78F5 /* eSportsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A0975D11D05EE1B000C78F5 /* Build configuration list for PBXNativeTarget "eSportsTests" */;
+			buildPhases = (
+				9A0975C11D05EE1B000C78F5 /* Sources */,
+				9A0975C21D05EE1B000C78F5 /* Frameworks */,
+				9A0975C31D05EE1B000C78F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A0975C71D05EE1B000C78F5 /* PBXTargetDependency */,
+			);
+			name = eSportsTests;
+			productName = eSportsTests;
+			productReference = 9A0975C51D05EE1B000C78F5 /* eSportsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A0975AC1D05EE1A000C78F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Alexandre Calil Marconi";
+				TargetAttributes = {
+					9A0975B31D05EE1A000C78F5 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					9A0975C41D05EE1B000C78F5 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 9A0975B31D05EE1A000C78F5;
+					};
+				};
+			};
+			buildConfigurationList = 9A0975AF1D05EE1A000C78F5 /* Build configuration list for PBXProject "eSports" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A0975AB1D05EE1A000C78F5;
+			productRefGroup = 9A0975B51D05EE1A000C78F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A0975B31D05EE1A000C78F5 /* eSports */,
+				9A0975C41D05EE1B000C78F5 /* eSportsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A0975B21D05EE1A000C78F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A0975BF1D05EE1B000C78F5 /* Assets.xcassets in Resources */,
+				9A0975BD1D05EE1A000C78F5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A0975C31D05EE1B000C78F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		491F3F07B46D21F845BDFDEB /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eSports/Pods-eSports-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91B4A8D5E7B0BDD44965FF95 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eSports/Pods-eSports-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6DAC73182A166AFC458FF03 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A0975B01D05EE1A000C78F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A0975BA1D05EE1A000C78F5 /* ViewController.swift in Sources */,
+				9A0975B81D05EE1A000C78F5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A0975C11D05EE1B000C78F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A0975CA1D05EE1B000C78F5 /* eSportsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A0975C71D05EE1B000C78F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A0975B31D05EE1A000C78F5 /* eSports */;
+			targetProxy = 9A0975C61D05EE1B000C78F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A0975BB1D05EE1A000C78F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A0975BC1D05EE1A000C78F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A0975CC1D05EE1B000C78F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		9A0975CD1D05EE1B000C78F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A0975CF1D05EE1B000C78F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C3C10A1BFE179B6BFCC0141 /* Pods-eSports.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = eSports/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandre.eSports;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9A0975D01D05EE1B000C78F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75E3823781F07CC9C418482A /* Pods-eSports.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = eSports/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandre.eSports;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9A0975D21D05EE1B000C78F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = eSportsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandre.eSportsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eSports.app/eSports";
+			};
+			name = Debug;
+		};
+		9A0975D31D05EE1B000C78F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = eSportsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandre.eSportsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eSports.app/eSports";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A0975AF1D05EE1A000C78F5 /* Build configuration list for PBXProject "eSports" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A0975CC1D05EE1B000C78F5 /* Debug */,
+				9A0975CD1D05EE1B000C78F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A0975CE1D05EE1B000C78F5 /* Build configuration list for PBXNativeTarget "eSports" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A0975CF1D05EE1B000C78F5 /* Debug */,
+				9A0975D01D05EE1B000C78F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A0975D11D05EE1B000C78F5 /* Build configuration list for PBXNativeTarget "eSportsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A0975D21D05EE1B000C78F5 /* Debug */,
+				9A0975D31D05EE1B000C78F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A0975AC1D05EE1A000C78F5 /* Project object */;
+}
