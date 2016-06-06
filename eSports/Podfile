@@ -1,12 +1,11 @@
 source 'https://github.com/CocoaPods/Specs'
 
-platform :ios, '8.0'
+platform :tvos, ‘9.0’
 use_frameworks!
 
 target ‘eSports’ do
-    pod 'Alamofire'
+    pod 'Alamofire', '~> 3.4'
     pod 'AlamofireImage', '~> 2.0'
     pod 'SwiftyJSON'
-    pod 'DZNEmptyDataSet'
     pod 'Ji', '~> 1.2.0'
 end
