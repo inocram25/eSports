@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3146D1DEA8049887ED91AFE9B0B8224BDA4B6A62",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9B2089D52C96D363CB01DC624A08465A75D98E33" : 0,
+    "3146D1DEA8049887ED91AFE9B0B8224BDA4B6A62" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "07C1431C-8BD0-4A42-AC0C-55413C5B1C8F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9B2089D52C96D363CB01DC624A08465A75D98E33" : "RememberMyMedication\/",
+    "3146D1DEA8049887ED91AFE9B0B8224BDA4B6A62" : "eSports\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "eSports",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "eSports\/eSports.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/inocram25\/eSports.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3146D1DEA8049887ED91AFE9B0B8224BDA4B6A62"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/inocram25\/RememberMyMedication.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9B2089D52C96D363CB01DC624A08465A75D98E33"
+    }
+  ]
+}

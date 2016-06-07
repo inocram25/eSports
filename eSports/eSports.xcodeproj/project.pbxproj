@@ -12,6 +12,12 @@
 		9A0975BD1D05EE1A000C78F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0975BB1D05EE1A000C78F5 /* Main.storyboard */; };
 		9A0975BF1D05EE1B000C78F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A0975BE1D05EE1B000C78F5 /* Assets.xcassets */; };
 		9A0975CA1D05EE1B000C78F5 /* eSportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0975C91D05EE1B000C78F5 /* eSportsTests.swift */; };
+		9A4747C11D0733AB00CF315D /* UIColor+eSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4747BF1D0733AB00CF315D /* UIColor+eSports.swift */; };
+		9A4747C21D0733AB00CF315D /* UIImage+WithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4747C01D0733AB00CF315D /* UIImage+WithColor.swift */; };
+		9A4747C41D07340600CF315D /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4747C31D07340600CF315D /* BorderedView.swift */; };
+		9ACAC6F71D07404F00D160F8 /* MenuGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */; };
+		9ACAC6FB1D07430000D160F8 /* GamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACAC6FA1D07430000D160F8 /* GamesCollectionViewCell.swift */; };
+		9ACAC6FD1D0754F100D160F8 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACAC6FC1D0754F100D160F8 /* Game.swift */; };
 		B3F8549476DE6C77F0B5D9A6 /* Pods_eSports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C6798CF8AD5CA26098DEE7 /* Pods_eSports.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +43,12 @@
 		9A0975C51D05EE1B000C78F5 /* eSportsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eSportsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0975C91D05EE1B000C78F5 /* eSportsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eSportsTests.swift; sourceTree = "<group>"; };
 		9A0975CB1D05EE1B000C78F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A4747BF1D0733AB00CF315D /* UIColor+eSports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+eSports.swift"; path = "../../../RememberMyMedication/RememberMedication/RememberMedication/UIColor+eSports.swift"; sourceTree = "<group>"; };
+		9A4747C01D0733AB00CF315D /* UIImage+WithColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+WithColor.swift"; path = "../../../RememberMyMedication/RememberMedication/RememberMedication/UIImage+WithColor.swift"; sourceTree = "<group>"; };
+		9A4747C31D07340600CF315D /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderedView.swift; path = ../../../RememberMyMedication/RememberMedication/RememberMedication/BorderedView.swift; sourceTree = "<group>"; };
+		9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuGamesViewController.swift; sourceTree = "<group>"; };
+		9ACAC6FA1D07430000D160F8 /* GamesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewCell.swift; sourceTree = "<group>"; };
+		9ACAC6FC1D0754F100D160F8 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		9C3C10A1BFE179B6BFCC0141 /* Pods-eSports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSports.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eSports/Pods-eSports.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,9 +103,12 @@
 		9A0975B61D05EE1A000C78F5 /* eSports */ = {
 			isa = PBXGroup;
 			children = (
+				9A4747BE1D07338700CF315D /* Controller */,
+				9A4747BD1D07338100CF315D /* View */,
+				9A4747BC1D07337A00CF315D /* Model */,
+				9A4747BB1D07337200CF315D /* Extensions */,
+				9A4747BA1D07336900CF315D /* Resources */,
 				9A0975B71D05EE1A000C78F5 /* AppDelegate.swift */,
-				9A0975B91D05EE1A000C78F5 /* ViewController.swift */,
-				9A0975BB1D05EE1A000C78F5 /* Main.storyboard */,
 				9A0975BE1D05EE1B000C78F5 /* Assets.xcassets */,
 				9A0975C01D05EE1B000C78F5 /* Info.plist */,
 			);
@@ -107,6 +122,49 @@
 				9A0975CB1D05EE1B000C78F5 /* Info.plist */,
 			);
 			path = eSportsTests;
+			sourceTree = "<group>";
+		};
+		9A4747BA1D07336900CF315D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9A0975BB1D05EE1A000C78F5 /* Main.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9A4747BB1D07337200CF315D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A4747BF1D0733AB00CF315D /* UIColor+eSports.swift */,
+				9A4747C01D0733AB00CF315D /* UIImage+WithColor.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		9A4747BC1D07337A00CF315D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9ACAC6FC1D0754F100D160F8 /* Game.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9A4747BD1D07338100CF315D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A4747C31D07340600CF315D /* BorderedView.swift */,
+				9ACAC6FA1D07430000D160F8 /* GamesCollectionViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9A4747BE1D07338700CF315D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A0975B91D05EE1A000C78F5 /* ViewController.swift */,
+				9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		E7AA85EC982C95B9BA77CFCA /* Frameworks */ = {
@@ -269,7 +327,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A0975BA1D05EE1A000C78F5 /* ViewController.swift in Sources */,
+				9ACAC6F71D07404F00D160F8 /* MenuGamesViewController.swift in Sources */,
+				9A4747C41D07340600CF315D /* BorderedView.swift in Sources */,
+				9A4747C21D0733AB00CF315D /* UIImage+WithColor.swift in Sources */,
 				9A0975B81D05EE1A000C78F5 /* AppDelegate.swift in Sources */,
+				9ACAC6FB1D07430000D160F8 /* GamesCollectionViewCell.swift in Sources */,
+				9A4747C11D0733AB00CF315D /* UIColor+eSports.swift in Sources */,
+				9ACAC6FD1D0754F100D160F8 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

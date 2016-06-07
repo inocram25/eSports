@@ -1,9 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="0YF-bo-Imd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Menu Games View Controller-->
+        <scene sceneID="tmd-aO-2j3">
+            <objects>
+                <viewController id="0YF-bo-Imd" customClass="MenuGamesViewController" customModule="eSports" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TLx-rm-qES"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mu1-GG-dNW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bLn-mV-sD3">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YjI-zs-sbV">
+                                <rect key="frame" x="110" y="60" width="1700" height="960"/>
+                                <color key="backgroundColor" red="0.39843998899999999" green="0.73869582899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="100" minimumInteritemSpacing="60" id="XKr-WR-86J">
+                                    <size key="itemSize" width="480" height="570"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="40" minY="40" maxX="0.0" maxY="40"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gamesCell" id="RKt-lZ-vgh" customClass="GamesCollectionViewCell" customModule="eSports" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="40" width="480" height="570"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="570"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="csgo-menu" translatesAutoresizingMaskIntoConstraints="NO" id="yYD-hJ-Q9L">
+                                                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="480" id="jGZ-1l-sHf"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter-Strike: Global Offensive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiG-R6-CHQ">
+                                                    <rect key="frame" x="8" y="533" width="464" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="yYD-hJ-Q9L" firstAttribute="top" secondItem="RKt-lZ-vgh" secondAttribute="top" id="4Rx-6h-2q6"/>
+                                            <constraint firstItem="yYD-hJ-Q9L" firstAttribute="leading" secondItem="RKt-lZ-vgh" secondAttribute="leading" id="M7x-lQ-RZa"/>
+                                            <constraint firstItem="hiG-R6-CHQ" firstAttribute="centerX" secondItem="yYD-hJ-Q9L" secondAttribute="centerX" id="Uz7-gM-unr"/>
+                                            <constraint firstAttribute="trailing" secondItem="yYD-hJ-Q9L" secondAttribute="trailing" id="Ze0-gc-BRL"/>
+                                            <constraint firstAttribute="bottom" secondItem="hiG-R6-CHQ" secondAttribute="bottom" id="bL5-Tw-cxa"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="yYD-hJ-Q9L" id="1Od-bS-oLx"/>
+                                            <outlet property="title" destination="hiG-R6-CHQ" id="NYC-Bt-m5h"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="0YF-bo-Imd" id="vGP-JO-A9s"/>
+                                    <outlet property="delegate" destination="0YF-bo-Imd" id="hsP-Ys-LE3"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YjI-zs-sbV" firstAttribute="top" secondItem="TLx-rm-qES" secondAttribute="bottom" constant="60" id="NNo-s0-FKf"/>
+                            <constraint firstItem="YjI-zs-sbV" firstAttribute="leading" secondItem="bLn-mV-sD3" secondAttribute="leadingMargin" constant="90" id="OeG-EV-AJG"/>
+                            <constraint firstItem="Mu1-GG-dNW" firstAttribute="top" secondItem="YjI-zs-sbV" secondAttribute="bottom" constant="60" id="fr1-9p-E0q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YjI-zs-sbV" secondAttribute="trailing" constant="90" id="lv2-0t-shY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="YjI-zs-sbV" id="9xh-9i-cGs"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="728-rG-Gvk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6O1-J2-fUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4031" y="-1423"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -16,29 +99,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhL-OA-Ojs">
-                                <rect key="frame" x="1298" y="472" width="232" height="114"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Na'Vi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgA-yt-C8h">
-                                <rect key="frame" x="288" y="476" width="386" height="127"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uzu-jj-6QX">
-                                <rect key="frame" x="840" y="357" width="240" height="344"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNI-F7-7EZ">
+                                <rect key="frame" x="110" y="20" width="1700" height="360"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="csgo-banner" translatesAutoresizingMaskIntoConstraints="NO" id="nAN-Ty-PZi">
+                                        <rect key="frame" x="0.0" y="0.0" width="1700" height="360"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="nAN-Ty-PZi" firstAttribute="top" secondItem="rNI-F7-7EZ" secondAttribute="top" id="VLn-Mc-05e"/>
+                                    <constraint firstItem="nAN-Ty-PZi" firstAttribute="leading" secondItem="rNI-F7-7EZ" secondAttribute="leading" id="jFu-0j-nCF"/>
+                                    <constraint firstAttribute="bottom" secondItem="nAN-Ty-PZi" secondAttribute="bottom" id="kmj-bm-dtY"/>
+                                    <constraint firstAttribute="trailing" secondItem="nAN-Ty-PZi" secondAttribute="trailing" id="lek-bs-6fW"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rNI-F7-7EZ" secondAttribute="trailing" constant="90" id="BPH-1D-bbA"/>
+                            <constraint firstItem="rNI-F7-7EZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="Ug6-je-NHs"/>
+                            <constraint firstItem="rNI-F7-7EZ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.333" id="bzi-ad-LyX"/>
+                            <constraint firstItem="rNI-F7-7EZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="p8H-Nf-0fb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="240" y="305"/>
+            <point key="canvasLocation" x="-1496" y="-1423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="csgo-banner" width="1920" height="480"/>
+        <image name="csgo-menu" width="940" height="400"/>
+    </resources>
 </document>
