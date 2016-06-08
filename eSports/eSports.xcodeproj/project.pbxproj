@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7F00E2F71D08859A00B875E8 /* UIColor+eSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00E2F61D08859A00B875E8 /* UIColor+eSports.swift */; };
 		7F00E2F91D0885D700B875E8 /* UIImage+WithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00E2F81D0885D700B875E8 /* UIImage+WithColor.swift */; };
+		7F18BCCB1D089DE700C3C64C /* MenuSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18BCCA1D089DE700C3C64C /* MenuSplitViewController.swift */; };
+		7F18BCCD1D08A18300C3C64C /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18BCCC1D08A18300C3C64C /* MenuTableViewController.swift */; };
 		9A0975B81D05EE1A000C78F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0975B71D05EE1A000C78F5 /* AppDelegate.swift */; };
 		9A0975BA1D05EE1A000C78F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0975B91D05EE1A000C78F5 /* ViewController.swift */; };
 		9A0975BD1D05EE1A000C78F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0975BB1D05EE1A000C78F5 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		75E3823781F07CC9C418482A /* Pods-eSports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSports.release.xcconfig"; path = "Pods/Target Support Files/Pods-eSports/Pods-eSports.release.xcconfig"; sourceTree = "<group>"; };
 		7F00E2F61D08859A00B875E8 /* UIColor+eSports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+eSports.swift"; sourceTree = "<group>"; };
 		7F00E2F81D0885D700B875E8 /* UIImage+WithColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+WithColor.swift"; sourceTree = "<group>"; };
+		7F18BCCA1D089DE700C3C64C /* MenuSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSplitViewController.swift; sourceTree = "<group>"; };
+		7F18BCCC1D08A18300C3C64C /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		9A0975B41D05EE1A000C78F5 /* eSports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eSports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0975B71D05EE1A000C78F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A0975B91D05EE1A000C78F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 			children = (
 				9A0975B91D05EE1A000C78F5 /* ViewController.swift */,
 				9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */,
+				7F18BCCA1D089DE700C3C64C /* MenuSplitViewController.swift */,
+				7F18BCCC1D08A18300C3C64C /* MenuTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -326,7 +332,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F18BCCB1D089DE700C3C64C /* MenuSplitViewController.swift in Sources */,
 				9A0975BA1D05EE1A000C78F5 /* ViewController.swift in Sources */,
+				7F18BCCD1D08A18300C3C64C /* MenuTableViewController.swift in Sources */,
 				7F00E2F91D0885D700B875E8 /* UIImage+WithColor.swift in Sources */,
 				9ACAC6F71D07404F00D160F8 /* MenuGamesViewController.swift in Sources */,
 				9A4747C41D07340600CF315D /* BorderedView.swift in Sources */,
