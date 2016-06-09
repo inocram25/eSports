@@ -56,7 +56,7 @@ extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDat
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return games.count
+        return games.count > 3 ? 3 : games.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

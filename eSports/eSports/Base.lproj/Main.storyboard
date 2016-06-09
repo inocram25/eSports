@@ -33,7 +33,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Rw-5X-Rmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5746.5" y="-1419"/>
+            <point key="canvasLocation" x="-7290.5" y="-3635"/>
         </scene>
         <!--Games-->
         <scene sceneID="o8X-H0-zy9">
@@ -61,9 +61,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="0YF-bo-Imd" kind="showDetail" id="muJ-7W-Wau"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="JgB-ZH-1cq" style="IBUITableViewCellStyleDefault" id="0pD-lm-h9O">
                                         <rect key="frame" x="0.0" y="259" width="594" height="66"/>
@@ -97,7 +94,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgQ-TU-1F4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5218" y="-2560"/>
+            <point key="canvasLocation" x="-5658" y="-5152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kg0-ym-LFw">
@@ -113,7 +110,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wui-t3-F43" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6072" y="-2560"/>
+            <point key="canvasLocation" x="-7352" y="-5976"/>
         </scene>
         <!--Menu Split View Controller-->
         <scene sceneID="kGh-Lk-Olo">
@@ -126,7 +123,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aY-c4-L57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7569" y="-1989"/>
+            <point key="canvasLocation" x="-10577" y="-5125"/>
         </scene>
         <!--Menu Games View Controller-->
         <scene sceneID="tmd-aO-2j3">
@@ -137,38 +134,38 @@
                         <viewControllerLayoutGuide type="bottom" id="Mu1-GG-dNW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bLn-mV-sD3">
-                        <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YjI-zs-sbV">
-                                <rect key="frame" x="110" y="60" width="1065" height="960"/>
-                                <color key="backgroundColor" red="0.39843998899999999" green="0.73869582899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="110" y="60" width="1700" height="960"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="100" minimumInteritemSpacing="60" id="XKr-WR-86J">
-                                    <size key="itemSize" width="480" height="570"/>
+                                    <size key="itemSize" width="400" height="648"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="40" minY="40" maxX="0.0" maxY="40"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gamesCell" id="RKt-lZ-vgh" customClass="GamesCollectionViewCell" customModule="eSports" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="40" width="480" height="570"/>
+                                        <rect key="frame" x="40" y="40" width="400" height="648"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="480" height="570"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="648"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="csgo-menu" translatesAutoresizingMaskIntoConstraints="NO" id="yYD-hJ-Q9L">
-                                                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="480" id="jGZ-1l-sHf"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter-Strike: Global Offensive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiG-R6-CHQ">
-                                                    <rect key="frame" x="8" y="533" width="464" height="37"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
+                                                    <rect key="frame" x="34" y="621" width="332" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="csgo-menu" translatesAutoresizingMaskIntoConstraints="NO" id="yYD-hJ-Q9L">
+                                                    <rect key="frame" x="0.0" y="0.0" width="400" height="580"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="580" id="jGZ-1l-sHf"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -207,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6O1-J2-fUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3802" y="-1440"/>
+            <point key="canvasLocation" x="-10242" y="-296"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -218,14 +215,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNI-F7-7EZ">
-                                <rect key="frame" x="110" y="20" width="1065" height="360"/>
+                                <rect key="frame" x="110" y="20" width="1700" height="360"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="csgo-banner" translatesAutoresizingMaskIntoConstraints="NO" id="nAN-Ty-PZi">
-                                        <rect key="frame" x="0.0" y="0.0" width="1065" height="360"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1700" height="360"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -248,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1496" y="-1423"/>
+            <point key="canvasLocation" x="-7936" y="-279"/>
         </scene>
     </scenes>
     <resources>
@@ -256,6 +253,6 @@
         <image name="csgo-menu" width="940" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Erl-Md-cVy"/>
+        <segue reference="5x2-px-4oM"/>
     </inferredMetricsTieBreakers>
 </document>
