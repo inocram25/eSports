@@ -16,6 +16,7 @@ class MenuGamesViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let toornamentClient = ToornamentController()
     var games = [Game]()
     
     override func viewDidLoad() {
@@ -25,10 +26,12 @@ class MenuGamesViewController: UIViewController {
         collectionView.dataSource = self
         
         
-        let g1 = Game(title: "DOTA", menuImage: UIImage(named: "csgo-menu"), logoImage: nil)
-        let g2 = Game(title: "Counter-Strike: Global Offensive", menuImage: UIImage(named: "csgo-menu"), logoImage: nil)
-        games.append(g1)
-        games.append(g2)
+        toornamentClient.getGames { result in
+            if let games = result.value {
+                self.games = games
+                self.collectionView?.reloadData()
+            }
+        }
 
     }
 

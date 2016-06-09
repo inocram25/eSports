@@ -28,15 +28,16 @@ class ToornamentController {
     }()
     
     
-    func getPopularShows(completion: Result<[Show], NSError> -> Void) {
-        let router = Router.popularShows
+    func getGames(completion: Result<[Game], NSError> -> Void) {
+        let router = Router.allGames
         getDecodableObject(router, completion: completion)
     }
     
-    func getAllSeasonsForShow(id: String, completion: Result<[Season], NSError> -> Void) {
-        let router = Router.seasonsForShow(id)
-        getDecodableObject(router, completion: completion)
-    }
+    
+//    func getTournaments(gameID: String, beforeStart: String, sort: String, completion: Result<[String], NSError> -> Void) {
+//        let router = Router.allTournamentsGame(gameID, beforeStart, sort)
+//        getDecodableObject(router, completion: completion)
+//    }
     
     private func getDecodableObject<T: Decodable>
         (router: Router, completion: Result<[T], NSError> -> Void)
@@ -79,8 +80,9 @@ private enum Router: URLRequestConvertible {
     
     case allGames
     
-    //id = game id; status = setup, running, completed; sort = date_asc, date_desc;
-    case tournamentsGameOnStatus(String,String,String)
+    //id = game id; before_start = 2016-12-30; sort = date_asc, date_desc;
+    case allTournamentsGame(String,String,String)
+    case tournamentInfo(String)
     
     var URLRequest: NSMutableURLRequest {
         let (path, parameters, method): (String, [String: AnyObject]?, Alamofire.Method) = {
@@ -89,9 +91,13 @@ private enum Router: URLRequestConvertible {
             case .allGames:
                 return ("disciplines", nil, .GET)
                 
-            case .tournamentsGameOnStatus(let id, let status, let sort):
-                let parameters = ["discipline" : id, "status" : status, "sort" : sort]
+            case .allTournamentsGame(let id, let date, let sort):
+                let parameters = ["discipline" : id, "before_start" : date, "sort" : sort]
                 return ("tournaments", parameters, .GET)
+                
+            case .tournamentInfo(let id):
+                let parameters = ["with_streams" : 1]
+                return ("tournaments/\(id)", parameters, .GET)
                 
             }
             

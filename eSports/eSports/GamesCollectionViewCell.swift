@@ -32,7 +32,7 @@ class GamesCollectionViewCell: UICollectionViewCell {
 //    }
     
     func configureCell(game: Game) {
-        imageView.image = game.menuImage
-        title.text = game.title
+        imageView.image = UIImage(named: "csgo-menu")
+        title.text = game.name
     }
 }
