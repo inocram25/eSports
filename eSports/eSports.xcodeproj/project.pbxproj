@@ -16,7 +16,8 @@
 		9A0975BD1D05EE1A000C78F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0975BB1D05EE1A000C78F5 /* Main.storyboard */; };
 		9A0975BF1D05EE1B000C78F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A0975BE1D05EE1B000C78F5 /* Assets.xcassets */; };
 		9A0975CA1D05EE1B000C78F5 /* eSportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0975C91D05EE1B000C78F5 /* eSportsTests.swift */; };
-		9A4747C41D07340600CF315D /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4747C31D07340600CF315D /* BorderedView.swift */; };
+		9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7263711D09DF410011DE8E /* BorderedView.swift */; };
+		9AA18E621D09D4FE001C87AA /* ToornamentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA18E611D09D4FE001C87AA /* ToornamentController.swift */; };
 		9ACAC6F71D07404F00D160F8 /* MenuGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */; };
 		9ACAC6FB1D07430000D160F8 /* GamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACAC6FA1D07430000D160F8 /* GamesCollectionViewCell.swift */; };
 		9ACAC6FD1D0754F100D160F8 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACAC6FC1D0754F100D160F8 /* Game.swift */; };
@@ -49,7 +50,8 @@
 		9A0975C51D05EE1B000C78F5 /* eSportsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eSportsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0975C91D05EE1B000C78F5 /* eSportsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eSportsTests.swift; sourceTree = "<group>"; };
 		9A0975CB1D05EE1B000C78F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A4747C31D07340600CF315D /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderedView.swift; path = ../../../RememberMyMedication/RememberMedication/RememberMedication/BorderedView.swift; sourceTree = "<group>"; };
+		9A7263711D09DF410011DE8E /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
+		9AA18E611D09D4FE001C87AA /* ToornamentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToornamentController.swift; sourceTree = "<group>"; };
 		9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuGamesViewController.swift; sourceTree = "<group>"; };
 		9ACAC6FA1D07430000D160F8 /* GamesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9ACAC6FC1D0754F100D160F8 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				9ACAC6FC1D0754F100D160F8 /* Game.swift */,
+				9AA18E611D09D4FE001C87AA /* ToornamentController.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -156,8 +159,8 @@
 		9A4747BD1D07338100CF315D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9A4747C31D07340600CF315D /* BorderedView.swift */,
 				9ACAC6FA1D07430000D160F8 /* GamesCollectionViewCell.swift */,
+				9A7263711D09DF410011DE8E /* BorderedView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -333,11 +336,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F18BCCB1D089DE700C3C64C /* MenuSplitViewController.swift in Sources */,
+				9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */,
 				9A0975BA1D05EE1A000C78F5 /* ViewController.swift in Sources */,
+				9AA18E621D09D4FE001C87AA /* ToornamentController.swift in Sources */,
 				7F18BCCD1D08A18300C3C64C /* MenuTableViewController.swift in Sources */,
 				7F00E2F91D0885D700B875E8 /* UIImage+WithColor.swift in Sources */,
 				9ACAC6F71D07404F00D160F8 /* MenuGamesViewController.swift in Sources */,
-				9A4747C41D07340600CF315D /* BorderedView.swift in Sources */,
 				9A0975B81D05EE1A000C78F5 /* AppDelegate.swift in Sources */,
 				7F00E2F71D08859A00B875E8 /* UIColor+eSports.swift in Sources */,
 				9ACAC6FB1D07430000D160F8 /* GamesCollectionViewCell.swift in Sources */,
