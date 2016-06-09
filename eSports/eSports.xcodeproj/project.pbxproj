@@ -17,6 +17,8 @@
 		9A0975BF1D05EE1B000C78F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A0975BE1D05EE1B000C78F5 /* Assets.xcassets */; };
 		9A0975CA1D05EE1B000C78F5 /* eSportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0975C91D05EE1B000C78F5 /* eSportsTests.swift */; };
 		9A3378301D09E29D00C21D79 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33782F1D09E29D00C21D79 /* Decodable.swift */; };
+		9A3378321D09EAC400C21D79 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378311D09EAC400C21D79 /* Tournament.swift */; };
+		9A3378341D09EAEC00C21D79 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378331D09EAEC00C21D79 /* Match.swift */; };
 		9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7263711D09DF410011DE8E /* BorderedView.swift */; };
 		9AA18E621D09D4FE001C87AA /* ToornamentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA18E611D09D4FE001C87AA /* ToornamentController.swift */; };
 		9ACAC6F71D07404F00D160F8 /* MenuGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */; };
@@ -52,6 +54,8 @@
 		9A0975C91D05EE1B000C78F5 /* eSportsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eSportsTests.swift; sourceTree = "<group>"; };
 		9A0975CB1D05EE1B000C78F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A33782F1D09E29D00C21D79 /* Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
+		9A3378311D09EAC400C21D79 /* Tournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
+		9A3378331D09EAEC00C21D79 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		9A7263711D09DF410011DE8E /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
 		9AA18E611D09D4FE001C87AA /* ToornamentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToornamentController.swift; sourceTree = "<group>"; };
 		9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuGamesViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 				9ACAC6FC1D0754F100D160F8 /* Game.swift */,
 				9AA18E611D09D4FE001C87AA /* ToornamentController.swift */,
 				9A33782F1D09E29D00C21D79 /* Decodable.swift */,
+				9A3378311D09EAC400C21D79 /* Tournament.swift */,
+				9A3378331D09EAEC00C21D79 /* Match.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3378321D09EAC400C21D79 /* Tournament.swift in Sources */,
 				7F18BCCB1D089DE700C3C64C /* MenuSplitViewController.swift in Sources */,
 				9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */,
 				9A0975BA1D05EE1A000C78F5 /* ViewController.swift in Sources */,
@@ -350,6 +357,7 @@
 				9A3378301D09E29D00C21D79 /* Decodable.swift in Sources */,
 				9ACAC6FB1D07430000D160F8 /* GamesCollectionViewCell.swift in Sources */,
 				9ACAC6FD1D0754F100D160F8 /* Game.swift in Sources */,
+				9A3378341D09EAEC00C21D79 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
