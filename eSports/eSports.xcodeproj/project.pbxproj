@@ -19,6 +19,7 @@
 		9A3378301D09E29D00C21D79 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33782F1D09E29D00C21D79 /* Decodable.swift */; };
 		9A3378321D09EAC400C21D79 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378311D09EAC400C21D79 /* Tournament.swift */; };
 		9A3378341D09EAEC00C21D79 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378331D09EAEC00C21D79 /* Match.swift */; };
+		9A3378381D09EED100C21D79 /* JSON+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378371D09EED100C21D79 /* JSON+Decodable.swift */; };
 		9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7263711D09DF410011DE8E /* BorderedView.swift */; };
 		9AA18E621D09D4FE001C87AA /* ToornamentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA18E611D09D4FE001C87AA /* ToornamentController.swift */; };
 		9ACAC6F71D07404F00D160F8 /* MenuGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */; };
@@ -56,6 +57,7 @@
 		9A33782F1D09E29D00C21D79 /* Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
 		9A3378311D09EAC400C21D79 /* Tournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		9A3378331D09EAEC00C21D79 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		9A3378371D09EED100C21D79 /* JSON+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Decodable.swift"; sourceTree = "<group>"; };
 		9A7263711D09DF410011DE8E /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
 		9AA18E611D09D4FE001C87AA /* ToornamentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToornamentController.swift; sourceTree = "<group>"; };
 		9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuGamesViewController.swift; sourceTree = "<group>"; };
@@ -115,12 +117,14 @@
 		9A0975B61D05EE1A000C78F5 /* eSports */ = {
 			isa = PBXGroup;
 			children = (
+				9A3378351D09EB8F00C21D79 /* API */,
 				9A4747BE1D07338700CF315D /* Controller */,
 				9A4747BD1D07338100CF315D /* View */,
 				9A4747BC1D07337A00CF315D /* Model */,
 				9A4747BB1D07337200CF315D /* Extensions */,
 				9A4747BA1D07336900CF315D /* Resources */,
 				9A0975B71D05EE1A000C78F5 /* AppDelegate.swift */,
+				9A33782F1D09E29D00C21D79 /* Decodable.swift */,
 				9A0975BE1D05EE1B000C78F5 /* Assets.xcassets */,
 				9A0975C01D05EE1B000C78F5 /* Info.plist */,
 			);
@@ -136,6 +140,14 @@
 			path = eSportsTests;
 			sourceTree = "<group>";
 		};
+		9A3378351D09EB8F00C21D79 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9AA18E611D09D4FE001C87AA /* ToornamentController.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		9A4747BA1D07336900CF315D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +161,7 @@
 			children = (
 				7F00E2F81D0885D700B875E8 /* UIImage+WithColor.swift */,
 				7F00E2F61D08859A00B875E8 /* UIColor+eSports.swift */,
+				9A3378371D09EED100C21D79 /* JSON+Decodable.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -157,8 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				9ACAC6FC1D0754F100D160F8 /* Game.swift */,
-				9AA18E611D09D4FE001C87AA /* ToornamentController.swift */,
-				9A33782F1D09E29D00C21D79 /* Decodable.swift */,
 				9A3378311D09EAC400C21D79 /* Tournament.swift */,
 				9A3378331D09EAEC00C21D79 /* Match.swift */,
 			);
@@ -345,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A3378321D09EAC400C21D79 /* Tournament.swift in Sources */,
+				9A3378381D09EED100C21D79 /* JSON+Decodable.swift in Sources */,
 				7F18BCCB1D089DE700C3C64C /* MenuSplitViewController.swift in Sources */,
 				9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */,
 				9A0975BA1D05EE1A000C78F5 /* ViewController.swift in Sources */,

@@ -18,6 +18,7 @@ class MenuGamesViewController: UIViewController {
     
     let toornamentClient = ToornamentController()
     var games = [Game]()
+    var tournaments = [Tournament]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,15 @@ class MenuGamesViewController: UIViewController {
             if let games = result.value {
                 self.games = games
                 self.collectionView?.reloadData()
+            }
+        }
+        
+        toornamentClient.getTournaments("counterstrike_go", beforeStart: "2016-06-09", sort: "date_desc") { result in
+            if let tournaments = result.value {
+                self.tournaments = tournaments
+            }
+            self.tournaments.forEach { t in
+                print("\(t.country) -- \(t.name)")
             }
         }
 

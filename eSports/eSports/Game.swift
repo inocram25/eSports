@@ -34,13 +34,3 @@ extension JSON {
         return Game(id: id!, name: name!, shortname: shortname, fullname: fullname, copyrights: copyrights)
     }
 }
-
-extension JSON {
-    func decode<T: Decodable>() -> T? {
-        return T.decode(self)
-    }
-    
-    func decode<T: Decodable>() -> [T] {
-        return self.arrayValue.flatMap { T.decode($0) }
-    }
-}

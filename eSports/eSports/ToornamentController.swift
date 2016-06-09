@@ -34,10 +34,10 @@ class ToornamentController {
     }
     
     
-//    func getTournaments(gameID: String, beforeStart: String, sort: String, completion: Result<[String], NSError> -> Void) {
-//        let router = Router.allTournamentsGame(gameID, beforeStart, sort)
-//        getDecodableObject(router, completion: completion)
-//    }
+    func getTournaments(gameID: String, beforeStart: String, sort: String, completion: Result<[Tournament], NSError> -> Void) {
+        let router = Router.allTournamentsGame(gameID, beforeStart, sort)
+        getDecodableObject(router, completion: completion)
+    }
     
     private func getDecodableObject<T: Decodable>
         (router: Router, completion: Result<[T], NSError> -> Void)
