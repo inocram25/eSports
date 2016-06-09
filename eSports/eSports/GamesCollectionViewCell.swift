@@ -31,6 +31,20 @@ class GamesCollectionViewCell: UICollectionViewCell {
 //        }
 //    }
     
+    func changeTitleSize(increase: Bool){
+        
+        UIView.animateWithDuration(1, animations: {
+            
+            if increase {
+                title.transform = CGAffineTransformMakeScale(1.2, 1.2)
+            }
+            
+            else
+                title.transform = CGAffineTransformMakeScale(1.0, 1.0)
+            }, completion: { (result) in
+        })
+    }
+    
     func configureCell(game: Game) {
         imageView.image = UIImage(named: "csgo-menu")
         title.text = game.name

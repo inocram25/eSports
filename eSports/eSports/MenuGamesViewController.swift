@@ -61,7 +61,6 @@ extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as? GamesCollectionViewCell
-        
         cell?.configureCell(games[indexPath.row])
         return cell!
     }
@@ -96,6 +95,8 @@ extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDat
         return true
     }
     
+    didupda
+    
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         super.didUpdateFocusInContext(context, withAnimationCoordinator: coordinator)
         
@@ -107,10 +108,14 @@ extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDat
         layer.shadowOpacity = 0.4
         layer.shadowRadius = 30
         
+        //chamar o changeTitleSize(increase: Bool) do GamesCollectionViewCell passando true
+        //A duvida é como chamar o changeTitleSize da cell certa..
         
         if let previousView = context.previouslyFocusedView {
             previousView.layer.shadowOffset = CGSizeMake(0,0)
             previousView.layer.shadowOpacity = 0.0
+            
+            //chamar changeTitleSize passando false
         }
         
     }
