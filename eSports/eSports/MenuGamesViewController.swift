@@ -18,7 +18,6 @@ class MenuGamesViewController: UIViewController {
     
     let toornamentClient = ToornamentController()
     var games = [Game]()
-    var tournaments = [Tournament]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,22 +26,44 @@ class MenuGamesViewController: UIViewController {
         collectionView.dataSource = self
         
         
-        toornamentClient.getGames { result in
-            if let games = result.value {
-                self.games = games
-                self.collectionView?.reloadData()
+        let group = dispatch_group_create()
+        
+        dispatch_group_enter(group)
+        toornamentClient.getGamesById("counterstrike_go") { result in
+            if let game = result.value {
+                self.games.append(game)
             }
+            dispatch_group_leave(group)
         }
         
-        toornamentClient.getTournaments("counterstrike_go", beforeStart: "2016-06-09", sort: "date_desc") { result in
-            if let tournaments = result.value {
-                self.tournaments = tournaments
+        dispatch_group_enter(group)
+        toornamentClient.getGamesById("dota2") { result in
+            if let game = result.value {
+                self.games.append(game)
             }
-            self.tournaments.forEach { t in
-                print("\(t.country) -- \(t.name)")
-            }
-        }
+            dispatch_group_leave(group)
 
+        }
+        
+        dispatch_group_enter(group)
+        toornamentClient.getGamesById("leagueoflegends") { result in
+            if let game = result.value {
+                self.games.append(game)
+            }
+            dispatch_group_leave(group)
+        }
+        
+        dispatch_group_notify(group, dispatch_get_main_queue()) {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "tournamentSegue" {
+            let vc = segue.destinationViewController as? TournamentViewController
+            let cell = sender as? GamesCollectionViewCell
+            vc?.game = cell?.currentGame
+        }
     }
 
 }
@@ -78,24 +99,16 @@ extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDat
         
         return UIEdgeInsets(top: flowLayout.sectionInset.top, left: edgeInsets, bottom: flowLayout.sectionInset.bottom, right: edgeInsets)
     }
-    
-    func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
  
-    func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    
-    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath.row)
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as? GamesCollectionViewCell
+        performSegueWithIdentifier("tournamentSegue", sender: cell)
+        
     }
     
     func collectionView(collectionView: UICollectionView, shouldUpdateFocusInContext context: UICollectionViewFocusUpdateContext) -> Bool {
         return true
     }
-    
-    didupda
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         super.didUpdateFocusInContext(context, withAnimationCoordinator: coordinator)
@@ -108,14 +121,9 @@ extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDat
         layer.shadowOpacity = 0.4
         layer.shadowRadius = 30
         
-        //chamar o changeTitleSize(increase: Bool) do GamesCollectionViewCell passando true
-        //A duvida é como chamar o changeTitleSize da cell certa..
-        
         if let previousView = context.previouslyFocusedView {
             previousView.layer.shadowOffset = CGSizeMake(0,0)
             previousView.layer.shadowOpacity = 0.0
-            
-            //chamar changeTitleSize passando false
         }
         
     }

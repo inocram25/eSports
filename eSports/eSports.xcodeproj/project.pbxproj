@@ -12,7 +12,6 @@
 		7F18BCCB1D089DE700C3C64C /* MenuSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18BCCA1D089DE700C3C64C /* MenuSplitViewController.swift */; };
 		7F18BCCD1D08A18300C3C64C /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18BCCC1D08A18300C3C64C /* MenuTableViewController.swift */; };
 		9A0975B81D05EE1A000C78F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0975B71D05EE1A000C78F5 /* AppDelegate.swift */; };
-		9A0975BA1D05EE1A000C78F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0975B91D05EE1A000C78F5 /* ViewController.swift */; };
 		9A0975BD1D05EE1A000C78F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0975BB1D05EE1A000C78F5 /* Main.storyboard */; };
 		9A0975BF1D05EE1B000C78F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A0975BE1D05EE1B000C78F5 /* Assets.xcassets */; };
 		9A0975CA1D05EE1B000C78F5 /* eSportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0975C91D05EE1B000C78F5 /* eSportsTests.swift */; };
@@ -20,6 +19,7 @@
 		9A3378321D09EAC400C21D79 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378311D09EAC400C21D79 /* Tournament.swift */; };
 		9A3378341D09EAEC00C21D79 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378331D09EAEC00C21D79 /* Match.swift */; };
 		9A3378381D09EED100C21D79 /* JSON+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378371D09EED100C21D79 /* JSON+Decodable.swift */; };
+		9A33783A1D0B27DC00C21D79 /* TournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378391D0B27DC00C21D79 /* TournamentViewController.swift */; };
 		9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7263711D09DF410011DE8E /* BorderedView.swift */; };
 		9AA18E621D09D4FE001C87AA /* ToornamentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA18E611D09D4FE001C87AA /* ToornamentController.swift */; };
 		9ACAC6F71D07404F00D160F8 /* MenuGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */; };
@@ -47,7 +47,6 @@
 		7F18BCCC1D08A18300C3C64C /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		9A0975B41D05EE1A000C78F5 /* eSports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eSports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0975B71D05EE1A000C78F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A0975B91D05EE1A000C78F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9A0975BC1D05EE1A000C78F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A0975BE1D05EE1B000C78F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A0975C01D05EE1B000C78F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		9A3378311D09EAC400C21D79 /* Tournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		9A3378331D09EAEC00C21D79 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		9A3378371D09EED100C21D79 /* JSON+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Decodable.swift"; sourceTree = "<group>"; };
+		9A3378391D0B27DC00C21D79 /* TournamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournamentViewController.swift; sourceTree = "<group>"; };
 		9A7263711D09DF410011DE8E /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
 		9AA18E611D09D4FE001C87AA /* ToornamentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToornamentController.swift; sourceTree = "<group>"; };
 		9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuGamesViewController.swift; sourceTree = "<group>"; };
@@ -188,8 +188,8 @@
 		9A4747BE1D07338700CF315D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9A0975B91D05EE1A000C78F5 /* ViewController.swift */,
 				9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */,
+				9A3378391D0B27DC00C21D79 /* TournamentViewController.swift */,
 				7F18BCCA1D089DE700C3C64C /* MenuSplitViewController.swift */,
 				7F18BCCC1D08A18300C3C64C /* MenuTableViewController.swift */,
 			);
@@ -359,7 +359,7 @@
 				9A3378381D09EED100C21D79 /* JSON+Decodable.swift in Sources */,
 				7F18BCCB1D089DE700C3C64C /* MenuSplitViewController.swift in Sources */,
 				9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */,
-				9A0975BA1D05EE1A000C78F5 /* ViewController.swift in Sources */,
+				9A33783A1D0B27DC00C21D79 /* TournamentViewController.swift in Sources */,
 				9AA18E621D09D4FE001C87AA /* ToornamentController.swift in Sources */,
 				7F18BCCD1D08A18300C3C64C /* MenuTableViewController.swift in Sources */,
 				7F00E2F91D0885D700B875E8 /* UIImage+WithColor.swift in Sources */,
