@@ -19,7 +19,6 @@ class TournamentViewController: UIViewController {
         super.viewDidLoad()
         
         if let game = game {
-            print(game.id)
             toornamentClient.getTournaments(game.id, beforeStart: "2016-06-09", sort: "date_desc") { result in
                 if let tournaments = result.value {
                     self.tournaments = tournaments
@@ -34,8 +33,9 @@ class TournamentViewController: UIViewController {
 //            if let matchs = result.value {
 //                self.matchs = matchs
 //            }
-//            self.tournaments.forEach { m in
-//                print("\(m.id) -- \(m.status)")
+//            self.matchs.forEach { m in
+//                print("\(m.opponents[0].participantName) vs \(m.opponents[1].participantName)")
+//                print("\(m.games[0].map)")
 //            }
 //        }
     }

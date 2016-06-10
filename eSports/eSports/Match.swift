@@ -16,8 +16,8 @@ struct Opponent {
     let forfeit: Bool
     
     //Paticipant
-    let participantId: String
-    let participantName: String
+    let participantId: String?
+    let participantName: String?
     let participantCountry: String?
 }
 
@@ -78,7 +78,7 @@ extension JSON {
         let participantName = self["participant"]["name"].string
         let participantCountry = self["participant"]["country"].string
         
-        return Opponent(result: result, score: score, forfeit: forfeit!, participantId: participantId!, participantName: participantName!, participantCountry: participantCountry)
+        return Opponent(result: result, score: score, forfeit: forfeit!, participantId: participantId, participantName: participantName, participantCountry: participantCountry)
     }
     
     var games: Games? {
