@@ -19,7 +19,7 @@ class TournamentViewController: UIViewController {
         super.viewDidLoad()
         
         if let game = game {
-            toornamentClient.getTournaments(game.id, beforeStart: "2016-06-09", sort: "date_desc") { result in
+            toornamentClient.getTournaments(game.id, beforeStart: "2016-06-08", sort: "date_desc") { result in
                 if let tournaments = result.value {
                     self.tournaments = tournaments
                 }
