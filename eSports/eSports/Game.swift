@@ -31,11 +31,12 @@ struct Game {
 }
 
 struct Lineup {
-    let name: String
-    let kills: Int
-    let deaths: Int
-    let assists: Int
-    let kd: Float
+    let name: String?
+    let kills: Int?
+    let deaths: Int?
+    let assists: Int?
+    let kd: Float?
+    let country: String?
     
 }
 
@@ -49,12 +50,16 @@ extension JSON {
     
     var lineup: Lineup? {
         let name = self["name"].string
+        let country = self["country"].string
+        
+        // atributos que "contem" no Game
         let kills = self["kills"].int
         let deaths = self["deaths"].int
         let assists = self["assists"].int
         let kd = self["kills_per_deaths"].float
         
-        return Lineup(name: name!, kills: kills!, deaths: deaths!, assists: assists!, kd: kd!)
+        
+        return Lineup(name: name, kills: kills, deaths: deaths, assists: assists, kd: kd, country: country)
     }
     
     var opponent: Opponent? {

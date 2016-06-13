@@ -54,6 +54,11 @@ class ToornamentController {
         getDecodableObject(router, completion: completion)
     }
     
+    func getParticipantsByTournament(tournamentId: String, completion: Result<[Participant], NSError> -> Void) {
+        let router = Router.participantsByTournament(tournamentId)
+        getDecodableObject(router, completion: completion)
+    }
+    
     
     private func getDecodableObject<T: Decodable>
         (router: Router, completion: Result<[T], NSError> -> Void)
@@ -106,6 +111,8 @@ private enum Router: URLRequestConvertible {
     
     case gamesByMatch(String, String)
     
+    case participantsByTournament(String)
+    
     var URLRequest: NSMutableURLRequest {
         let (path, parameters, method): (String, [String: AnyObject]?, Alamofire.Method) = {
             switch self {
@@ -131,6 +138,10 @@ private enum Router: URLRequestConvertible {
             case .gamesByMatch(let tournamentId, let matchId):
                 let parameters = ["with_stats" : 1]
                 return ("tournaments/\(tournamentId)/matches/\(matchId)/games", parameters, .GET)
+                
+            case .participantsByTournament(let id):
+                let parameters = ["with_lineup" : 1]
+                return ("tournaments/\(id)/participants", parameters, .GET)
                 
             }
             
