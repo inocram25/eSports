@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 private let reuseIdentifier = "gamesCell"
 
 class MenuGamesViewController: UIViewController {
@@ -17,7 +15,7 @@ class MenuGamesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let toornamentClient = ToornamentController()
-    var games = [Game]()
+    var disciplines = [Discipline]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,26 +27,26 @@ class MenuGamesViewController: UIViewController {
         let group = dispatch_group_create()
         
         dispatch_group_enter(group)
-        toornamentClient.getGamesById("counterstrike_go") { result in
-            if let game = result.value {
-                self.games.append(game)
+        toornamentClient.getDisciplinesById("counterstrike_go") { result in
+            if let discipline = result.value {
+                self.disciplines.append(discipline)
             }
             dispatch_group_leave(group)
         }
         
         dispatch_group_enter(group)
-        toornamentClient.getGamesById("dota2") { result in
-            if let game = result.value {
-                self.games.append(game)
+        toornamentClient.getDisciplinesById("dota2") { result in
+            if let discipline = result.value {
+                self.disciplines.append(discipline)
             }
             dispatch_group_leave(group)
 
         }
         
         dispatch_group_enter(group)
-        toornamentClient.getGamesById("leagueoflegends") { result in
-            if let game = result.value {
-                self.games.append(game)
+        toornamentClient.getDisciplinesById("leagueoflegends") { result in
+            if let discipline = result.value {
+                self.disciplines.append(discipline)
             }
             dispatch_group_leave(group)
         }
@@ -62,7 +60,7 @@ class MenuGamesViewController: UIViewController {
         if segue.identifier == "tournamentSegue" {
             let vc = segue.destinationViewController as? TournamentViewController
             let cell = sender as? GamesCollectionViewCell
-            vc?.game = cell?.currentGame
+            vc?.discipline = cell?.currentGame
         }
     }
 
@@ -77,12 +75,12 @@ extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDat
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return games.count > 3 ? 3 : games.count
+        return disciplines.count > 3 ? 3 : disciplines.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as? GamesCollectionViewCell
-        cell?.configureCell(games[indexPath.row])
+        cell?.configureCell(disciplines[indexPath.row])
         return cell!
     }
     

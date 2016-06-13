@@ -14,7 +14,7 @@ class GamesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
-    var currentGame: Game?
+    var currentGame: Discipline?
     
     
     override func awakeFromNib() {
@@ -45,10 +45,10 @@ class GamesCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func configureCell(game: Game) {
-        currentGame = game
+    func configureCell(discipline: Discipline) {
+        currentGame = discipline
         
         imageView.image = UIImage(named: "csgo-menu")
-        title.text = game.name
+        title.text = discipline.name
     }
 }
