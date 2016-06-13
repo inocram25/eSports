@@ -1,73 +1,70 @@
 //
-//  MenuGamesViewController.swift
+//  TournamentViewController.swift
 //  eSports
 //
-//  Created by Alexandre Calil Marconi on 6/7/16.
+//  Created by Alexandre Calil Marconi on 6/10/16.
 //  Copyright © 2016 Alexandre Calil Marconi. All rights reserved.
 //
 
 import UIKit
 
-private let reuseIdentifier = "gamesCell"
+private let reuseIdentifier = "regionsCell"
 
-class MenuGamesViewController: UIViewController {
-
-    @IBOutlet weak var collectionView: UICollectionView!
+class RegionViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
+
     let toornamentClient = ToornamentController()
-    var disciplines = [Discipline]()
+    var tournaments = [Tournament]()
+    var matchs = [Match]()
+    var discipline: Discipline?
+    var participants = [Participant]()
+    
+    let regions = ["CS:GO_logo", "Dota2_logo", "LOL_logo"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        
-        let group = dispatch_group_create()
-        
-        dispatch_group_enter(group)
-        toornamentClient.getDisciplinesById("counterstrike_go") { result in
-            if let discipline = result.value {
-                self.disciplines.append(discipline)
-            }
-            dispatch_group_leave(group)
+        if let discipline = discipline {
+            print(discipline.shortname)
+            imageView.image = UIImage(named: "\(discipline.shortname!)_logo")
         }
         
-        dispatch_group_enter(group)
-        toornamentClient.getDisciplinesById("dota2") { result in
-            if let discipline = result.value {
-                self.disciplines.append(discipline)
-            }
-            dispatch_group_leave(group)
-
-        }
+//        if let discipline = discipline {
+//            toornamentClient.getTournaments(discipline.id, beforeStart: "2016-04-08", sort: "date_desc") { result in
+//                if let tournaments = result.value {
+//                    self.tournaments = tournaments
+//                }
+//                self.tournaments.forEach { t in
+//                    print("\(t.id) -- \(t.name)")
+//                }
+//            }
+//        }
         
-        dispatch_group_enter(group)
-        toornamentClient.getDisciplinesById("leagueoflegends") { result in
-            if let discipline = result.value {
-                self.disciplines.append(discipline)
-            }
-            dispatch_group_leave(group)
-        }
+        // match id astralis x NRG = 5733266170cb4913198b4570
+        //match id lg x splyce = 569f970c150ba039518b4583
+                
+        // dreamhack austin = 569f96a9140ba0be3a8b4568 , 
+//        eleague group c = 5733261f150ba005238b4567
+        // ESL Cologne = 5668664d150ba0d80a8b45ed
         
-        dispatch_group_notify(group, dispatch_get_main_queue()) {
-            self.collectionView.reloadData()
-        }
+//        toornamentClient.getParticipantsByTournament("5668664d150ba0d80a8b45ed") { result in
+//            
+//            if let participants = result.value {
+//                self.participants = participants
+//            }
+//            self.participants.forEach { p in
+//                
+//                print("\(p.name) ---- \(p.country)")
+//                p.lineup?.forEach { l in
+//                    print(l.name)
+//                }
+//            }
+//        }
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "tournamentSegue" {
-            let vc = segue.destinationViewController as? RegionViewController
-            let cell = sender as? GamesCollectionViewCell
-            vc?.discipline = cell?.currentGame
-        }
-    }
-
 }
 
-
-extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension RegionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -75,12 +72,12 @@ extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDat
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return disciplines.count > 3 ? 3 : disciplines.count
+        return regions.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as? GamesCollectionViewCell
-        cell?.configureCell(disciplines[indexPath.row])
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as? RegionCell
+        cell?.configureCell(regions[indexPath.row])
         return cell!
     }
     
@@ -97,9 +94,9 @@ extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDat
         
         return UIEdgeInsets(top: flowLayout.sectionInset.top, left: edgeInsets, bottom: flowLayout.sectionInset.bottom, right: edgeInsets)
     }
- 
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let cell = collectionView.cellForItemAtIndexPath(indexPath) as? GamesCollectionViewCell
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as? RegionCell
         performSegueWithIdentifier("tournamentSegue", sender: cell)
         
     }
@@ -125,5 +122,6 @@ extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDat
         }
         
     }
-
+    
 }
+

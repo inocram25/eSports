@@ -17,7 +17,7 @@ class MatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        toornamentClient.getMatchesByTournament("569f96a9140ba0be3a8b4568", hasResult: true, sort: "latest") { result in
+        toornamentClient.getMatchesByTournament("574ede73150ba0f5118b4579", hasResult: true, sort: "latest") { result in
             if let matchs = result.value {
                 self.matchs = matchs
             }
