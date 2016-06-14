@@ -28,7 +28,8 @@ class MenuGamesViewController: UIViewController {
         
         dispatch_group_enter(group)
         toornamentClient.getDisciplinesById("counterstrike_go") { result in
-            if let discipline = result.value {
+            if var discipline = result.value {
+                discipline.image = UIImage(named: "csgo_poster")
                 self.disciplines.append(discipline)
             }
             dispatch_group_leave(group)
@@ -36,7 +37,8 @@ class MenuGamesViewController: UIViewController {
         
         dispatch_group_enter(group)
         toornamentClient.getDisciplinesById("dota2") { result in
-            if let discipline = result.value {
+            if var discipline = result.value {
+                discipline.image = UIImage(named: "dota2_poster")
                 self.disciplines.append(discipline)
             }
             dispatch_group_leave(group)
@@ -45,7 +47,8 @@ class MenuGamesViewController: UIViewController {
         
         dispatch_group_enter(group)
         toornamentClient.getDisciplinesById("leagueoflegends") { result in
-            if let discipline = result.value {
+            if var discipline = result.value {
+                discipline.image = UIImage(named: "lol_poster")
                 self.disciplines.append(discipline)
             }
             dispatch_group_leave(group)

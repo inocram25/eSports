@@ -14,6 +14,8 @@ struct Discipline {
     let shortname: String?
     let fullname: String?
     let copyrights: String?
+    
+    var image: UIImage?
 }
 
 extension Discipline: Decodable {
@@ -31,6 +33,6 @@ extension JSON {
         let fullname = self["fullname"].string
         let copyrights = self["copyrights"].string
         
-        return Discipline(id: id!, name: name!, shortname: shortname, fullname: fullname, copyrights: copyrights)
+        return Discipline(id: id!, name: name!, shortname: shortname, fullname: fullname, copyrights: copyrights, image: nil)
     }
 }

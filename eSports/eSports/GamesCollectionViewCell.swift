@@ -19,10 +19,9 @@ class GamesCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         
-        title.text = "Counter-Strike: Global Offensive"
-        imageView.image = UIImage(named: "csgo-menu")
         imageView.adjustsImageWhenAncestorFocused = true
-        imageView.clipsToBounds = false
+        imageView.contentMode = .BottomLeft
+        
     }
     
     
@@ -48,7 +47,7 @@ class GamesCollectionViewCell: UICollectionViewCell {
     func configureCell(discipline: Discipline) {
         currentGame = discipline
         
-        imageView.image = UIImage(named: "csgo-menu")
+        imageView.image = discipline.image
         title.text = discipline.name
     }
 }

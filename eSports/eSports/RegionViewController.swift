@@ -10,9 +10,11 @@ import UIKit
 
 private let reuseIdentifier = "regionsCell"
 
+
 class RegionViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var regionImageView: UIImageView!
 
     let toornamentClient = ToornamentController()
     var tournaments = [Tournament]()
@@ -20,7 +22,7 @@ class RegionViewController: UIViewController {
     var discipline: Discipline?
     var participants = [Participant]()
     
-    let regions = ["CS:GO_logo", "Dota2_logo", "LOL_logo"]
+    let regions = [Region.NorthAmerica, Region.Europe, Region.Asia, Region.Africa, Region.SouthAmerica, Region.Oceania]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,66 +64,36 @@ class RegionViewController: UIViewController {
 //            }
 //        }
     }
+    
+    
 }
 
-extension RegionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension RegionViewController: UITableViewDataSource, UITableViewDelegate {
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return regions.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as? RegionCell
-        cell?.configureCell(regions[indexPath.row])
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as? RegionCell
+        cell?.regionLabel.text = regions[indexPath.row].description
         return cell!
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        
-        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-        let border = flowLayout.sectionInset.left + flowLayout.sectionInset.right
-        let itemWidth = flowLayout.itemSize.width + flowLayout.minimumInteritemSpacing
-        let totalWidth = collectionView.bounds.width - border
-        let numberOfCells = floor(totalWidth / itemWidth)
-        let usedSpace = itemWidth * numberOfCells
-        let bonusSpace = flowLayout.minimumInteritemSpacing * numberOfCells
-        let edgeInsets = floor((totalWidth - usedSpace + bonusSpace) / (numberOfCells + 1.0))
-        
-        return UIEdgeInsets(top: flowLayout.sectionInset.top, left: edgeInsets, bottom: flowLayout.sectionInset.bottom, right: edgeInsets)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let cell = collectionView.cellForItemAtIndexPath(indexPath) as? RegionCell
-        performSegueWithIdentifier("tournamentSegue", sender: cell)
-        
-    }
-    
-    func collectionView(collectionView: UICollectionView, shouldUpdateFocusInContext context: UICollectionViewFocusUpdateContext) -> Bool {
-        return true
-    }
-    
-    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
-        super.didUpdateFocusInContext(context, withAnimationCoordinator: coordinator)
-        
-        guard let nextFocusedView = context.nextFocusedView else { return }
-        
-        let layer = nextFocusedView.layer
-        layer.shadowColor = UIColor.blackColor().CGColor
-        layer.shadowOffset = CGSize(width: 0, height: 5)
-        layer.shadowOpacity = 0.4
-        layer.shadowRadius = 30
-        
-        if let previousView = context.previouslyFocusedView {
-            previousView.layer.shadowOffset = CGSizeMake(0,0)
-            previousView.layer.shadowOpacity = 0.0
+    func tableView(tableView: UITableView, didUpdateFocusInContext context: UITableViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+        if let nextIndexPath = context.nextFocusedIndexPath {
+            regionImageView.image = regions[nextIndexPath.row].image
+
         }
-        
     }
-    
+
 }
 
