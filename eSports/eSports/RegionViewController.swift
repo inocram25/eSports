@@ -65,6 +65,12 @@ class RegionViewController: UIViewController {
 //        }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "matchSegue" {
+            let vc = segue.destinationViewController as? MatchViewController
+            vc?.discipline = discipline
+        }
+    }
     
 }
 
@@ -85,7 +91,7 @@ extension RegionViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+        performSegueWithIdentifier("matchSegue", sender: self)
     }
     
     func tableView(tableView: UITableView, didUpdateFocusInContext context: UITableViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {

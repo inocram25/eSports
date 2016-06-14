@@ -11,6 +11,7 @@ import UIKit
 class MatchViewController: UIViewController {
 
     let toornamentClient = ToornamentController()
+    var discipline: Discipline?
     var matchs = [Match]()
     var tournament: Tournament?
     
