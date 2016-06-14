@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="0YF-bo-Imd">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="0YF-bo-Imd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -45,7 +45,7 @@
                         <sections>
                             <tableViewSection id="Hgl-HD-Bjx">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="hwa-Yw-Bp5" rowHeight="100" style="IBUITableViewCellStyleDefault" id="KhZ-Sy-ZNC">
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" textLabel="hwa-Yw-Bp5" rowHeight="100" style="IBUITableViewCellStyleDefault" id="KhZ-Sy-ZNC">
                                         <rect key="frame" x="0.0" y="145" width="594" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KhZ-Sy-ZNC" id="pzo-hX-lMu">
@@ -62,7 +62,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="JgB-ZH-1cq" style="IBUITableViewCellStyleDefault" id="0pD-lm-h9O">
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" textLabel="JgB-ZH-1cq" style="IBUITableViewCellStyleDefault" id="0pD-lm-h9O">
                                         <rect key="frame" x="0.0" y="259" width="594" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0pD-lm-h9O" id="gkm-aV-het">
@@ -100,7 +100,7 @@
         <scene sceneID="kg0-ym-LFw">
             <objects>
                 <navigationController id="q2N-eg-g9V" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eLi-VI-um4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eLi-VI-um4">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
