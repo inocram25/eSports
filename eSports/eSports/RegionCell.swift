@@ -32,7 +32,7 @@ class RegionCell: UITableViewCell {
         if (context.nextFocusedView == self) {
             
             backgroundColor = UIColor.clearColor()
-            layer.shadowColor = UIColor.eSports_Blue().CGColor
+            layer.shadowColor = UIColor.eSports_LightBlue().CGColor
             layer.shadowOffset = CGSize(width: 0, height: 5)
             layer.shadowOpacity = 0.8
             layer.shadowRadius = 30

@@ -210,9 +210,9 @@
 			children = (
 				9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */,
 				9A3378391D0B27DC00C21D79 /* RegionViewController.swift */,
+				7FD88E241D119FA3009F6FD2 /* TournamentsViewController.swift */,
 				7FA1C5831D0F1E0F00CBA914 /* GamesViewController.swift */,
 				7FA1C5871D0F256D00CBA914 /* MatchViewController.swift */,
-				7FD88E241D119FA3009F6FD2 /* TournamentsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -232,12 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A0975CE1D05EE1B000C78F5 /* Build configuration list for PBXNativeTarget "eSports" */;
 			buildPhases = (
-				F6DAC73182A166AFC458FF03 /* 📦 Check Pods Manifest.lock */,
+				F6DAC73182A166AFC458FF03 /* [CP] Check Pods Manifest.lock */,
 				9A0975B01D05EE1A000C78F5 /* Sources */,
 				9A0975B11D05EE1A000C78F5 /* Frameworks */,
 				9A0975B21D05EE1A000C78F5 /* Resources */,
-				91B4A8D5E7B0BDD44965FF95 /* 📦 Embed Pods Frameworks */,
-				491F3F07B46D21F845BDFDEB /* 📦 Copy Pods Resources */,
+				91B4A8D5E7B0BDD44965FF95 /* [CP] Embed Pods Frameworks */,
+				491F3F07B46D21F845BDFDEB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,14 +324,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		491F3F07B46D21F845BDFDEB /* 📦 Copy Pods Resources */ = {
+		491F3F07B46D21F845BDFDEB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,14 +339,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eSports/Pods-eSports-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		91B4A8D5E7B0BDD44965FF95 /* 📦 Embed Pods Frameworks */ = {
+		91B4A8D5E7B0BDD44965FF95 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,14 +354,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eSports/Pods-eSports-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6DAC73182A166AFC458FF03 /* 📦 Check Pods Manifest.lock */ = {
+		F6DAC73182A166AFC458FF03 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -36,7 +36,7 @@ extension Region: CustomStringConvertible {
         }
     }
     
-    var image: UIImage {
+    var imageHighlighted: UIImage {
         switch self {
         case .Africa:
             return UIImage(named:"AF")!
@@ -50,6 +50,23 @@ extension Region: CustomStringConvertible {
             return UIImage(named:"AS")!
         case .NorthAmerica:
             return UIImage(named:"NA")!
+        }
+    }
+    
+    var image: UIImage {
+        switch self {
+        case .Africa:
+            return UIImage(named:"Africa")!
+        case .SouthAmerica:
+            return UIImage(named:"SouthAmerica")!
+        case .Oceania:
+            return UIImage(named:"Oceania")!
+        case .Europe:
+            return UIImage(named:"Europe")!
+        case .Asia:
+            return UIImage(named:"Asia")!
+        case .NorthAmerica:
+            return UIImage(named:"NorthAmerica")!
         }
     }
 }

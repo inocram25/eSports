@@ -22,7 +22,7 @@ class TrapeziumView: UIView {
         bezierPath.moveToPoint(CGPoint(x: 0, y: 0))
         bezierPath.addLineToPoint(CGPoint(x: 0, y: layerHeight))
         bezierPath.addLineToPoint(CGPoint(x: layerWidth, y: layerHeight))
-        bezierPath.addLineToPoint(CGPoint(x: 0.8*layerWidth , y: 0))
+        bezierPath.addLineToPoint(CGPoint(x: 0.82*layerWidth , y: 0))
 
         bezierPath.closePath()
         

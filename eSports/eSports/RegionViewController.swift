@@ -32,17 +32,6 @@ class RegionViewController: UIViewController {
             imageView.image = UIImage(named: "\(discipline.shortname!)_logo")
         }
         
-//        if let discipline = discipline {
-//            toornamentClient.getTournaments(discipline.id, beforeStart: "2016-04-08", sort: "date_desc") { result in
-//                if let tournaments = result.value {
-//                    self.tournaments = tournaments
-//                }
-//                self.tournaments.forEach { t in
-//                    print("\(t.id) -- \(t.name)")
-//                }
-//            }
-//        }
-        
         // match id astralis x NRG = 5733266170cb4913198b4570
         //match id lg x splyce = 569f970c150ba039518b4583
                 
@@ -66,9 +55,11 @@ class RegionViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "matchSegue" {
-            let vc = segue.destinationViewController as? MatchViewController
-            vc?.discipline = discipline
+        if segue.identifier == "tournamentSegue" {
+            let row = sender as! Int
+            let vc = segue.destinationViewController as? TournamentsViewController
+            vc?.discipline = discipline!
+            vc?.region = regions[row]
         }
     }
     
@@ -91,13 +82,13 @@ extension RegionViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("matchSegue", sender: self)
+        performSegueWithIdentifier("tournamentSegue", sender: indexPath.row)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     func tableView(tableView: UITableView, didUpdateFocusInContext context: UITableViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         if let nextIndexPath = context.nextFocusedIndexPath {
-            regionImageView.image = regions[nextIndexPath.row].image
+            regionImageView.image = regions[nextIndexPath.row].imageHighlighted
 
         }
     }
