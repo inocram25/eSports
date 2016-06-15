@@ -88,7 +88,7 @@ extension RegionViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, didUpdateFocusInContext context: UITableViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         if let nextIndexPath = context.nextFocusedIndexPath {
-            regionImageView.image = regions[nextIndexPath.row].image
+            regionImageView.image = regions[nextIndexPath.row].imageHighlighted
 
         }
     }

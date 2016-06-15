@@ -16,6 +16,7 @@ class TournamentsViewController: UIViewController {
     private var tournaments = [Tournament]()
     
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet weak var regionImageView: UIImageView!
     
     var discipline: Discipline?
     var region: Region?
@@ -33,9 +34,9 @@ class TournamentsViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
-        
+     
+        regionImageView.image = region?.image
     }
-    
 }
 
 extension TournamentsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -58,12 +59,6 @@ extension TournamentsViewController: UITableViewDataSource, UITableViewDelegate 
 //        performSegueWithIdentifier("matchSegue", sender: self)
 //    }
     
-//    func tableView(tableView: UITableView, didUpdateFocusInContext context: UITableViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
-//        if let nextIndexPath = context.nextFocusedIndexPath {
-////            regionImageView.image = tournaments[nextIndexPath.row].image
-//            
-//        }
-//    }
     
 }
 
