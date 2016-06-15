@@ -14,15 +14,14 @@ class GamesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
-    var currentGame: Game?
+    var currentGame: Discipline?
     
     
     override func awakeFromNib() {
         
-        title.text = "Counter-Strike: Global Offensive"
-        imageView.image = UIImage(named: "csgo-menu")
         imageView.adjustsImageWhenAncestorFocused = true
-        imageView.clipsToBounds = false
+        imageView.contentMode = .Center
+        
     }
     
     
@@ -45,10 +44,10 @@ class GamesCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func configureCell(game: Game) {
-        currentGame = game
+    func configureCell(discipline: Discipline) {
+        currentGame = discipline
         
-        imageView.image = UIImage(named: "csgo-menu")
-        title.text = game.name
+        imageView.image = discipline.image
+        title.text = discipline.name
     }
 }

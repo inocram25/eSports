@@ -9,25 +9,6 @@
 import Foundation
 import SwiftyJSON
 
-struct Opponent {
-    //1 = win, 2 = draw, 3 = loss.
-    let result: Int?
-    let score: Int?
-    let forfeit: Bool
-    
-    //Paticipant
-    let participantId: String?
-    let participantName: String?
-    let participantCountry: String?
-}
-
-struct Games {
-    let number: Int
-    let status: String
-    let map: String?
-    let opponents: [Opponent]
-}
-
 struct Match {
     
     let id: String
@@ -41,7 +22,7 @@ struct Match {
     let timezone: String?
     let matchFormat: String?
     let opponents: [Opponent]
-    let games : [Games]
+    let games : [Game]
 }
 
 extension Match: Decodable {
@@ -64,30 +45,8 @@ extension JSON {
         let timezone = self["timezone"].string
         let matchFormat = self["match_format"].string
         let opponents = self["opponents"].arrayValue.flatMap { $0.opponent }
-        let games = self["games"].arrayValue.flatMap { $0.games }
+        let game = self["games"].arrayValue.flatMap { $0.game }
         
-        return Match(id: id!, discipline: discipline!, status: status!, tournamentID: tournamentId!, stage: stage!, group: group!, round: round!, date: date, timezone: timezone, matchFormat: matchFormat, opponents: opponents, games: games)
-    }
-    
-    var opponent: Opponent? {
-        
-        let result = self["result"].int
-        let score = self["score"].int
-        let forfeit = self["forfeit"].bool
-        let participantId = self["participant"]["id"].string
-        let participantName = self["participant"]["name"].string
-        let participantCountry = self["participant"]["country"].string
-        
-        return Opponent(result: result, score: score, forfeit: forfeit!, participantId: participantId, participantName: participantName, participantCountry: participantCountry)
-    }
-    
-    var games: Games? {
-        
-        let number = self["number"].int
-        let status = self["status"].string
-        let map = self["map"].string
-        let opponents = self["opponents"].arrayValue.flatMap { $0.opponent }
-        
-        return Games(number: number! , status: status!, map: map, opponents: opponents)
+        return Match(id: id!, discipline: discipline!, status: status!, tournamentID: tournamentId!, stage: stage!, group: group!, round: round!, date: date, timezone: timezone, matchFormat: matchFormat, opponents: opponents, games: game)
     }
 }

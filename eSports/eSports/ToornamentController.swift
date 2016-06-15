@@ -28,19 +28,19 @@ class ToornamentController {
     }()
     
     
-    func getGames(completion: Result<[Game], NSError> -> Void) {
-        let router = Router.allGames
+    func getDisciplines(completion: Result<[Discipline], NSError> -> Void) {
+        let router = Router.allDisciplines
         getDecodableObject(router, completion: completion)
     }
     
-    func getGamesById(id: String, completion: Result<Game, NSError> -> Void) {
-        let router = Router.gamesById(id)
+    func getDisciplinesById(id: String, completion: Result<Discipline, NSError> -> Void) {
+        let router = Router.disciplinesById(id)
         getDecodableObject(router, completion: completion)
     }
     
     
-    func getTournaments(gameID: String, beforeStart: String, sort: String, completion: Result<[Tournament], NSError> -> Void) {
-        let router = Router.allTournamentsGame(gameID, beforeStart, sort)
+    func getTournaments(disciplineID: String, beforeStart: String, sort: String, completion: Result<[Tournament], NSError> -> Void) {
+        let router = Router.allTournamentsDiscipline(disciplineID, beforeStart, sort)
         getDecodableObject(router, completion: completion)
     }
     
@@ -48,6 +48,17 @@ class ToornamentController {
         let router = Router.matchesByTournament(tournamentId, hasResult, sort)
         getDecodableObject(router, completion: completion)
     }
+    
+    func getGamesByMatch(tournamentId tournamentId: String, matchId: String, completion: Result<[Game], NSError> -> Void) {
+        let router = Router.gamesByMatch(tournamentId, matchId)
+        getDecodableObject(router, completion: completion)
+    }
+    
+    func getParticipantsByTournament(tournamentId: String, completion: Result<[Participant], NSError> -> Void) {
+        let router = Router.participantsByTournament(tournamentId)
+        getDecodableObject(router, completion: completion)
+    }
+    
     
     private func getDecodableObject<T: Decodable>
         (router: Router, completion: Result<[T], NSError> -> Void)
@@ -88,24 +99,28 @@ private enum Router: URLRequestConvertible {
     
     static let baseURLString = "https://api.toornament.com/v1/"
     
-    case allGames
-    case gamesById(String)
+    case allDisciplines
+    case disciplinesById(String)
     
     //id = game id; before_start = 2016-12-30; sort = date_asc, date_desc;
-    case allTournamentsGame(String,String,String)
+    case allTournamentsDiscipline(String,String,String)
     case tournamentInfoById(String)
     
     //sort = Allowed values: structure, schedule, latest
     case matchesByTournament(String, Bool, String)
     
+    case gamesByMatch(String, String)
+    
+    case participantsByTournament(String)
+    
     var URLRequest: NSMutableURLRequest {
         let (path, parameters, method): (String, [String: AnyObject]?, Alamofire.Method) = {
             switch self {
                 
-            case .allGames:
+            case .allDisciplines:
                 return ("disciplines", nil, .GET)
                 
-            case .allTournamentsGame(let id, let date, let sort):
+            case .allTournamentsDiscipline(let id, let date, let sort):
                 let parameters = ["discipline" : id, "before_start" : date, "sort" : sort]
                 return ("tournaments", parameters, .GET)
                 
@@ -113,12 +128,21 @@ private enum Router: URLRequestConvertible {
                 let parameters = ["with_streams" : 1]
                 return ("tournaments/\(id)", parameters, .GET)
                 
-            case .gamesById(let id):
+            case .disciplinesById(let id):
                 return ("disciplines/\(id)", nil, .GET)
                
             case .matchesByTournament(let id, let hasResult, let sort):
                 let parameters = ["has_result" : hasResult, "sort" : sort, "with_games" : 1]
                 return ("tournaments/\(id)/matches", parameters as? [String : AnyObject], .GET)
+                
+            case .gamesByMatch(let tournamentId, let matchId):
+                let parameters = ["with_stats" : 1]
+                return ("tournaments/\(tournamentId)/matches/\(matchId)/games", parameters, .GET)
+                
+            case .participantsByTournament(let id):
+                let parameters = ["with_lineup" : 1]
+                return ("tournaments/\(id)/participants", parameters, .GET)
+                
             }
             
         }()

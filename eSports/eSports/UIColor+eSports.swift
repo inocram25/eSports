@@ -10,26 +10,16 @@ import UIKit
 
 extension UIColor {
     
-    class func healthU_Orange() -> Self {
-        return self.init(red: 233.0 / 255.0, green: 88.0 / 255.0, blue: 28.0 / 255.0, alpha: 1.0)
+    class func eSports_LightGray() -> Self {
+        return self.init(red: 220.0 / 255.0, green: 220.0 / 255.0, blue: 220.0 / 255.0, alpha: 1.0)
     }
     
-    class func healthU_LightGrey() -> Self {
-        return self.init(red: 239.0 / 255.0, green: 239.0 / 255.0, blue: 244.0 / 255.0, alpha: 1.0)
+    class func eSports_DarkGray() -> Self {
+        return self.init(red: 66.0 / 255.0, green: 66.0 / 255.0, blue: 66.0 / 255.0, alpha: 1.0)
     }
     
-
-    class func randomColor() -> Self {
-        let randomRed:CGFloat = CGFloat.random()
-        let randomGreen:CGFloat = CGFloat.random()
-        let randomBlue:CGFloat = CGFloat.random()
-        
-        return self.init(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+    class func eSports_Blue() -> Self {
+        return self.init(red: 21.0 / 255.0, green: 123.0 / 255.0, blue: 251.0 / 255.0, alpha: 1.0)
     }
-}
 
-extension CGFloat {
-    static func random() -> CGFloat {
-        return CGFloat(arc4random()) / CGFloat(UInt32.max)
-    }
 }
