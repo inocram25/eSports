@@ -20,7 +20,6 @@ class GamesCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         
         imageView.adjustsImageWhenAncestorFocused = true
-        imageView.contentMode = .Center
         
     }
     

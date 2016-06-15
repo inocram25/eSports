@@ -87,6 +87,7 @@ extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDat
         return cell!
     }
     
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
