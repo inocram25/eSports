@@ -12,9 +12,9 @@ private let reuseIdentifier = "gamesCell"
 
 class MenuGamesViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
-    let toornamentClient = ToornamentController()
+    private let toornamentClient = ToornamentController()
     var disciplines = [Discipline]()
     
     override func viewDidLoad() {

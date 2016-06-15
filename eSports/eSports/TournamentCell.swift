@@ -10,13 +10,13 @@ import UIKit
 
 class TournamentCell: UITableViewCell {
     
-    @IBOutlet weak var mapImageView: UIImageView!
-    @IBOutlet weak var tournamentNameLabel: UILabel!
-    @IBOutlet weak var cityNameLabel: UILabel!
-    @IBOutlet weak var dateTournamentLabel: UILabel!
-    @IBOutlet weak var numberOfTeamsLabel: UILabel!
+    @IBOutlet private weak var mapImageView: UIImageView!
+    @IBOutlet private weak var tournamentNameLabel: UILabel!
+    @IBOutlet private weak var cityNameLabel: UILabel!
+    @IBOutlet private weak var dateTournamentLabel: UILabel!
+    @IBOutlet private weak var numberOfTeamsLabel: UILabel!
     
-    @IBOutlet weak var backView: TrapeziumView!
+    @IBOutlet private weak var backView: TrapeziumView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,8 +26,14 @@ class TournamentCell: UITableViewCell {
         
         tournamentNameLabel.text = tournament.fullName
         cityNameLabel.text = tournament.location
-        dateTournamentLabel.text = "\(tournament.dateStart) - \(tournament.dateEnd)" //FORMATAR DATA DE UM JEITO DECENTE
         numberOfTeamsLabel.text = "\(tournament.size) Teams"
-        mapImageView.image = UIImage(named: "br")
+        
+        if let country = tournament.country?.lowercaseString {
+            mapImageView.image = UIImage(named: country)
+        }
+        
+        if let dateStart = tournament.dateStart, dateEnd = tournament.dateEnd {
+            dateTournamentLabel.text = "\(dateStart) - \(dateEnd)"
+        }
     }
 }

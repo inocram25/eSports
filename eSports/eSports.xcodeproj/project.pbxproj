@@ -210,9 +210,9 @@
 			children = (
 				9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */,
 				9A3378391D0B27DC00C21D79 /* RegionViewController.swift */,
+				7FD88E241D119FA3009F6FD2 /* TournamentsViewController.swift */,
 				7FA1C5831D0F1E0F00CBA914 /* GamesViewController.swift */,
 				7FA1C5871D0F256D00CBA914 /* MatchViewController.swift */,
-				7FD88E241D119FA3009F6FD2 /* TournamentsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
