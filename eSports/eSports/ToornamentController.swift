@@ -121,8 +121,8 @@ private enum Router: URLRequestConvertible {
                 return ("disciplines", nil, .GET)
                 
             case .allTournamentsDiscipline(let id, let date, let sort):
-                let parameters = ["discipline" : id, "before_start" : date, "sort" : sort]
-                return ("tournaments", parameters, .GET)
+                let parameters = ["discipline" : id, "before_start" : date, "sort" : sort, "featured" : 1]
+                return ("tournaments", parameters as? [String : AnyObject], .GET)
                 
             case .tournamentInfoById(let id):
                 let parameters = ["with_streams" : 1]
