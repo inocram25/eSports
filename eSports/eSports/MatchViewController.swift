@@ -28,6 +28,7 @@ class MatchViewController: UIViewController {
 
         
         
+        
         // match id astralis x NRG = 5733266170cb4913198b4570
         //match id lg x splyce = 569f970c150ba039518b4583
         
@@ -49,8 +50,13 @@ class MatchViewController: UIViewController {
         //            }
         //        }
         
-        if let id = tournament?.id {
-            toornamentClient.getMatchesByTournament(id, hasResult: true, sort: "latest") { result in
+        if let tournament = tournament {
+            
+            tournamentTitleLabel.text = tournament.fullName
+            tournamentDateLabel.text = tournament.dateStart
+            tournamentCityLabel.text = tournament.location
+            
+            toornamentClient.getMatchesByTournament(tournament.id, hasResult: true, sort: "latest") { result in
                 if let matchs = result.value {
                     self.matchs = matchs
                 }
@@ -123,24 +129,6 @@ extension MatchViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(collectionView: UICollectionView, shouldUpdateFocusInContext context: UICollectionViewFocusUpdateContext) -> Bool {
         return true
-    }
-    
-    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
-        super.didUpdateFocusInContext(context, withAnimationCoordinator: coordinator)
-        
-        guard let nextFocusedView = context.nextFocusedView else { return }
-        
-        let layer = nextFocusedView.layer
-        layer.shadowColor = UIColor.blackColor().CGColor
-        layer.shadowOffset = CGSize(width: 0, height: 5)
-        layer.shadowOpacity = 0.4
-        layer.shadowRadius = 30
-        
-        if let previousView = context.previouslyFocusedView {
-            previousView.layer.shadowOffset = CGSizeMake(0,0)
-            previousView.layer.shadowOpacity = 0.0
-        }
-        
     }
     
 }
