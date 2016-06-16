@@ -26,6 +26,9 @@
 		9A3378381D09EED100C21D79 /* JSON+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378371D09EED100C21D79 /* JSON+Decodable.swift */; };
 		9A33783A1D0B27DC00C21D79 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378391D0B27DC00C21D79 /* RegionViewController.swift */; };
 		9A69C4331D13193C009B6206 /* NSDate+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69C4321D13193C009B6206 /* NSDate+Components.swift */; };
+		9A69C4351D132248009B6206 /* ReverseTrapeziumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69C4341D132248009B6206 /* ReverseTrapeziumView.swift */; };
+		9A69C4371D1324AB009B6206 /* WeekDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69C4361D1324AB009B6206 /* WeekDayCell.swift */; };
+		9A69C4391D132622009B6206 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69C4381D132622009B6206 /* MatchCell.swift */; };
 		9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7263711D09DF410011DE8E /* BorderedView.swift */; };
 		9A9748BA1D107C36002972BD /* TrapeziumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9748B91D107C36002972BD /* TrapeziumView.swift */; };
 		9A9748BC1D1087EB002972BD /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9748BB1D1087EB002972BD /* Region.swift */; };
@@ -72,6 +75,9 @@
 		9A3378371D09EED100C21D79 /* JSON+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Decodable.swift"; sourceTree = "<group>"; };
 		9A3378391D0B27DC00C21D79 /* RegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
 		9A69C4321D13193C009B6206 /* NSDate+Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Components.swift"; sourceTree = "<group>"; };
+		9A69C4341D132248009B6206 /* ReverseTrapeziumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseTrapeziumView.swift; sourceTree = "<group>"; };
+		9A69C4361D1324AB009B6206 /* WeekDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekDayCell.swift; sourceTree = "<group>"; };
+		9A69C4381D132622009B6206 /* MatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		9A7263711D09DF410011DE8E /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
 		9A9748B91D107C36002972BD /* TrapeziumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrapeziumView.swift; sourceTree = "<group>"; };
 		9A9748BB1D1087EB002972BD /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
@@ -204,6 +210,9 @@
 				7FA1C5891D0F3C4000CBA914 /* RegionCell.swift */,
 				9A9748B91D107C36002972BD /* TrapeziumView.swift */,
 				7FD88E261D11A35F009F6FD2 /* TournamentCell.swift */,
+				9A69C4341D132248009B6206 /* ReverseTrapeziumView.swift */,
+				9A69C4361D1324AB009B6206 /* WeekDayCell.swift */,
+				9A69C4381D132622009B6206 /* MatchCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -384,6 +393,7 @@
 				7FD88E251D119FA3009F6FD2 /* TournamentsViewController.swift in Sources */,
 				9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */,
 				7FD88E271D11A35F009F6FD2 /* TournamentCell.swift in Sources */,
+				9A69C4391D132622009B6206 /* MatchCell.swift in Sources */,
 				9A9748BC1D1087EB002972BD /* Region.swift in Sources */,
 				9A33783A1D0B27DC00C21D79 /* RegionViewController.swift in Sources */,
 				7FA1C5841D0F1E0F00CBA914 /* GamesViewController.swift in Sources */,
@@ -400,7 +410,9 @@
 				9A9748BA1D107C36002972BD /* TrapeziumView.swift in Sources */,
 				7FA1C5881D0F256D00CBA914 /* MatchViewController.swift in Sources */,
 				9ACAC6FD1D0754F100D160F8 /* Discipline.swift in Sources */,
+				9A69C4351D132248009B6206 /* ReverseTrapeziumView.swift in Sources */,
 				9A3378341D09EAEC00C21D79 /* Match.swift in Sources */,
+				9A69C4371D1324AB009B6206 /* WeekDayCell.swift in Sources */,
 				7F545C281D0E402C0001260B /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,8 +8,17 @@
 
 import UIKit
 
+private let collectionReuseIdentifier = "weekDayCell"
+private let tableReuseIdentifier = "matchCell"
+
+
 class MatchViewController: UIViewController {
 
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tournamentImageView: UIImageView!
+    @IBOutlet private weak var tournamentTitleLabel: UILabel!
+    @IBOutlet private weak var tournamentDateLabel: UILabel!
+    @IBOutlet private weak var tournamentCityLabel: UILabel!
     private let toornamentClient = ToornamentController()
     var matchs = [Match]()
     var tournament: Tournament?
@@ -45,13 +54,94 @@ class MatchViewController: UIViewController {
                 if let matchs = result.value {
                     self.matchs = matchs
                 }
-                self.matchs.forEach { m in
-                    print("\(m.opponents[0].participantName) vs \(m.opponents[1].participantName)")
-                    print("\(m.games[0].map)")
-                    print("\(m.id)")
-                }
+                self.tableView.reloadData()
             }
         }
 
     }
 }
+
+extension MatchViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return matchs.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(tableReuseIdentifier) as? MatchCell
+        cell?.configureCell(matchs[indexPath.row])
+        return cell!
+    }
+    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        performSegueWithIdentifier("tournamentSegue", sender: indexPath.row)
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//    }
+    
+}
+
+extension MatchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(collectionReuseIdentifier, forIndexPath: indexPath) as? WeekDayCell
+        cell?.configureCell("")
+        return cell!
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        let border = flowLayout.sectionInset.left + flowLayout.sectionInset.right
+        let itemWidth = flowLayout.itemSize.width + flowLayout.minimumInteritemSpacing
+        let totalWidth = collectionView.bounds.width - border
+        let numberOfCells = floor(totalWidth / itemWidth)
+        let usedSpace = itemWidth * numberOfCells
+        let bonusSpace = flowLayout.minimumInteritemSpacing * numberOfCells
+        let edgeInsets = floor((totalWidth - usedSpace + bonusSpace) / (numberOfCells + 1.0))
+        
+        return UIEdgeInsets(top: flowLayout.sectionInset.top, left: edgeInsets, bottom: flowLayout.sectionInset.bottom, right: edgeInsets)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+
+        
+    }
+    
+    func collectionView(collectionView: UICollectionView, shouldUpdateFocusInContext context: UICollectionViewFocusUpdateContext) -> Bool {
+        return true
+    }
+    
+    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+        super.didUpdateFocusInContext(context, withAnimationCoordinator: coordinator)
+        
+        guard let nextFocusedView = context.nextFocusedView else { return }
+        
+        let layer = nextFocusedView.layer
+        layer.shadowColor = UIColor.blackColor().CGColor
+        layer.shadowOffset = CGSize(width: 0, height: 5)
+        layer.shadowOpacity = 0.4
+        layer.shadowRadius = 30
+        
+        if let previousView = context.previouslyFocusedView {
+            previousView.layer.shadowOffset = CGSizeMake(0,0)
+            previousView.layer.shadowOpacity = 0.0
+        }
+        
+    }
+    
+}
+
