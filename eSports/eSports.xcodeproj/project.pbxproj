@@ -25,6 +25,7 @@
 		9A3378341D09EAEC00C21D79 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378331D09EAEC00C21D79 /* Match.swift */; };
 		9A3378381D09EED100C21D79 /* JSON+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378371D09EED100C21D79 /* JSON+Decodable.swift */; };
 		9A33783A1D0B27DC00C21D79 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378391D0B27DC00C21D79 /* RegionViewController.swift */; };
+		9A69C4331D13193C009B6206 /* NSDate+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69C4321D13193C009B6206 /* NSDate+Components.swift */; };
 		9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7263711D09DF410011DE8E /* BorderedView.swift */; };
 		9A9748BA1D107C36002972BD /* TrapeziumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9748B91D107C36002972BD /* TrapeziumView.swift */; };
 		9A9748BC1D1087EB002972BD /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9748BB1D1087EB002972BD /* Region.swift */; };
@@ -70,6 +71,7 @@
 		9A3378331D09EAEC00C21D79 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		9A3378371D09EED100C21D79 /* JSON+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Decodable.swift"; sourceTree = "<group>"; };
 		9A3378391D0B27DC00C21D79 /* RegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
+		9A69C4321D13193C009B6206 /* NSDate+Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Components.swift"; sourceTree = "<group>"; };
 		9A7263711D09DF410011DE8E /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
 		9A9748B91D107C36002972BD /* TrapeziumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrapeziumView.swift; sourceTree = "<group>"; };
 		9A9748BB1D1087EB002972BD /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				7F00E2F81D0885D700B875E8 /* UIImage+WithColor.swift */,
 				7F00E2F61D08859A00B875E8 /* UIColor+eSports.swift */,
 				9A3378371D09EED100C21D79 /* JSON+Decodable.swift */,
+				9A69C4321D13193C009B6206 /* NSDate+Components.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -211,8 +214,8 @@
 				9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */,
 				9A3378391D0B27DC00C21D79 /* RegionViewController.swift */,
 				7FD88E241D119FA3009F6FD2 /* TournamentsViewController.swift */,
-				7FA1C5831D0F1E0F00CBA914 /* GamesViewController.swift */,
 				7FA1C5871D0F256D00CBA914 /* MatchViewController.swift */,
+				7FA1C5831D0F1E0F00CBA914 /* GamesViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				7FA1C5861D0F1FBD00CBA914 /* Participant.swift in Sources */,
 				7F00E2F71D08859A00B875E8 /* UIColor+eSports.swift in Sources */,
 				9A3378301D09E29D00C21D79 /* Decodable.swift in Sources */,
+				9A69C4331D13193C009B6206 /* NSDate+Components.swift in Sources */,
 				9ACAC6FB1D07430000D160F8 /* GamesCollectionViewCell.swift in Sources */,
 				9A9748BA1D107C36002972BD /* TrapeziumView.swift in Sources */,
 				7FA1C5881D0F256D00CBA914 /* MatchViewController.swift in Sources */,

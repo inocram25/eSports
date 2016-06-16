@@ -162,7 +162,7 @@
                                 </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EU" translatesAutoresizingMaskIntoConstraints="NO" id="Js2-zP-Pjj">
-                                <rect key="frame" x="474" y="394" width="1336" height="656"/>
+                                <rect key="frame" x="474" y="384" width="1336" height="666"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -176,7 +176,7 @@
                             <constraint firstAttribute="trailing" secondItem="rNI-F7-7EZ" secondAttribute="trailing" id="Hbh-Dl-zyc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Js2-zP-Pjj" secondAttribute="trailing" constant="90" id="VOX-Zl-suu"/>
                             <constraint firstItem="rNI-F7-7EZ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.333" id="bzi-ad-LyX"/>
-                            <constraint firstItem="Js2-zP-Pjj" firstAttribute="top" secondItem="nAN-Ty-PZi" secondAttribute="bottom" constant="30" id="kmr-Aq-HFf"/>
+                            <constraint firstItem="Js2-zP-Pjj" firstAttribute="top" secondItem="nAN-Ty-PZi" secondAttribute="bottom" constant="20" id="kmr-Aq-HFf"/>
                             <constraint firstItem="rNI-F7-7EZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="p8H-Nf-0fb"/>
                             <constraint firstItem="I6M-rP-RaM" firstAttribute="top" secondItem="rNI-F7-7EZ" secondAttribute="bottom" constant="80" id="pa0-s4-mxh"/>
                         </constraints>
@@ -218,7 +218,7 @@
                                         <rect key="frame" x="0.0" y="54" width="961" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z1l-hm-sJB" id="EKj-C9-aeG">
-                                            <rect key="frame" x="0.0" y="0.0" width="961" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="945" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8V-Kw-8ow" customClass="TrapeziumView" customModule="eSports" customModuleProvider="target">
@@ -307,7 +307,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NorthAmerica" translatesAutoresizingMaskIntoConstraints="NO" id="xCh-fo-aSm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Europe" translatesAutoresizingMaskIntoConstraints="NO" id="xCh-fo-aSm">
                                 <rect key="frame" x="110" y="140" width="676" height="880"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="676" id="s0L-XC-yJa"/>
@@ -334,18 +334,38 @@
                     </view>
                     <connections>
                         <outlet property="regionImageView" destination="xCh-fo-aSm" id="61B-NO-MCQ"/>
+                        <outlet property="regionInitialsLabel" destination="l8B-G3-3Yr" id="6LA-Dl-0Wj"/>
+                        <outlet property="regionLabel" destination="egY-bn-qTO" id="8ES-B8-s5B"/>
                         <outlet property="tableView" destination="nz9-Vy-A1Y" id="jkf-nu-i0A"/>
+                        <segue destination="Car-qW-ECb" kind="show" identifier="matchSegue" id="0e2-7B-6sI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="At2-8f-Bg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5813" y="-296"/>
         </scene>
+        <!--Match View Controller-->
+        <scene sceneID="Q4X-Kk-Kqi">
+            <objects>
+                <viewController id="Car-qW-ECb" customClass="MatchViewController" customModule="eSports" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KEu-dL-3sG"/>
+                        <viewControllerLayoutGuide type="bottom" id="SrV-J9-wcA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MPE-gV-9kQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCh-cE-eL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3552" y="-296"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CS:GO_logo" width="2897" height="668"/>
         <image name="EU" width="781" height="416"/>
-        <image name="NorthAmerica" width="501" height="504"/>
+        <image name="Europe" width="552" height="266"/>
         <image name="csgo_poster" width="810" height="1080"/>
         <image name="so" width="1600" height="1067"/>
     </resources>

@@ -22,6 +22,11 @@ class TournamentCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        cityNameLabel.textColor = UIColor.eSports_LightGray()
+        dateTournamentLabel.textColor = UIColor.eSports_LightGray()
+        numberOfTeamsLabel.textColor = UIColor.eSports_LightGray()
+        
+        
         gradient.colors = [UIColor.eSports_DarkGray().colorWithAlphaComponent(0.5).CGColor, UIColor.eSports_LightGray().colorWithAlphaComponent(0.7).CGColor]
         gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
         gradient.endPoint = CGPoint(x: 1.0, y: 1.0)

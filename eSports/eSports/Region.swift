@@ -69,4 +69,22 @@ extension Region: CustomStringConvertible {
             return UIImage(named:"NorthAmerica")!
         }
     }
+    
+    var initials: String {
+        switch self {
+        case .Africa:
+            return "AF"
+        case .SouthAmerica:
+            return "SA"
+        case .Oceania:
+            return "OC"
+        case .Europe:
+            return "EU"
+        case .Asia:
+            return "AS"
+        case .NorthAmerica:
+            return "NA"
+            
+        }
+    }
 }

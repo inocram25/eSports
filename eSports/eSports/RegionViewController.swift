@@ -32,26 +32,6 @@ class RegionViewController: UIViewController {
             imageView.image = UIImage(named: "\(discipline.shortname!)_logo")
         }
         
-        // match id astralis x NRG = 5733266170cb4913198b4570
-        //match id lg x splyce = 569f970c150ba039518b4583
-                
-        // dreamhack austin = 569f96a9140ba0be3a8b4568 , 
-//        eleague group c = 5733261f150ba005238b4567
-        // ESL Cologne = 5668664d150ba0d80a8b45ed
-        
-//        toornamentClient.getParticipantsByTournament("5668664d150ba0d80a8b45ed") { result in
-//            
-//            if let participants = result.value {
-//                self.participants = participants
-//            }
-//            self.participants.forEach { p in
-//                
-//                print("\(p.name) ---- \(p.country)")
-//                p.lineup?.forEach { l in
-//                    print(l.name)
-//                }
-//            }
-//        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -62,6 +42,7 @@ class RegionViewController: UIViewController {
             vc?.region = regions[row]
         }
     }
+    
     
 }
 
@@ -89,6 +70,7 @@ extension RegionViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, didUpdateFocusInContext context: UITableViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         if let nextIndexPath = context.nextFocusedIndexPath {
             regionImageView.image = regions[nextIndexPath.row].imageHighlighted
+//            regionImageView.transform = CGAffineTransformMakeRotation((-10 * CGFloat(M_PI)) / 180.0)
 
         }
     }
