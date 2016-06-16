@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F00E2F71D08859A00B875E8 /* UIColor+eSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00E2F61D08859A00B875E8 /* UIColor+eSports.swift */; };
-		7F00E2F91D0885D700B875E8 /* UIImage+WithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00E2F81D0885D700B875E8 /* UIImage+WithColor.swift */; };
+		7F00E2F91D0885D700B875E8 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00E2F81D0885D700B875E8 /* UIImage+Color.swift */; };
 		7F545C281D0E402C0001260B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F545C271D0E402C0001260B /* Game.swift */; };
 		7FA1C5841D0F1E0F00CBA914 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1C5831D0F1E0F00CBA914 /* GamesViewController.swift */; };
 		7FA1C5861D0F1FBD00CBA914 /* Participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1C5851D0F1FBD00CBA914 /* Participant.swift */; };
@@ -53,7 +53,7 @@
 		42C6798CF8AD5CA26098DEE7 /* Pods_eSports.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E3823781F07CC9C418482A /* Pods-eSports.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSports.release.xcconfig"; path = "Pods/Target Support Files/Pods-eSports/Pods-eSports.release.xcconfig"; sourceTree = "<group>"; };
 		7F00E2F61D08859A00B875E8 /* UIColor+eSports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+eSports.swift"; sourceTree = "<group>"; };
-		7F00E2F81D0885D700B875E8 /* UIImage+WithColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+WithColor.swift"; sourceTree = "<group>"; };
+		7F00E2F81D0885D700B875E8 /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		7F545C271D0E402C0001260B /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		7FA1C5831D0F1E0F00CBA914 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		7FA1C5851D0F1FBD00CBA914 /* Participant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participant.swift; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 		9A4747BB1D07337200CF315D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7F00E2F81D0885D700B875E8 /* UIImage+WithColor.swift */,
+				7F00E2F81D0885D700B875E8 /* UIImage+Color.swift */,
 				7F00E2F61D08859A00B875E8 /* UIColor+eSports.swift */,
 				9A3378371D09EED100C21D79 /* JSON+Decodable.swift */,
 				9A69C4321D13193C009B6206 /* NSDate+Components.swift */,
@@ -398,7 +398,7 @@
 				9A33783A1D0B27DC00C21D79 /* RegionViewController.swift in Sources */,
 				7FA1C5841D0F1E0F00CBA914 /* GamesViewController.swift in Sources */,
 				9AA18E621D09D4FE001C87AA /* ToornamentController.swift in Sources */,
-				7F00E2F91D0885D700B875E8 /* UIImage+WithColor.swift in Sources */,
+				7F00E2F91D0885D700B875E8 /* UIImage+Color.swift in Sources */,
 				9ACAC6F71D07404F00D160F8 /* MenuGamesViewController.swift in Sources */,
 				9A0975B81D05EE1A000C78F5 /* AppDelegate.swift in Sources */,
 				7FA1C58A1D0F3C4000CBA914 /* RegionCell.swift in Sources */,

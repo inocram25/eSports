@@ -67,6 +67,19 @@ class MatchCell: UITableViewCell {
             teamBScoreLabel.text = "\(scoreB)"
         }
         
+        teamALogoImageView.image?.getColors { colors in
+            self.teamABackView.backgroundColor = colors.backgroundColor
+            self.teamALabel.textColor = colors.primaryColor
+            self.teamAScoreLabel.textColor = colors.detailColor
+        }
+        
+        teamBLogoImageView.image?.getColors { colors in
+            self.teamBBackView.backgroundColor = colors.backgroundColor
+            self.teamBLabel.textColor = colors.primaryColor
+            self.teamBScoreLabel.textColor = colors.detailColor
+
+        }
+        
     }
 
 }

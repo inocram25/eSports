@@ -415,6 +415,9 @@
                                             <constraint firstItem="Lff-qK-15F" firstAttribute="centerY" secondItem="kh6-xD-PUQ" secondAttribute="centerY" id="VYf-zz-lb0"/>
                                             <constraint firstItem="Lff-qK-15F" firstAttribute="centerX" secondItem="kh6-xD-PUQ" secondAttribute="centerX" id="Vnu-RQ-yNA"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="Lff-qK-15F" id="3wn-NG-Atg"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -430,7 +433,7 @@
                                         <rect key="frame" x="0.0" y="54" width="1560" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XOv-SC-XZU" id="a7M-Sl-r5n">
-                                            <rect key="frame" x="0.0" y="0.0" width="1560" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1544" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2E-Sd-1Dj" customClass="TrapeziumView" customModule="eSports" customModuleProvider="target">
