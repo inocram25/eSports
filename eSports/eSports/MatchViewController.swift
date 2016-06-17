@@ -47,6 +47,14 @@ class MatchViewController: UIViewController {
         }
 
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "gamesSegue" {
+            let row = sender as! Int
+            let vc = segue.destinationViewController as? GamesViewController
+            vc?.match = matchs[row]
+        }
+    }
 }
 
 extension MatchViewController: UITableViewDataSource, UITableViewDelegate {
@@ -65,10 +73,10 @@ extension MatchViewController: UITableViewDataSource, UITableViewDelegate {
         return cell!
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        performSegueWithIdentifier("tournamentSegue", sender: indexPath.row)
-//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("gamesSegue", sender: indexPath.row)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
     
 }
 

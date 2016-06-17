@@ -8,47 +8,145 @@
 
 import UIKit
 
+
+private let LeftTableReuseIdentifier = "leftTable"
+private let RightTableReuseIdentifier = "rightTable"
+
+enum gameResult: Int {
+    case win = 1
+    case draw = 2
+    case loose = 3
+    
+    var description: String {
+        switch self {
+        case .win:
+            return "Win"
+        case .draw:
+            return "Draw"
+        case .loose:
+            return "Loss"
+        }
+    }
+}
+
+
 class GamesViewController: UIViewController {
     
-    let toornamentClient = ToornamentController()
-    var games = [Game]()
+    private let toornamentClient = ToornamentController()
+    private var games = [Game]()
+    private var participants = [Participant]()
+    
     var match: Match?
-    var tournament: Tournament?
 
+    
+    @IBOutlet weak var tableViewLeft: UITableView!
+    @IBOutlet weak var tableViewRight: UITableView!
+    
 
+    //Team A
+    @IBOutlet weak var leftBackView: TrapeziumView!
+    @IBOutlet weak var leftLogoImageView: UIImageView!
+    @IBOutlet weak var leftTeamLabel: UILabel!
+    
+    var lineupA = [Lineup]()
+    
+    //Team B
+    @IBOutlet weak var rightBackView: ReverseTrapeziumView!
+    @IBOutlet weak var rightLogoImageView: UIImageView!
+    @IBOutlet weak var rightTeamLabel: UILabel!
+    
+    var lineupB = [Lineup]()
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // match id astralis x NRG = 5733266170cb4913198b4570
-        //match id lg x splyce = 569f970c150ba039518b4583
-        
-        // dreamhack austin = 569f96a9140ba0be3a8b4568 ,
-        //        eleague group c = 5733261f150ba005238b4567
-        // ESL Cologne = 5668664d150ba0d80a8b45ed
-        
-        //        toornamentClient.getParticipantsByTournament("5668664d150ba0d80a8b45ed") { result in
-        //
-        //            if let participants = result.value {
-        //                self.participants = participants
-        //            }
-        //            self.participants.forEach { p in
-        //
-        //                print("\(p.name) ---- \(p.country)")
-        //                p.lineup?.forEach { l in
-        //                    print(l.name)
-        //                }
-        //            }
-        //        }
-        
-        
-        toornamentClient.getGamesByMatch(tournamentId: "5733261f150ba005238b4567", matchId: "5733266170cb4913198b457c") { result in
-            if let games = result.value {
-                self.games = games
+        if let match = match {
+         
+            leftTeamLabel.text = match.opponents[0].participantName
+            rightTeamLabel.text = match.opponents[1].participantName
+            
+            let group = dispatch_group_create()
+            
+            dispatch_group_enter(group)
+            toornamentClient.getGamesByMatch(tournamentId: match.tournamentID, matchId: match.id) { result in
+                if let games = result.value {
+                    self.games = games
+                }
+                //1 = win, 2 = draw, 3 = loss.
+                
+                //example
+                self.games.forEach { g in
+                    //                    let x = gameResult.init(rawValue: g.opponents[0].result!)?.description
+                    //                    let y = gameResult.init(rawValue: g.opponents[1].result!)?.description
+                    //
+                    //                    print("Team A -- \(x)              Team B -- \(y)")
+                }
+                dispatch_group_leave(group)
             }
-            self.games.forEach { t in
-                print("\(t.opponents[0].participantName) ----- ")
+            
+            
+            
+            //Games lineup not working (API Beta), then we need to find lineup using other API request and compare the participant id.
+            dispatch_group_notify(group, dispatch_get_main_queue()) {
+                self.toornamentClient.getParticipantsByTournament(match.tournamentID) { result in
+                    
+                    if let participants = result.value {
+                        self.participants = participants
+                    }
+                    
+                    self.participants.forEach { p in
+                        
+                        if p.id == self.games[0].opponents[0].participantId {
+                            guard let lineup = p.lineup else { return }
+                            self.lineupA = lineup
+                        }
+                        
+                        if p.id == self.games[0].opponents[1].participantId {
+                            guard let lineup = p.lineup else { return }
+                            self.lineupB = lineup
+                        }
+                        
+                    }
+                    
+                    self.tableViewLeft.reloadData()
+                    self.tableViewRight.reloadData()
+                }
+                
             }
+            
+        }
+        
+    }
+    
+    
+
+}
+
+extension GamesViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableView == tableViewLeft ? lineupA.count : lineupB.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if tableView == tableViewLeft {
+            let cell = tableView.dequeueReusableCellWithIdentifier(LeftTableReuseIdentifier) as? ParticipantACell
+            cell?.configureCell(lineupA[indexPath.row])
+            return cell!
+
+        }
+        
+        else {
+            let cell = tableView.dequeueReusableCellWithIdentifier(RightTableReuseIdentifier) as? ParticipantBCell
+            cell?.configureCell(lineupB[indexPath.row])
+            return cell!
         }
     }
-
+    
 }
