@@ -15,6 +15,14 @@ class WeekDayCell: UICollectionViewCell {
      var gradient: CAGradientLayer = CAGradientLayer()
 
     override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        gradient.colors = [UIColor.eSports_DarkGray().CGColor, UIColor.eSports_LightGray().CGColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+        gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradient.frame = self.frame
+        
+        layer.insertSublayer(gradient, atIndex: 0)
     }
     
     func configureCell(date: String) {
@@ -34,12 +42,12 @@ class WeekDayCell: UICollectionViewCell {
             
             gradient.removeFromSuperlayer()
             
-            gradient.colors = [UIColor.eSports_Black().colorWithAlphaComponent(0.5).CGColor, UIColor.eSports_DarkBlue().colorWithAlphaComponent(1.0).CGColor]
+            gradient.colors = [UIColor.eSports_Black().CGColor, UIColor.eSports_DarkGray().CGColor]
             gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
             gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
-//            gradient.frame = backgroundView!.frame
+            gradient.frame = self.bounds
             
-            backgroundView?.layer.insertSublayer(gradient, atIndex: 0)
+            layer.insertSublayer(gradient, atIndex: 0)
             
             
             UIView.animateWithDuration(0.2) {
@@ -52,12 +60,12 @@ class WeekDayCell: UICollectionViewCell {
             
             gradient.removeFromSuperlayer()
             
-            gradient.colors = [UIColor.eSports_DarkGray().colorWithAlphaComponent(0.5).CGColor, UIColor.eSports_LightGray().colorWithAlphaComponent(0.7).CGColor]
+            gradient.colors = [UIColor.eSports_DarkGray().CGColor, UIColor.eSports_LightGray().CGColor]
             gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
             gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
-            gradient.frame = backgroundView!.frame
+            gradient.frame = self.bounds
             
-//            backgroundView?.layer.insertSublayer(gradient, atIndex: 0)
+            layer.insertSublayer(gradient, atIndex: 0)
             
             
             UIView.animateWithDuration(0.2) {

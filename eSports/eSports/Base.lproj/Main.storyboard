@@ -356,38 +356,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AHo-r2-2ev">
-                                <rect key="frame" x="90" y="60" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dota2_poster" translatesAutoresizingMaskIntoConstraints="NO" id="AHo-r2-2ev">
+                                <rect key="frame" x="90" y="60" width="350" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Efi-jc-GLN"/>
-                                    <constraint firstAttribute="width" constant="200" id="MF5-Xd-a5L"/>
+                                    <constraint firstAttribute="height" constant="350" id="Efi-jc-GLN"/>
+                                    <constraint firstAttribute="width" constant="350" id="MF5-Xd-a5L"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016 LCS NA Summer Split" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFE-ub-x39">
-                                <rect key="frame" x="354" y="60" width="757" height="72"/>
+                                <rect key="frame" x="504" y="60" width="1396" height="72"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 jun - 30 jun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIW-6l-PBM">
-                                <rect key="frame" x="354" y="142" width="182" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="504" y="162" width="260" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sao Paulo - Brasil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKC-nk-B9Q">
-                                <rect key="frame" x="354" y="203" width="262" height="41"/>
+                                <rect key="frame" x="504" y="239" width="262" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-aB-PAt">
-                                <rect key="frame" x="90" y="280" width="1740" height="100"/>
+                                <rect key="frame" x="90" y="430" width="1740" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="MDM-qa-PxN"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="30" minimumInteritemSpacing="30" id="cYn-rd-czz">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="30" minimumInteritemSpacing="0.0" id="cYn-rd-czz">
                                     <size key="itemSize" width="240" height="70"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -426,14 +426,14 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="MrA-1j-DGw">
-                                <rect key="frame" x="180" y="410" width="1560" height="610"/>
+                                <rect key="frame" x="180" y="560" width="1560" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchCell" rowHeight="150" id="XOv-SC-XZU" customClass="MatchCell" customModule="eSports" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="54" width="1560" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XOv-SC-XZU" id="a7M-Sl-r5n">
-                                            <rect key="frame" x="0.0" y="0.0" width="1544" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1560" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2E-Sd-1Dj" customClass="TrapeziumView" customModule="eSports" customModuleProvider="target">
@@ -472,13 +472,6 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84O-Ms-6E5" customClass="ReverseTrapeziumView" customModule="eSports" customModuleProvider="target">
                                                     <rect key="frame" x="725" y="20" width="835" height="130"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ae" translatesAutoresizingMaskIntoConstraints="NO" id="FtF-Mk-fY8">
-                                                            <rect key="frame" x="655" y="15" width="160" height="100"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="160" id="G82-K7-CGb"/>
-                                                                <constraint firstAttribute="height" constant="100" id="fe7-7a-MMD"/>
-                                                            </constraints>
-                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fnatic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjS-xq-Oka">
                                                             <rect key="frame" x="520" y="44" width="105" height="43"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
@@ -491,6 +484,13 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pain-gaming" translatesAutoresizingMaskIntoConstraints="NO" id="FtF-Mk-fY8">
+                                                            <rect key="frame" x="655" y="15" width="160" height="100"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="160" id="G82-K7-CGb"/>
+                                                                <constraint firstAttribute="height" constant="100" id="fe7-7a-MMD"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.39843998899999999" green="0.73869582899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -532,21 +532,23 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dKC-nk-B9Q" firstAttribute="top" secondItem="fIW-6l-PBM" secondAttribute="bottom" constant="24" id="2fJ-gb-skn"/>
                             <constraint firstItem="XFE-ub-x39" firstAttribute="leading" secondItem="AHo-r2-2ev" secondAttribute="trailing" constant="64" id="B5M-F2-Z0I"/>
                             <constraint firstAttribute="trailing" secondItem="MrA-1j-DGw" secondAttribute="trailing" constant="180" id="BjH-5T-O2T"/>
                             <constraint firstItem="MrA-1j-DGw" firstAttribute="top" secondItem="6Mb-aB-PAt" secondAttribute="bottom" constant="30" id="GkS-rj-JFC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XFE-ub-x39" secondAttribute="trailing" id="JK4-rx-rg5"/>
                             <constraint firstItem="SrV-J9-wcA" firstAttribute="top" secondItem="MrA-1j-DGw" secondAttribute="bottom" constant="60" id="OFG-Of-v5d"/>
                             <constraint firstItem="dKC-nk-B9Q" firstAttribute="leading" secondItem="XFE-ub-x39" secondAttribute="leading" id="Q5p-wD-STq"/>
-                            <constraint firstItem="fIW-6l-PBM" firstAttribute="centerY" secondItem="AHo-r2-2ev" secondAttribute="centerY" id="QiN-EX-edb"/>
                             <constraint firstItem="XFE-ub-x39" firstAttribute="top" secondItem="AHo-r2-2ev" secondAttribute="top" id="QzA-dI-SYC"/>
-                            <constraint firstItem="6Mb-aB-PAt" firstAttribute="leading" secondItem="MPE-gV-9kQ" secondAttribute="leading" constant="90" id="WYj-Bl-cds"/>
                             <constraint firstItem="6Mb-aB-PAt" firstAttribute="top" secondItem="AHo-r2-2ev" secondAttribute="bottom" constant="20" id="Zfz-13-zlZ"/>
+                            <constraint firstItem="6Mb-aB-PAt" firstAttribute="leading" secondItem="AHo-r2-2ev" secondAttribute="leading" id="apF-R0-FXV"/>
                             <constraint firstItem="AHo-r2-2ev" firstAttribute="leading" secondItem="MPE-gV-9kQ" secondAttribute="leading" constant="90" id="dwp-1x-Kn0"/>
                             <constraint firstItem="fIW-6l-PBM" firstAttribute="leading" secondItem="XFE-ub-x39" secondAttribute="leading" id="ey3-hv-eae"/>
                             <constraint firstAttribute="trailing" secondItem="6Mb-aB-PAt" secondAttribute="trailing" constant="90" id="glw-cV-HdG"/>
                             <constraint firstItem="MrA-1j-DGw" firstAttribute="leading" secondItem="MPE-gV-9kQ" secondAttribute="leading" constant="180" id="k9w-EX-Zqt"/>
+                            <constraint firstItem="fIW-6l-PBM" firstAttribute="top" secondItem="XFE-ub-x39" secondAttribute="bottom" constant="30" id="lkV-of-gfJ"/>
                             <constraint firstItem="AHo-r2-2ev" firstAttribute="top" secondItem="KEu-dL-3sG" secondAttribute="bottom" constant="60" id="uxq-hw-zUn"/>
                         </constraints>
                     </view>
@@ -567,9 +569,10 @@
         <image name="CS:GO_logo" width="2897" height="668"/>
         <image name="EU" width="781" height="416"/>
         <image name="Europe" width="552" height="266"/>
-        <image name="ae" width="1600" height="800"/>
         <image name="br" width="1600" height="1120"/>
         <image name="csgo_poster" width="810" height="1080"/>
+        <image name="dota2_poster" width="752" height="1063"/>
+        <image name="pain-gaming" width="377" height="377"/>
         <image name="so" width="1600" height="1067"/>
     </resources>
 </document>

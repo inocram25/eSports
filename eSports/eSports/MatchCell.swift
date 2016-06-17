@@ -23,6 +23,9 @@ class MatchCell: UITableViewCell {
     @IBOutlet weak var teamBBackView: ReverseTrapeziumView!
     
 
+    //test
+    let logoTest = ["biggods", "cnb", "pain-gaming", "intz", "keyd", "red-canids"]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -54,9 +57,13 @@ class MatchCell: UITableViewCell {
     }
 
     func configureCell(match: Match) {
+            
         let opponentA = match.opponents[0]
         let opponentB = match.opponents[1]
         
+        teamALogoImageView.image = UIImage(named: logoTest[Int(arc4random() % 6)])
+        teamBLogoImageView.image = UIImage(named: logoTest[Int(arc4random() % 6)])
+
         if let participantA = opponentA.participantName, scoreA = opponentA.score {
             teamALabel.text = participantA
             teamAScoreLabel.text = "\(scoreA)"
@@ -70,14 +77,13 @@ class MatchCell: UITableViewCell {
         teamALogoImageView.image?.getColors { colors in
             self.teamABackView.backgroundColor = colors.backgroundColor
             self.teamALabel.textColor = colors.primaryColor
-            self.teamAScoreLabel.textColor = colors.detailColor
+            self.teamAScoreLabel.textColor = colors.secondaryColor
         }
-        
+
         teamBLogoImageView.image?.getColors { colors in
             self.teamBBackView.backgroundColor = colors.backgroundColor
             self.teamBLabel.textColor = colors.primaryColor
-            self.teamBScoreLabel.textColor = colors.detailColor
-
+            self.teamBScoreLabel.textColor = colors.secondaryColor
         }
         
     }

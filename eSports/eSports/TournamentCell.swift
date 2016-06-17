@@ -86,7 +86,9 @@ class TournamentCell: UITableViewCell {
 
     func configureCell(tournament: Tournament) {
         
-        tournamentNameLabel.text = tournament.fullName
+        guard let name = tournament.fullName else { return }
+        
+        tournamentNameLabel.text = name
         cityNameLabel.text = tournament.location
         numberOfTeamsLabel.text = "\(tournament.size) Teams"
         
