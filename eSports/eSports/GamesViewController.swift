@@ -11,6 +11,7 @@ import UIKit
 
 private let LeftTableReuseIdentifier = "leftTable"
 private let RightTableReuseIdentifier = "rightTable"
+private let ResultTableReuseIdentifier = "gameResultCell"
 
 enum gameResult: Int {
     case win = 1
@@ -27,6 +28,17 @@ enum gameResult: Int {
             return "Loss"
         }
     }
+    
+    var color: UIColor {
+        switch self {
+        case .win:
+            return UIColor.greenColor()
+        case .draw:
+            return UIColor.yellowColor()
+        case .loose:
+            return UIColor.redColor()
+        }
+    }
 }
 
 
@@ -41,6 +53,7 @@ class GamesViewController: UIViewController {
     
     @IBOutlet weak var tableViewLeft: UITableView!
     @IBOutlet weak var tableViewRight: UITableView!
+    @IBOutlet weak var tableViewMiddle: UITableView!
     
 
     //Team A
@@ -74,18 +87,11 @@ class GamesViewController: UIViewController {
                 if let games = result.value {
                     self.games = games
                 }
-                //1 = win, 2 = draw, 3 = loss.
                 
-                //example
-                self.games.forEach { g in
-                    //                    let x = gameResult.init(rawValue: g.opponents[0].result!)?.description
-                    //                    let y = gameResult.init(rawValue: g.opponents[1].result!)?.description
-                    //
-                    //                    print("Team A -- \(x)              Team B -- \(y)")
-                }
+                self.tableViewMiddle.reloadData()
+                
                 dispatch_group_leave(group)
             }
-            
             
             
             //Games lineup not working (API Beta), then we need to find lineup using other API request and compare the participant id.
@@ -113,13 +119,9 @@ class GamesViewController: UIViewController {
                     self.tableViewLeft.reloadData()
                     self.tableViewRight.reloadData()
                 }
-                
             }
-            
         }
-        
     }
-    
     
 
 }
@@ -131,7 +133,7 @@ extension GamesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableView == tableViewLeft ? lineupA.count : lineupB.count
+        return tableView == tableViewLeft || tableView == tableViewRight ? lineupA.count : games.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -141,10 +143,14 @@ extension GamesViewController: UITableViewDataSource, UITableViewDelegate {
             return cell!
 
         }
-        
-        else {
+        else if tableView == tableViewRight {
             let cell = tableView.dequeueReusableCellWithIdentifier(RightTableReuseIdentifier) as? ParticipantBCell
             cell?.configureCell(lineupB[indexPath.row])
+            return cell!
+        }
+        else {
+            let cell = tableView.dequeueReusableCellWithIdentifier(ResultTableReuseIdentifier) as? GameResultCell
+            cell?.configureCell(games[indexPath.row])
             return cell!
         }
     }

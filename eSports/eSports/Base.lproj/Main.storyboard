@@ -736,11 +736,11 @@
                                     <constraint firstAttribute="height" constant="280" id="XSv-wC-C1A"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="ejN-Hm-bZy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="106" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="ejN-Hm-bZy">
                                 <rect key="frame" x="658" y="420" width="604" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="106" id="w04-iL-fxC">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameResultCell" rowHeight="106" id="w04-iL-fxC" customClass="GameResultCell" customModule="eSports" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="54" width="604" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w04-iL-fxC" id="JPw-ql-qFH">
@@ -748,32 +748,32 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvs-Fo-IfN">
-                                                    <rect key="frame" x="274" y="8" width="57" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="251" y="8" width="103" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgr-Co-AgI">
-                                                    <rect key="frame" x="199" y="59" width="30" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="－" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jn5-9r-6tA">
-                                                    <rect key="frame" x="294" y="59" width="17" height="21"/>
+                                                    <rect key="frame" x="294" y="65" width="17" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-hp-WdT">
-                                                    <rect key="frame" x="376" y="46" width="92" height="48"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                                    <rect key="frame" x="376" y="52" width="95" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgr-Co-AgI">
+                                                    <rect key="frame" x="151" y="52" width="78" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Jn5-9r-6tA" firstAttribute="top" secondItem="dvs-Fo-IfN" secondAttribute="bottom" constant="30" id="8RD-Y2-6yI"/>
+                                                <constraint firstItem="Jn5-9r-6tA" firstAttribute="top" secondItem="dvs-Fo-IfN" secondAttribute="bottom" constant="20" id="8RD-Y2-6yI"/>
                                                 <constraint firstAttribute="topMargin" secondItem="dvs-Fo-IfN" secondAttribute="top" id="TKc-hh-xNv"/>
                                                 <constraint firstItem="Jn5-9r-6tA" firstAttribute="centerX" secondItem="dvs-Fo-IfN" secondAttribute="centerX" id="Vze-k8-3AI"/>
                                                 <constraint firstItem="dvs-Fo-IfN" firstAttribute="centerX" secondItem="JPw-ql-qFH" secondAttribute="centerX" id="ivJ-E9-FdN"/>
@@ -783,8 +783,17 @@
                                                 <constraint firstItem="Jn5-9r-6tA" firstAttribute="leading" secondItem="Wgr-Co-AgI" secondAttribute="trailing" constant="65" id="wpw-4L-B7M"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="gameCountLabel" destination="dvs-Fo-IfN" id="QQp-1I-Z5E"/>
+                                            <outlet property="leftResultLabel" destination="Wgr-Co-AgI" id="HFd-MH-Evn"/>
+                                            <outlet property="rightResultLabel" destination="tNA-hp-WdT" id="9fY-1p-6EJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Mh0-mM-AGW" id="faz-7f-cRZ"/>
+                                    <outlet property="delegate" destination="Mh0-mM-AGW" id="Dpp-KI-tdh"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <constraints>
@@ -821,6 +830,7 @@
                         <outlet property="rightLogoImageView" destination="qi3-bK-gBM" id="ojA-3C-j4T"/>
                         <outlet property="rightTeamLabel" destination="AXt-Dz-eMa" id="8Ih-1O-NqS"/>
                         <outlet property="tableViewLeft" destination="Pvt-5v-Ra6" id="Hss-rB-QVT"/>
+                        <outlet property="tableViewMiddle" destination="ejN-Hm-bZy" id="Eei-df-0gx"/>
                         <outlet property="tableViewRight" destination="NYz-94-YQu" id="c7o-ce-72w"/>
                     </connections>
                 </viewController>
