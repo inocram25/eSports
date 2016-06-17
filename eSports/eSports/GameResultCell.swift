@@ -20,11 +20,15 @@ class GameResultCell: UITableViewCell {
     func configureCell(game: Game) {
         gameCountLabel.text = "Game \(game.number)"
         
-        leftResultLabel.text = gameResult(rawValue: game.opponents[0].result!)?.description
-        leftResultLabel.textColor = gameResult(rawValue: game.opponents[0].result!)?.color
+        if let result = game.opponents[0].result {
+            leftResultLabel.text = gameResult(rawValue: result)!.description
+            leftResultLabel.textColor = gameResult(rawValue: result)!.color
+        }
         
-        rightResultLabel.text = gameResult(rawValue: game.opponents[1].result!)?.description
-        rightResultLabel.textColor = gameResult(rawValue: game.opponents[1].result!)?.color
+        if let result = game.opponents[1].result {
+            rightResultLabel.text = gameResult(rawValue: result)!.description
+            rightResultLabel.textColor = gameResult(rawValue: result)!.color
+        }
 
     }
 

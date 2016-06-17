@@ -83,13 +83,13 @@ class GamesViewController: UIViewController {
             let group = dispatch_group_create()
             
             dispatch_group_enter(group)
-            toornamentClient.getGamesByMatch(tournamentId: match.tournamentID, matchId: match.id) { result in
+            toornamentClient.getGamesByMatch(tournamentId: match.tournamentID, matchId: match.id) {[weak self] result in
                 if let games = result.value {
-                    self.games = games
+                    self?.games = games
                 }
                 
-                self.tableViewMiddle.reloadData()
-                
+                self?.tableViewMiddle.reloadData()
+               
                 dispatch_group_leave(group)
             }
             
