@@ -32,11 +32,11 @@ class TournamentsViewController: UIViewController {
         print(currentDate)
         
         if let discipline = discipline {
-            toornamentClient.getTournaments(discipline.id, beforeStart: currentDate, sort: "date_desc") { result in
+            toornamentClient.getTournaments(discipline.id, beforeStart: currentDate, sort: "date_desc") { [weak self] result in
                 if let tournaments = result.value {
-                    self.tournaments = tournaments
+                    self?.tournaments = tournaments
                 }
-                self.tableView.reloadData()
+                self?.tableView.reloadData()
             }
         }
      

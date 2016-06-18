@@ -27,35 +27,35 @@ class MenuGamesViewController: UIViewController {
         let group = dispatch_group_create()
         
         dispatch_group_enter(group)
-        toornamentClient.getDisciplinesById("counterstrike_go") { result in
+        toornamentClient.getDisciplinesById("counterstrike_go") { [weak self] result in
             if var discipline = result.value {
                 discipline.image = UIImage(named: "csgo_poster")
-                self.disciplines.append(discipline)
+                self?.disciplines.append(discipline)
             }
             dispatch_group_leave(group)
         }
         
         dispatch_group_enter(group)
-        toornamentClient.getDisciplinesById("dota2") { result in
+        toornamentClient.getDisciplinesById("dota2") { [weak self] result in
             if var discipline = result.value {
                 discipline.image = UIImage(named: "dota2_poster")
-                self.disciplines.append(discipline)
+                self?.disciplines.append(discipline)
             }
             dispatch_group_leave(group)
 
         }
         
         dispatch_group_enter(group)
-        toornamentClient.getDisciplinesById("leagueoflegends") { result in
+        toornamentClient.getDisciplinesById("leagueoflegends") { [weak self] result in
             if var discipline = result.value {
                 discipline.image = UIImage(named: "lol_poster")
-                self.disciplines.append(discipline)
+                self?.disciplines.append(discipline)
             }
             dispatch_group_leave(group)
         }
         
-        dispatch_group_notify(group, dispatch_get_main_queue()) {
-            self.collectionView.reloadData()
+        dispatch_group_notify(group, dispatch_get_main_queue()) { [weak self] in
+            self?.collectionView.reloadData()
         }
     }
     

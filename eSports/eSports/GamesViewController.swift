@@ -95,29 +95,29 @@ class GamesViewController: UIViewController {
             
             
             //Games lineup not working (API Beta), then we need to find lineup using other API request and compare the participant id.
-            dispatch_group_notify(group, dispatch_get_main_queue()) {
-                self.toornamentClient.getParticipantsByTournament(match.tournamentID) { result in
+            dispatch_group_notify(group, dispatch_get_main_queue()) { [weak self] in
+                self?.toornamentClient.getParticipantsByTournament(match.tournamentID) { result in
                     
                     if let participants = result.value {
-                        self.participants = participants
+                        self?.participants = participants
                     }
                     
-                    self.participants.forEach { p in
+                    self?.participants.forEach { p in
                         
-                        if p.id == self.games[0].opponents[0].participantId {
+                        if p.id == self?.games[0].opponents[0].participantId {
                             guard let lineup = p.lineup else { return }
-                            self.lineupA = lineup
+                            self?.lineupA = lineup
                         }
                         
-                        if p.id == self.games[0].opponents[1].participantId {
+                        if p.id == self?.games[0].opponents[1].participantId {
                             guard let lineup = p.lineup else { return }
-                            self.lineupB = lineup
+                            self?.lineupB = lineup
                         }
                         
                     }
                     
-                    self.tableViewLeft.reloadData()
-                    self.tableViewRight.reloadData()
+                    self?.tableViewLeft.reloadData()
+                    self?.tableViewRight.reloadData()
                 }
             }
         }

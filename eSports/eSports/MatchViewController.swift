@@ -38,11 +38,11 @@ class MatchViewController: UIViewController {
             tournamentDateLabel.text = tournament.dateStart
             tournamentCityLabel.text = tournament.location
             
-            toornamentClient.getMatchesByTournament(tournament.id, hasResult: true, sort: "latest") { result in
+            toornamentClient.getMatchesByTournament(tournament.id, hasResult: true, sort: "latest") { [weak self] result in
                 if let matchs = result.value {
-                    self.matchs = matchs
+                    self?.matchs = matchs
                 }
-                self.tableView.reloadData()
+                self?.tableView.reloadData()
             }
         }
 
