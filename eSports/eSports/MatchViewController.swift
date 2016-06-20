@@ -19,6 +19,8 @@ class MatchViewController: UIViewController {
     @IBOutlet private weak var tournamentTitleLabel: UILabel!
     @IBOutlet private weak var tournamentDateLabel: UILabel!
     @IBOutlet private weak var tournamentCityLabel: UILabel!
+    @IBOutlet weak var headerView: UIView!
+    
     
     private let toornamentClient = ToornamentController()
     var matchs = [Match]()
@@ -26,16 +28,36 @@ class MatchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tournamentCityLabel.text = ""
+        tournamentDateLabel.text = ""
 
         tournamentTitleLabel.numberOfLines = 1
         tournamentTitleLabel.minimumScaleFactor = (1.0 / tournamentTitleLabel.font.pointSize)
         tournamentTitleLabel.adjustsFontSizeToFitWidth = true
         
+        headerView.backgroundColor = UIColor.eSports_DarkGray()
+        headerView.layer.shadowColor = UIColor.eSports_LightBlue().CGColor
+        headerView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        headerView.layer.shadowOpacity = 0.8
+        headerView.layer.shadowRadius = 10
+        
+        tournamentCityLabel.tintColor = UIColor.eSports_LightGray()
+        tournamentDateLabel.tintColor = UIColor.eSports_LightGray()
+        
         if let tournament = tournament {
             
-            tournamentTitleLabel.text = tournament.fullName
-            tournamentDateLabel.text = tournament.dateStart
-            tournamentCityLabel.text = tournament.location
+            tournamentTitleLabel.text = tournament.name
+            tournamentImageView.image = UIImage(named: "\(tournament.discipline)_icon")
+            print(tournament.name)
+            
+            if let dateStart = tournament.dateStart, dateEnd = tournament.dateEnd {
+                tournamentDateLabel.text = "\(dateStart) - \(dateEnd)"
+            }
+            
+            if let location = tournament.location, country = tournament.country {
+                tournamentCityLabel.text = "\(location) - \(country)"
+            }
             
             toornamentClient.getMatchesByTournament(tournament.id, hasResult: true, sort: "latest") { [weak self] result in
                 if let matchs = result.value {

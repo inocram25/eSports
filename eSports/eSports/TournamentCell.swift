@@ -22,9 +22,9 @@ class TournamentCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cityNameLabel.textColor = UIColor.eSports_LightGray()
-        dateTournamentLabel.textColor = UIColor.eSports_LightGray()
-        numberOfTeamsLabel.textColor = UIColor.eSports_LightGray()
+        cityNameLabel.textColor = UIColor.eSports_White()
+        dateTournamentLabel.textColor = UIColor.eSports_White()
+        numberOfTeamsLabel.textColor = UIColor.eSports_White()
         
         
         gradient.colors = [UIColor.eSports_DarkGray().colorWithAlphaComponent(0.5).CGColor, UIColor.eSports_LightGray().colorWithAlphaComponent(0.7).CGColor]
@@ -86,9 +86,7 @@ class TournamentCell: UITableViewCell {
 
     func configureCell(tournament: Tournament) {
         
-        guard let name = tournament.fullName else { return }
-        
-        tournamentNameLabel.text = name
+        tournamentNameLabel.text = tournament.name
         cityNameLabel.text = tournament.location
         numberOfTeamsLabel.text = "\(tournament.size) Teams"
         

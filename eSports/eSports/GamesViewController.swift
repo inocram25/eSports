@@ -91,7 +91,6 @@ class GamesViewController: UIViewController {
                     }
                     
                 }
-                self?.tableViewMiddle.reloadData()
                 dispatch_group_leave(group)
             }
             
@@ -120,6 +119,7 @@ class GamesViewController: UIViewController {
                     
                     self?.tableViewLeft.reloadData()
                     self?.tableViewRight.reloadData()
+                    self?.tableViewMiddle.reloadData()
                 }
             }
         }

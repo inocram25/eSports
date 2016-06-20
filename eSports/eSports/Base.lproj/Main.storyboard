@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="0YF-bo-Imd">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="0YF-bo-Imd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -363,71 +363,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dota2_poster" translatesAutoresizingMaskIntoConstraints="NO" id="AHo-r2-2ev">
-                                <rect key="frame" x="90" y="60" width="350" height="350"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="350" id="Efi-jc-GLN"/>
-                                    <constraint firstAttribute="width" constant="350" id="MF5-Xd-a5L"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016 LCS NA Summer Split" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFE-ub-x39">
-                                <rect key="frame" x="504" y="60" width="1396" height="74"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="60"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 jun - 30 jun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIW-6l-PBM">
-                                <rect key="frame" x="504" y="164" width="260" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sao Paulo - Brasil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKC-nk-B9Q">
-                                <rect key="frame" x="504" y="241" width="262" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-aB-PAt">
-                                <rect key="frame" x="90" y="430" width="1740" height="120"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="MDM-qa-PxN"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="30" minimumInteritemSpacing="0.0" id="cYn-rd-czz">
-                                    <size key="itemSize" width="260" height="90"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="weekDayCell" id="kh6-xD-PUQ" customClass="WeekDayCell" customModule="eSports" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="15" width="260" height="90"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="260" height="90"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dom, 08/08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lff-qK-15F">
-                                                    <rect key="frame" x="58" y="29" width="145" height="33"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" red="0.023529411760000001" green="0.023529411760000001" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="Lff-qK-15F" firstAttribute="centerY" secondItem="kh6-xD-PUQ" secondAttribute="centerY" id="VYf-zz-lb0"/>
-                                            <constraint firstItem="Lff-qK-15F" firstAttribute="centerX" secondItem="kh6-xD-PUQ" secondAttribute="centerX" id="Vnu-RQ-yNA"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="dateLabel" destination="Lff-qK-15F" id="3wn-NG-Atg"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="MrA-1j-DGw">
                                 <rect key="frame" x="180" y="450" width="1560" height="570"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -534,28 +469,62 @@
                                     <outlet property="delegate" destination="Car-qW-ECb" id="pp6-6z-cLC"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buJ-LU-BJ5">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="420"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016 LCS NA Summer Split" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFE-ub-x39">
+                                        <rect key="frame" x="454" y="60" width="630" height="74"/>
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="60"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dota2_poster" translatesAutoresizingMaskIntoConstraints="NO" id="AHo-r2-2ev">
+                                        <rect key="frame" x="90" y="60" width="300" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="59d-PA-f3G"/>
+                                            <constraint firstAttribute="height" constant="300" id="buy-oK-NnD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 jun - 30 jun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIW-6l-PBM">
+                                        <rect key="frame" x="454" y="164" width="222" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sao Paulo - Brasil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKC-nk-B9Q">
+                                        <rect key="frame" x="454" y="240" width="338" height="53"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="E9E-L3-4Vd"/>
+                                    <constraint firstItem="XFE-ub-x39" firstAttribute="top" secondItem="AHo-r2-2ev" secondAttribute="top" id="J2j-zz-wRr"/>
+                                    <constraint firstItem="fIW-6l-PBM" firstAttribute="top" secondItem="XFE-ub-x39" secondAttribute="bottom" constant="30" id="NJk-yz-YJa"/>
+                                    <constraint firstItem="XFE-ub-x39" firstAttribute="leading" secondItem="AHo-r2-2ev" secondAttribute="trailing" constant="64" id="TyR-Mo-K83"/>
+                                    <constraint firstItem="AHo-r2-2ev" firstAttribute="leading" secondItem="buJ-LU-BJ5" secondAttribute="leading" constant="90" id="WSW-p4-fdR"/>
+                                    <constraint firstItem="fIW-6l-PBM" firstAttribute="leading" secondItem="XFE-ub-x39" secondAttribute="leading" id="YrX-mW-y19"/>
+                                    <constraint firstItem="dKC-nk-B9Q" firstAttribute="top" secondItem="fIW-6l-PBM" secondAttribute="bottom" constant="30" id="h40-mS-Ttj"/>
+                                    <constraint firstItem="dKC-nk-B9Q" firstAttribute="leading" secondItem="XFE-ub-x39" secondAttribute="leading" id="rIv-S6-NiI"/>
+                                    <constraint firstItem="AHo-r2-2ev" firstAttribute="top" secondItem="buJ-LU-BJ5" secondAttribute="top" constant="60" id="vuM-Ds-Cbi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="dKC-nk-B9Q" firstAttribute="top" secondItem="fIW-6l-PBM" secondAttribute="bottom" constant="24" id="2fJ-gb-skn"/>
-                            <constraint firstItem="XFE-ub-x39" firstAttribute="leading" secondItem="AHo-r2-2ev" secondAttribute="trailing" constant="64" id="B5M-F2-Z0I"/>
+                            <constraint firstItem="MrA-1j-DGw" firstAttribute="top" secondItem="buJ-LU-BJ5" secondAttribute="bottom" constant="30" id="9fh-Dz-Ebm"/>
                             <constraint firstAttribute="trailing" secondItem="MrA-1j-DGw" secondAttribute="trailing" constant="180" id="BjH-5T-O2T"/>
-                            <constraint firstItem="MrA-1j-DGw" firstAttribute="top" secondItem="AHo-r2-2ev" secondAttribute="bottom" constant="40" id="JBa-Jb-zKm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XFE-ub-x39" secondAttribute="trailing" id="JK4-rx-rg5"/>
                             <constraint firstItem="SrV-J9-wcA" firstAttribute="top" secondItem="MrA-1j-DGw" secondAttribute="bottom" constant="60" id="OFG-Of-v5d"/>
-                            <constraint firstItem="dKC-nk-B9Q" firstAttribute="leading" secondItem="XFE-ub-x39" secondAttribute="leading" id="Q5p-wD-STq"/>
-                            <constraint firstItem="XFE-ub-x39" firstAttribute="top" secondItem="AHo-r2-2ev" secondAttribute="top" id="QzA-dI-SYC"/>
-                            <constraint firstItem="6Mb-aB-PAt" firstAttribute="top" secondItem="AHo-r2-2ev" secondAttribute="bottom" constant="20" id="Zfz-13-zlZ"/>
-                            <constraint firstItem="6Mb-aB-PAt" firstAttribute="leading" secondItem="AHo-r2-2ev" secondAttribute="leading" id="apF-R0-FXV"/>
-                            <constraint firstItem="AHo-r2-2ev" firstAttribute="leading" secondItem="MPE-gV-9kQ" secondAttribute="leading" constant="90" id="dwp-1x-Kn0"/>
-                            <constraint firstItem="fIW-6l-PBM" firstAttribute="leading" secondItem="XFE-ub-x39" secondAttribute="leading" id="ey3-hv-eae"/>
-                            <constraint firstAttribute="trailing" secondItem="6Mb-aB-PAt" secondAttribute="trailing" constant="90" id="glw-cV-HdG"/>
+                            <constraint firstAttribute="trailing" secondItem="buJ-LU-BJ5" secondAttribute="trailing" id="WWQ-rH-aRF"/>
+                            <constraint firstItem="buJ-LU-BJ5" firstAttribute="top" secondItem="KEu-dL-3sG" secondAttribute="bottom" id="X7C-wD-Tky"/>
+                            <constraint firstItem="buJ-LU-BJ5" firstAttribute="leading" secondItem="MPE-gV-9kQ" secondAttribute="leading" id="bGJ-gv-1O8"/>
                             <constraint firstItem="MrA-1j-DGw" firstAttribute="leading" secondItem="MPE-gV-9kQ" secondAttribute="leading" constant="180" id="k9w-EX-Zqt"/>
-                            <constraint firstItem="fIW-6l-PBM" firstAttribute="top" secondItem="XFE-ub-x39" secondAttribute="bottom" constant="30" id="lkV-of-gfJ"/>
-                            <constraint firstItem="AHo-r2-2ev" firstAttribute="top" secondItem="KEu-dL-3sG" secondAttribute="bottom" constant="60" id="uxq-hw-zUn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="headerView" destination="buJ-LU-BJ5" id="3H2-gq-9ck"/>
                         <outlet property="tableView" destination="MrA-1j-DGw" id="zWS-tC-mEh"/>
                         <outlet property="tournamentCityLabel" destination="dKC-nk-B9Q" id="IUT-Rs-xAw"/>
                         <outlet property="tournamentDateLabel" destination="fIW-6l-PBM" id="ly0-7P-yyQ"/>
