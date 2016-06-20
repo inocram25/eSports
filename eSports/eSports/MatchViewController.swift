@@ -27,7 +27,6 @@ class MatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         tournamentTitleLabel.numberOfLines = 1
         tournamentTitleLabel.minimumScaleFactor = (1.0 / tournamentTitleLabel.font.pointSize)
         tournamentTitleLabel.adjustsFontSizeToFitWidth = true
@@ -77,49 +76,6 @@ extension MatchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("gamesSegue", sender: indexPath.row)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
-    
-}
-
-extension MatchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(collectionReuseIdentifier, forIndexPath: indexPath) as? WeekDayCell
-        cell?.configureCell("")
-        return cell!
-    }
-    
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        
-        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-        let border = flowLayout.sectionInset.left + flowLayout.sectionInset.right
-        let itemWidth = flowLayout.itemSize.width + flowLayout.minimumInteritemSpacing
-        let totalWidth = collectionView.bounds.width - border
-        let numberOfCells = floor(totalWidth / itemWidth)
-        let usedSpace = itemWidth * numberOfCells
-        let bonusSpace = flowLayout.minimumInteritemSpacing * numberOfCells
-        let edgeInsets = floor((totalWidth - usedSpace + bonusSpace) / (numberOfCells + 1.0))
-        
-        return UIEdgeInsets(top: flowLayout.sectionInset.top, left: edgeInsets, bottom: flowLayout.sectionInset.bottom, right: edgeInsets)
-    }
-    
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-
-        
-    }
-    
-    func collectionView(collectionView: UICollectionView, shouldUpdateFocusInContext context: UICollectionViewFocusUpdateContext) -> Bool {
-        return true
     }
     
 }
