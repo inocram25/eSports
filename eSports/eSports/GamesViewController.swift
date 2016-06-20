@@ -83,9 +83,17 @@ class GamesViewController: UIViewController {
             let group = dispatch_group_create()
             
             dispatch_group_enter(group)
-            toornamentClient.getGamesByMatch(tournamentId: match.tournamentID, matchId: match.id) {[weak self] result in
+            toornamentClient.getGamesByMatch(tournamentId: match.tournamentID, matchId: match.id) { [weak self] result in
+                guard let s = self else { return }
                 if let games = result.value {
                     self?.games = games
+                }
+                
+                for i in 0..<s.games.count {
+                    if s.games[i].status == "pending" {
+                        s.games.removeAtIndex(i)
+                        print("removed")
+                    }
                 }
                 
                 self?.tableViewMiddle.reloadData()
