@@ -32,7 +32,7 @@ enum gameResult: Int {
     var color: UIColor {
         switch self {
         case .win:
-            return UIColor.greenColor()
+            return UIColor.eSports_Green()
         case .draw:
             return UIColor.yellowColor()
         case .loose:
@@ -68,11 +68,18 @@ class GamesViewController: UIViewController {
     @IBOutlet weak var rightLogoImageView: UIImageView!
     @IBOutlet weak var rightTeamLabel: UILabel!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
     var lineupB = [Lineup]()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicator.color = UIColor.eSports_DarkBlue()
+        activityIndicator.layer.hidden = false
+        activityIndicator.startAnimating()
         
         if let match = match {
          
@@ -120,6 +127,8 @@ class GamesViewController: UIViewController {
                     self?.tableViewLeft.reloadData()
                     self?.tableViewRight.reloadData()
                     self?.tableViewMiddle.reloadData()
+                    self?.activityIndicator.layer.hidden = true
+                    self?.activityIndicator.stopAnimating()
                 }
             }
         }

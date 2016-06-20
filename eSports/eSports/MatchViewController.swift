@@ -21,6 +21,9 @@ class MatchViewController: UIViewController {
     @IBOutlet private weak var tournamentCityLabel: UILabel!
     @IBOutlet weak var headerView: UIView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
     
     private let toornamentClient = ToornamentController()
     var matchs = [Match]()
@@ -28,6 +31,11 @@ class MatchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicator.color = UIColor.eSports_DarkBlue()
+        activityIndicator.layer.hidden = false
+        activityIndicator.startAnimating()
+
         
         tournamentCityLabel.text = ""
         tournamentDateLabel.text = ""
@@ -65,6 +73,8 @@ class MatchViewController: UIViewController {
                 }
                 
                 self?.tableView.reloadData()
+                self?.activityIndicator.layer.hidden = true
+                self?.activityIndicator.stopAnimating()
             }
         }
 

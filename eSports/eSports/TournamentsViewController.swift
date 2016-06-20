@@ -20,11 +20,19 @@ class TournamentsViewController: UIViewController {
     @IBOutlet private weak var regionInitialsLabel: UILabel!
     @IBOutlet private weak var regionLabel: UILabel!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var activityView: UIView!
+    
+    
     var discipline: Discipline?
     var region: Region?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicator.color = UIColor.eSports_DarkBlue()
+        activityIndicator.layer.hidden = false
+        activityIndicator.startAnimating()
         
         regionLabel.textColor = UIColor.eSports_MediumGray()
         
@@ -36,7 +44,11 @@ class TournamentsViewController: UIViewController {
                 if let tournaments = result.value {
                     self?.tournaments = tournaments
                 }
+                
+                self?.activityView.hidden = true
                 self?.tableView.reloadData()
+                self?.activityIndicator.layer.hidden = true
+                self?.activityIndicator.stopAnimating()
             }
         }
      
