@@ -35,7 +35,7 @@ class TournamentCell: UITableViewCell {
         backView.layer.insertSublayer(gradient, atIndex: 0)
         
         tournamentNameLabel.numberOfLines = 1
-        tournamentNameLabel.minimumScaleFactor = (8.0 / tournamentNameLabel.font.pointSize)
+        tournamentNameLabel.minimumScaleFactor = (30.0 / tournamentNameLabel.font.pointSize)
         tournamentNameLabel.adjustsFontSizeToFitWidth = true
     }
     

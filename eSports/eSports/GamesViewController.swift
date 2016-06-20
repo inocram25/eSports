@@ -71,7 +71,6 @@ class GamesViewController: UIViewController {
     var lineupB = [Lineup]()
 
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,24 +79,28 @@ class GamesViewController: UIViewController {
             leftTeamLabel.text = match.opponents[0].participantName
             rightTeamLabel.text = match.opponents[1].participantName
             
+            leftTeamLabel.numberOfLines = 1
+            leftTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
+            leftTeamLabel.adjustsFontSizeToFitWidth = true
+            
+            rightTeamLabel.numberOfLines = 1
+            rightTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
+            rightTeamLabel.adjustsFontSizeToFitWidth = true
+            
             let group = dispatch_group_create()
             
             dispatch_group_enter(group)
             toornamentClient.getGamesByMatch(tournamentId: match.tournamentID, matchId: match.id) { [weak self] result in
-                guard let s = self else { return }
                 if let games = result.value {
-                    self?.games = games
-                }
-                
-                for i in 0..<s.games.count {
-                    if s.games[i].status == "pending" {
-                        s.games.removeAtIndex(i)
-                        print("removed")
+                    
+                    games.forEach { game in
+                        if game.status != "pending" {
+                            self?.games.append(game)
+                        }
                     }
+                    
                 }
-                
                 self?.tableViewMiddle.reloadData()
-               
                 dispatch_group_leave(group)
             }
             

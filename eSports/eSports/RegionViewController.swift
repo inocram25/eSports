@@ -28,7 +28,6 @@ class RegionViewController: UIViewController {
         super.viewDidLoad()
         
         if let discipline = discipline {
-            print(discipline.shortname)
             imageView.image = UIImage(named: "\(discipline.shortname!)_logo")
         }
         
