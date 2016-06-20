@@ -23,6 +23,7 @@
 		9A0975BF1D05EE1B000C78F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A0975BE1D05EE1B000C78F5 /* Assets.xcassets */; };
 		9A0975CA1D05EE1B000C78F5 /* eSportsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0975C91D05EE1B000C78F5 /* eSportsTests.swift */; };
 		9A221BB51D14990900E6CE3F /* GameResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A221BB41D14990900E6CE3F /* GameResultCell.swift */; };
+		9A221BB71D184B8200E6CE3F /* ufonts.com_impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A221BB61D184B1400E6CE3F /* ufonts.com_impact.ttf */; };
 		9A3378301D09E29D00C21D79 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33782F1D09E29D00C21D79 /* Decodable.swift */; };
 		9A3378321D09EAC400C21D79 /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378311D09EAC400C21D79 /* Tournament.swift */; };
 		9A3378341D09EAEC00C21D79 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378331D09EAEC00C21D79 /* Match.swift */; };
@@ -75,6 +76,7 @@
 		9A0975C91D05EE1B000C78F5 /* eSportsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eSportsTests.swift; sourceTree = "<group>"; };
 		9A0975CB1D05EE1B000C78F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A221BB41D14990900E6CE3F /* GameResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameResultCell.swift; sourceTree = "<group>"; };
+		9A221BB61D184B1400E6CE3F /* ufonts.com_impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ufonts.com_impact.ttf; sourceTree = "<group>"; };
 		9A33782F1D09E29D00C21D79 /* Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
 		9A3378311D09EAC400C21D79 /* Tournament.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		9A3378331D09EAEC00C21D79 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				9A33782F1D09E29D00C21D79 /* Decodable.swift */,
 				9A0975BE1D05EE1B000C78F5 /* Assets.xcassets */,
 				9A0975C01D05EE1B000C78F5 /* Info.plist */,
+				9A221BB61D184B1400E6CE3F /* ufonts.com_impact.ttf */,
 			);
 			path = eSports;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A221BB71D184B8200E6CE3F /* ufonts.com_impact.ttf in Resources */,
 				9A0975BF1D05EE1B000C78F5 /* Assets.xcassets in Resources */,
 				9A0975BD1D05EE1A000C78F5 /* Main.storyboard in Resources */,
 			);

@@ -24,7 +24,7 @@ class MatchCell: UITableViewCell {
     
 
     //test
-    let logoTest = ["biggods", "cnb", "pain-gaming", "intz", "keyd", "red-canids"]
+    let logoTest = ["biggods", "cnb", "pain-gaming", "intz", "keyd", "red-canids","navi"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,8 +61,8 @@ class MatchCell: UITableViewCell {
         let opponentA = match.opponents[0]
         let opponentB = match.opponents[1]
         
-        teamALogoImageView.image = UIImage(named: logoTest[Int(arc4random() % 6)])
-        teamBLogoImageView.image = UIImage(named: logoTest[Int(arc4random() % 6)])
+        teamALogoImageView.image = UIImage(named: logoTest[Int(arc4random() % 7)])
+        teamBLogoImageView.image = UIImage(named: logoTest[Int(arc4random() % 7)])
 
         if let participantA = opponentA.participantName, scoreA = opponentA.score {
             teamALabel.text = participantA
@@ -74,17 +74,17 @@ class MatchCell: UITableViewCell {
             teamBScoreLabel.text = "\(scoreB)"
         }
         
-        teamALogoImageView.image?.getColors { colors in
-            self.teamABackView.backgroundColor = colors.backgroundColor
-            self.teamALabel.textColor = colors.primaryColor
-            self.teamAScoreLabel.textColor = colors.secondaryColor
-        }
-
-        teamBLogoImageView.image?.getColors { colors in
-            self.teamBBackView.backgroundColor = colors.backgroundColor
-            self.teamBLabel.textColor = colors.primaryColor
-            self.teamBScoreLabel.textColor = colors.secondaryColor
-        }
+//        teamALogoImageView.image?.getColors {[weak self] colors in
+//            self?.teamABackView.backgroundColor = colors.backgroundColor
+//            self?.teamALabel.textColor = colors.primaryColor
+//            self?.teamAScoreLabel.textColor = colors.secondaryColor
+//        }
+//
+//        teamBLogoImageView.image?.getColors {[weak self] colors in
+//            self?.teamBBackView.backgroundColor = colors.backgroundColor
+//            self?.teamBLabel.textColor = colors.primaryColor
+//            self?.teamBScoreLabel.textColor = colors.secondaryColor
+//        }
         
     }
 

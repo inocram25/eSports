@@ -74,6 +74,7 @@ extension TournamentsViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("matchSegue", sender: indexPath.row)
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
     

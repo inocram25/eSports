@@ -42,6 +42,7 @@ class MatchViewController: UIViewController {
                 if let matchs = result.value {
                     self?.matchs = matchs
                 }
+                
                 self?.tableView.reloadData()
             }
         }

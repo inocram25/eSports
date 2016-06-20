@@ -5,6 +5,13 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ufonts.com_impact.ttf">
+            <string>Impact</string>
+            <string>Impact</string>
+            <string>Impact</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Menu Games View Controller-->
         <scene sceneID="tmd-aO-2j3">
@@ -218,7 +225,7 @@
                                         <rect key="frame" x="0.0" y="54" width="961" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z1l-hm-sJB" id="EKj-C9-aeG">
-                                            <rect key="frame" x="0.0" y="0.0" width="961" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="945" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8V-Kw-8ow" customClass="TrapeziumView" customModule="eSports" customModuleProvider="target">
@@ -364,24 +371,24 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016 LCS NA Summer Split" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFE-ub-x39">
-                                <rect key="frame" x="504" y="60" width="1396" height="72"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <rect key="frame" x="504" y="60" width="1396" height="74"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 jun - 30 jun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIW-6l-PBM">
-                                <rect key="frame" x="504" y="162" width="260" height="53"/>
+                                <rect key="frame" x="504" y="164" width="260" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sao Paulo - Brasil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKC-nk-B9Q">
-                                <rect key="frame" x="504" y="239" width="262" height="41"/>
+                                <rect key="frame" x="504" y="241" width="262" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-aB-PAt">
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-aB-PAt">
                                 <rect key="frame" x="90" y="430" width="1740" height="120"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -426,7 +433,7 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="MrA-1j-DGw">
-                                <rect key="frame" x="180" y="580" width="1560" height="440"/>
+                                <rect key="frame" x="180" y="450" width="1560" height="570"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchCell" rowHeight="150" id="XOv-SC-XZU" customClass="MatchCell" customModule="eSports" customModuleProvider="target">
@@ -440,8 +447,8 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="835" height="130"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luminosity Gaming" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTg-pz-vFv">
-                                                            <rect key="frame" x="210" y="44" width="327" height="43"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                                            <rect key="frame" x="210" y="43" width="282" height="44"/>
+                                                            <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="36"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -473,8 +480,8 @@
                                                     <rect key="frame" x="725" y="20" width="835" height="130"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fnatic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjS-xq-Oka">
-                                                            <rect key="frame" x="520" y="44" width="105" height="43"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                                            <rect key="frame" x="535" y="43" width="90" height="44"/>
+                                                            <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="36"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -537,7 +544,7 @@
                             <constraint firstItem="dKC-nk-B9Q" firstAttribute="top" secondItem="fIW-6l-PBM" secondAttribute="bottom" constant="24" id="2fJ-gb-skn"/>
                             <constraint firstItem="XFE-ub-x39" firstAttribute="leading" secondItem="AHo-r2-2ev" secondAttribute="trailing" constant="64" id="B5M-F2-Z0I"/>
                             <constraint firstAttribute="trailing" secondItem="MrA-1j-DGw" secondAttribute="trailing" constant="180" id="BjH-5T-O2T"/>
-                            <constraint firstItem="MrA-1j-DGw" firstAttribute="top" secondItem="6Mb-aB-PAt" secondAttribute="bottom" constant="30" id="GkS-rj-JFC"/>
+                            <constraint firstItem="MrA-1j-DGw" firstAttribute="top" secondItem="AHo-r2-2ev" secondAttribute="bottom" constant="40" id="JBa-Jb-zKm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XFE-ub-x39" secondAttribute="trailing" id="JK4-rx-rg5"/>
                             <constraint firstItem="SrV-J9-wcA" firstAttribute="top" secondItem="MrA-1j-DGw" secondAttribute="bottom" constant="60" id="OFG-Of-v5d"/>
                             <constraint firstItem="dKC-nk-B9Q" firstAttribute="leading" secondItem="XFE-ub-x39" secondAttribute="leading" id="Q5p-wD-STq"/>
@@ -748,24 +755,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvs-Fo-IfN">
-                                                    <rect key="frame" x="251" y="8" width="103" height="37"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                                    <rect key="frame" x="239" y="8" width="127" height="46"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="－" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jn5-9r-6tA">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="－" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jn5-9r-6tA">
                                                     <rect key="frame" x="294" y="65" width="17" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-hp-WdT">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-hp-WdT">
                                                     <rect key="frame" x="376" y="52" width="95" height="48"/>
                                                     <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgr-Co-AgI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgr-Co-AgI">
                                                     <rect key="frame" x="151" y="52" width="78" height="48"/>
                                                     <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                                     <color key="textColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>

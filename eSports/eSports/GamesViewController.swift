@@ -76,16 +76,7 @@ class GamesViewController: UIViewController {
         
         if let match = match {
          
-            leftTeamLabel.text = match.opponents[0].participantName
-            rightTeamLabel.text = match.opponents[1].participantName
-            
-            leftTeamLabel.numberOfLines = 1
-            leftTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
-            leftTeamLabel.adjustsFontSizeToFitWidth = true
-            
-            rightTeamLabel.numberOfLines = 1
-            rightTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
-            rightTeamLabel.adjustsFontSizeToFitWidth = true
+            configureHeader()
             
             let group = dispatch_group_create()
             
@@ -132,6 +123,28 @@ class GamesViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    
+    func configureHeader() {
+        
+        leftTeamLabel.text = match!.opponents[0].participantName
+        rightTeamLabel.text = match!.opponents[1].participantName
+        
+        leftTeamLabel.numberOfLines = 1
+        leftTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
+        leftTeamLabel.adjustsFontSizeToFitWidth = true
+        leftLogoImageView.image = UIImage(named: "navi")
+        leftLogoImageView.image?.getColors { colors in
+            self.leftBackView.backgroundColor = colors.backgroundColor
+        }
+        
+        
+        rightTeamLabel.numberOfLines = 1
+        rightTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
+        rightTeamLabel.adjustsFontSizeToFitWidth = true
+//        rightLogoImageView.image = UIImage(named: "kabum")
+        
     }
     
 
