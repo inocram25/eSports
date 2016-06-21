@@ -31,7 +31,8 @@ class TournamentsViewController: UIViewController {
                              "EU":["AL","AT","AX","BA","BG","BY","CZ","DE","DK","EE","EU","FI","FO","FR","FX","GB","GG","GR","HR","IE","IM","IT","JE","LI","LU","LV","MD","ME","MK","MT","NL","PL","RO","RU","SI","SK","SM","TR","UA","VA","AD","LT","MC","NO","BE","PT","CH","PY","RS","SE","SJ","ES","GI","HU","IS"],
                              "AS":["AE","AF","AM","AP","AZ","BD","BH","BN","BT","CC","CN","CX","CY","GE","HK","ID","IL","IN","IO","IQ","IR","JO","JP","KG","KH","KP","KR","KW","KZ","LA","LB","LK","MM","MN","MO","MV","MY","NP","OM","PH","PK","PS","QA","SA","SG","SY","TH","TJ","TL","TM","TW","UZ","VN","YE"],
                              "AF":["AO","BF","BI","BJ","BW","CD","CF","CG","CI","CM","CV","DJ","DZ","EG","EH","ER","ET","GA","GH","GM","GN","GQ","GW","KE","KM","LR","LS","LY","MA","MG","ML","MR","MU","MW","MZ","NA","NE","NG","RE","RW","SC","SD","SH","SL","SN","SO","ST","SZ","TD","TG","TN","TZ","UG","YT","ZA","ZW","ZM"],
-                             "OC":["AS","AU","CK","FJ","FM","GU","KI","MH","MP","NC","NF","NR","NU","NZ","PF","PG","PN","PW","SB","TK","TO","TV","UM","VU","WF","WS"]]
+                             "OC":["AS","AU","CK","FJ","FM","GU","KI","MH","MP","NC","NF","NR","NU","NZ","PF","PG","PN","PW","SB","TK","TO","TV","UM","VU","WF","WS"],
+                             "SA": ["AR","BO","BR","CL","CO","EC","FK","GF","GY","PE","PY","SR","UY","VE"]]
     
     func tournamentsByContinent(continent:String, tournamentList: [Tournament]) -> [Tournament] {
         
@@ -63,6 +64,8 @@ class TournamentsViewController: UIViewController {
                 }
                 
                 if let initial = self!.region?.initials, tournaments = self?.tournaments {
+                    print(initial)
+                    print(tournaments.count)
                     let x = self?.tournamentsByContinent(initial, tournamentList: tournaments)
                     
                     print(x?.count)
