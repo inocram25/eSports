@@ -19,11 +19,8 @@ class MatchViewController: UIViewController {
     @IBOutlet private weak var tournamentTitleLabel: UILabel!
     @IBOutlet private weak var tournamentDateLabel: UILabel!
     @IBOutlet private weak var tournamentCityLabel: UILabel!
-    @IBOutlet weak var headerView: UIView!
-    
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
-    
+    @IBOutlet private weak var headerView: UIView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     private let toornamentClient = ToornamentController()
     var matchs = [Match]()
@@ -32,26 +29,8 @@ class MatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        activityIndicator.color = UIColor.eSports_DarkBlue()
-        activityIndicator.layer.hidden = false
         activityIndicator.startAnimating()
-
-        
-        tournamentCityLabel.text = ""
-        tournamentDateLabel.text = ""
-
-        tournamentTitleLabel.numberOfLines = 1
-        tournamentTitleLabel.minimumScaleFactor = (1.0 / tournamentTitleLabel.font.pointSize)
-        tournamentTitleLabel.adjustsFontSizeToFitWidth = true
-        
-        headerView.backgroundColor = UIColor.eSports_DarkGray()
-        headerView.layer.shadowColor = UIColor.eSports_LightBlue().CGColor
-        headerView.layer.shadowOffset = CGSize(width: 0, height: 3)
-        headerView.layer.shadowOpacity = 0.8
-        headerView.layer.shadowRadius = 10
-        
-        tournamentCityLabel.tintColor = UIColor.eSports_LightGray()
-        tournamentDateLabel.tintColor = UIColor.eSports_LightGray()
+        configureUI()
         
         if let tournament = tournament {
             
@@ -73,11 +52,30 @@ class MatchViewController: UIViewController {
                 }
                 
                 self?.tableView.reloadData()
-                self?.activityIndicator.layer.hidden = true
                 self?.activityIndicator.stopAnimating()
             }
         }
-
+    }
+    
+    func configureUI() {
+        activityIndicator.color = UIColor.eSports_DarkBlue()
+        activityIndicator.hidesWhenStopped = true
+        
+        tournamentCityLabel.text = ""
+        tournamentDateLabel.text = ""
+        
+        tournamentTitleLabel.numberOfLines = 1
+        tournamentTitleLabel.minimumScaleFactor = (1.0 / tournamentTitleLabel.font.pointSize)
+        tournamentTitleLabel.adjustsFontSizeToFitWidth = true
+        
+        headerView.backgroundColor = UIColor.eSports_DarkGray()
+        headerView.layer.shadowColor = UIColor.eSports_LightBlue().CGColor
+        headerView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        headerView.layer.shadowOpacity = 0.8
+        headerView.layer.shadowRadius = 10
+        
+        tournamentCityLabel.tintColor = UIColor.eSports_LightGray()
+        tournamentDateLabel.tintColor = UIColor.eSports_LightGray()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

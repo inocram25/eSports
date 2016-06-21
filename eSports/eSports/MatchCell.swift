@@ -10,27 +10,22 @@ import UIKit
 
 class MatchCell: UITableViewCell {
     
-    @IBOutlet weak var teamALogoImageView: UIImageView!
-    @IBOutlet weak var teamALabel: UILabel!
-    @IBOutlet weak var teamAScoreLabel: UILabel!
+    //Team A
+    @IBOutlet private weak var teamALogoImageView: UIImageView!
+    @IBOutlet private weak var teamALabel: UILabel!
+    @IBOutlet private weak var teamAScoreLabel: UILabel!
 
-
-    @IBOutlet weak var teamBLogoImageView: UIImageView!
-    @IBOutlet weak var teamBLabel: UILabel!
-    @IBOutlet weak var teamBScoreLabel: UILabel!
+    //Team B
+    @IBOutlet private weak var teamBLogoImageView: UIImageView!
+    @IBOutlet private weak var teamBLabel: UILabel!
+    @IBOutlet private weak var teamBScoreLabel: UILabel!
     
-    @IBOutlet weak var teamABackView: TrapeziumView!
-    @IBOutlet weak var teamBBackView: ReverseTrapeziumView!
-    
-
-    //test
-    let logoTest = ["biggods", "cnb", "pain-gaming", "intz", "keyd", "red-canids","navi"]
+    @IBOutlet private weak var teamABackView: TrapeziumView!
+    @IBOutlet private weak var teamBBackView: ReverseTrapeziumView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-    
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         
@@ -57,35 +52,28 @@ class MatchCell: UITableViewCell {
     }
 
     func configureCell(match: Match) {
+        
+        if match.opponents.count == 2 {
+            let opponentA = match.opponents[0]
+            let opponentB = match.opponents[1]
+
+            if let participantA = opponentA.participantName, scoreA = opponentA.score {
+                teamALabel.text = participantA
+                teamAScoreLabel.text = "\(scoreA)"
+            }
             
-        let opponentA = match.opponents[0]
-        let opponentB = match.opponents[1]
-        
-        teamALogoImageView.image = UIImage(named: logoTest[Int(arc4random() % 7)])
-        teamBLogoImageView.image = UIImage(named: logoTest[Int(arc4random() % 7)])
+            if let participantB = opponentB.participantName, scoreB = opponentB.score {
+                teamBLabel.text = participantB
+                teamBScoreLabel.text = "\(scoreB)"
+            }
+            
+            teamABackView.backgroundColor = UIColor.eSports_LogoBlue()
+            teamALabel.textColor = UIColor.whiteColor()
+            teamAScoreLabel.textColor = UIColor.whiteColor()
 
-        if let participantA = opponentA.participantName, scoreA = opponentA.score {
-            teamALabel.text = participantA
-            teamAScoreLabel.text = "\(scoreA)"
+            teamBBackView.backgroundColor = UIColor.eSports_LogoRed()
+            teamBLabel.textColor = UIColor.eSports_LogoYellow()
+            teamBScoreLabel.textColor = UIColor.eSports_LogoYellow()
         }
-        
-        if let participantB = opponentB.participantName, scoreB = opponentB.score {
-            teamBLabel.text = participantB
-            teamBScoreLabel.text = "\(scoreB)"
-        }
-        
-//        teamALogoImageView.image?.getColors {[weak self] colors in
-//            self?.teamABackView.backgroundColor = colors.backgroundColor
-//            self?.teamALabel.textColor = colors.primaryColor
-//            self?.teamAScoreLabel.textColor = colors.secondaryColor
-//        }
-//
-//        teamBLogoImageView.image?.getColors {[weak self] colors in
-//            self?.teamBBackView.backgroundColor = colors.backgroundColor
-//            self?.teamBLabel.textColor = colors.primaryColor
-//            self?.teamBScoreLabel.textColor = colors.secondaryColor
-//        }
-        
     }
-
 }

@@ -9,9 +9,6 @@
 import UIKit
 
 extension UIColor {
-    
-    
-    
     //Gray
     class func eSports_LightGray() -> Self {
         return self.init(red: 150.0 / 255.0, green: 150.0 / 255.0, blue: 150.0 / 255.0, alpha: 1.0)
@@ -26,8 +23,6 @@ extension UIColor {
     }
     
     
-    
-    
     //Blue
     class func eSports_DarkBlue() -> Self {
         return self.init(red: 0 / 255.0, green: 114 / 255.0, blue: 188 / 255.0, alpha: 1.0)
@@ -37,7 +32,9 @@ extension UIColor {
         return self.init(red: 0 / 255.0, green: 158 / 255.0, blue: 226 / 255.0, alpha: 1.0)
     }
     
-    
+    class func eSports_LogoBlue() -> Self {
+        return self.init(red: 32.0 / 255.0, green: 88.0 / 255.0, blue: 134.0 / 255.0, alpha: 1.0)
+    }
     
     
     //Red
@@ -48,24 +45,27 @@ extension UIColor {
     class func eSports_LightRed() -> Self {
         return self.init(red: 168 / 255.0, green: 30 / 255.0, blue: 34 / 255.0, alpha: 1.0)
     }
+    
+    class func eSports_LogoRed() -> Self {
+        return self.init(red: 191.0 / 255.0, green: 30.0 / 255.0, blue: 45.0 / 255.0, alpha: 1.0)
+    }
 
     
-    
-    //Black
     class func eSports_Black() -> Self {
         return self.init(red: 20 / 255.0, green: 20 / 255.0, blue: 20 / 255.0, alpha: 1.0)
     }
     
     
-    //White
     class func eSports_White() -> Self {
         return self.init(red: 220.0 / 255.0, green: 220.0 / 255.0, blue: 220.0 / 255.0, alpha: 1.0)
     }
     
-    
-    //Green
     class func eSports_Green() -> Self {
         return self.init(red: 114.0 / 255.0, green: 190.0 / 255.0, blue: 73.0 / 255.0, alpha: 1.0)
+    }
+    
+    class func eSports_LogoYellow() -> Self {
+        return self.init(red: 245.0 / 255.0, green: 182.0 / 255.0, blue: 107.0 / 255.0, alpha: 1.0)
     }
 
 }

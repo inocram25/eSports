@@ -10,7 +10,6 @@
 		7F00E2F71D08859A00B875E8 /* UIColor+eSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00E2F61D08859A00B875E8 /* UIColor+eSports.swift */; };
 		7F00E2F91D0885D700B875E8 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F00E2F81D0885D700B875E8 /* UIImage+Color.swift */; };
 		7F545C281D0E402C0001260B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F545C271D0E402C0001260B /* Game.swift */; };
-		7F6E840F1D1884630031A2F6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6E840E1D1884630031A2F6 /* DataManager.swift */; };
 		7F6E84111D1884A70031A2F6 /* Countries+Continents.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F6E84101D1884A70031A2F6 /* Countries+Continents.json */; };
 		7F6E84131D1885A30031A2F6 /* Continent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6E84121D1885A30031A2F6 /* Continent.swift */; };
 		7F9780091D146FAF0025B9FE /* ParticipantACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9780081D146FAF0025B9FE /* ParticipantACell.swift */; };
@@ -62,7 +61,6 @@
 		7F00E2F61D08859A00B875E8 /* UIColor+eSports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+eSports.swift"; sourceTree = "<group>"; };
 		7F00E2F81D0885D700B875E8 /* UIImage+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		7F545C271D0E402C0001260B /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		7F6E840E1D1884630031A2F6 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		7F6E84101D1884A70031A2F6 /* Countries+Continents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Countries+Continents.json"; sourceTree = "<group>"; };
 		7F6E84121D1885A30031A2F6 /* Continent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Continent.swift; sourceTree = "<group>"; };
 		7F9780081D146FAF0025B9FE /* ParticipantACell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantACell.swift; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 			children = (
 				7F6E84101D1884A70031A2F6 /* Countries+Continents.json */,
 				9A0975BB1D05EE1A000C78F5 /* Main.storyboard */,
-				7F6E840E1D1884630031A2F6 /* DataManager.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -412,7 +409,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A3378321D09EAC400C21D79 /* Tournament.swift in Sources */,
-				7F6E840F1D1884630031A2F6 /* DataManager.swift in Sources */,
 				9A3378381D09EED100C21D79 /* JSON+Decodable.swift in Sources */,
 				7FD88E251D119FA3009F6FD2 /* TournamentsViewController.swift in Sources */,
 				9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */,

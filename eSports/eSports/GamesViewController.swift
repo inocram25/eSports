@@ -101,7 +101,6 @@ class GamesViewController: UIViewController {
                 dispatch_group_leave(group)
             }
             
-            
             //Games lineup not working (API Beta), then we need to find lineup using other API request and compare the participant id.
             dispatch_group_notify(group, dispatch_get_main_queue()) { [weak self] in
                 self?.toornamentClient.getParticipantsByTournament(match.tournamentID) { result in
@@ -134,29 +133,24 @@ class GamesViewController: UIViewController {
         }
     }
     
-    
     func configureHeader() {
-        
-        leftTeamLabel.text = match!.opponents[0].participantName
-        rightTeamLabel.text = match!.opponents[1].participantName
-        
-        leftTeamLabel.numberOfLines = 1
-        leftTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
-        leftTeamLabel.adjustsFontSizeToFitWidth = true
-        leftLogoImageView.image = UIImage(named: "navi")
-        leftLogoImageView.image?.getColors { colors in
-            self.leftBackView.backgroundColor = colors.backgroundColor
+        if let match = match {
+            leftTeamLabel.text = match.opponents[0].participantName
+            rightTeamLabel.text = match.opponents[1].participantName
+            
+            leftTeamLabel.numberOfLines = 1
+            leftTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
+            leftTeamLabel.adjustsFontSizeToFitWidth = true
+            leftTeamLabel.textColor = UIColor.whiteColor()
+            leftBackView.backgroundColor = UIColor.eSports_LogoBlue()
+            
+            rightTeamLabel.numberOfLines = 1
+            rightTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
+            rightTeamLabel.adjustsFontSizeToFitWidth = true
+            rightTeamLabel.textColor = UIColor.eSports_LogoYellow()
+            rightBackView.backgroundColor = UIColor.eSports_LogoRed()
         }
-        
-        
-        rightTeamLabel.numberOfLines = 1
-        rightTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
-        rightTeamLabel.adjustsFontSizeToFitWidth = true
-//        rightLogoImageView.image = UIImage(named: "kabum")
-        
     }
-    
-
 }
 
 extension GamesViewController: UITableViewDataSource, UITableViewDelegate {

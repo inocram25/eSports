@@ -21,114 +21,98 @@ class TournamentsViewController: UIViewController {
     @IBOutlet private weak var regionInitialsLabel: UILabel!
     @IBOutlet private weak var regionLabel: UILabel!
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var activityView: UIView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var activityView: UIView!
     
     
     var discipline: Discipline?
     var region: Region?
     
-    var continentDictionary = ["NA": [""],
-                               "EU":[""],
-                               "AS":[""],
-                               "AF":[""],
-                               "OC":[""],
-                               "SA":[""]]
+    private var continentDictionary = ["NA": [""], "EU":[""], "AS":[""],
+                                       "AF":[""], "OC":[""], "SA":[""]]
     
-//    let countryDictionary = ["NA":["AG","AI","AN","AW","BB","BL","BM","BS","BZ","CA","CR","CU","DM","DO","GD","GL","GP","GT","HN","HT","JM","KN","KY","LC","MF","MQ","MS","MX","NI","PM","PR","SV","TC","TT","VC","VG","VI","PA","US"],
-//                             "EU":["AL","AT","AX","BA","BG","BY","CZ","DE","DK","EE","EU","FI","FO","FR","FX","GB","GG","GR","HR","IE","IM","IT","JE","LI","LU","LV","MD","ME","MK","MT","NL","PL","RO","RU","SI","SK","SM","TR","UA","VA","AD","LT","MC","NO","BE","PT","CH","PY","RS","SE","SJ","ES","GI","HU","IS"],
-//                             "AS":["AE","AF","AM","AP","AZ","BD","BH","BN","BT","CC","CN","CX","CY","GE","HK","ID","IL","IN","IO","IQ","IR","JO","JP","KG","KH","KP","KR","KW","KZ","LA","LB","LK","MM","MN","MO","MV","MY","NP","OM","PH","PK","PS","QA","SA","SG","SY","TH","TJ","TL","TM","TW","UZ","VN","YE"],
-//                             "AF":["AO","BF","BI","BJ","BW","CD","CF","CG","CI","CM","CV","DJ","DZ","EG","EH","ER","ET","GA","GH","GM","GN","GQ","GW","KE","KM","LR","LS","LY","MA","MG","ML","MR","MU","MW","MZ","NA","NE","NG","RE","RW","SC","SD","SH","SL","SN","SO","ST","SZ","TD","TG","TN","TZ","UG","YT","ZA","ZW","ZM"],
-//                             "OC":["AS","AU","CK","FJ","FM","GU","KI","MH","MP","NC","NF","NR","NU","NZ","PF","PG","PN","PW","SB","TK","TO","TV","UM","VU","WF","WS"],
-//                             "SA": ["AR","BO","BR","CL","CO","EC","FK","GF","GY","PE","PY","SR","UY","VE"]]
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        readContinentsJSON()
+        
+        activityIndicator.color = UIColor.eSports_DarkBlue()
+        activityIndicator.layer.hidden = false
+        activityIndicator.startAnimating()
+        
+        let currentDate = "\(NSDate().year)-\(NSDate().month)-\(NSDate().day)"
+        
+        if let discipline = discipline {
+            toornamentClient.getTournaments(discipline.id, beforeStart: currentDate, sort: "date_desc") { [weak self] result in
+                
+                guard let weakSelf = self else { return }
+                
+                if let tournaments = result.value {
+                    self?.tournaments = tournaments
+                }
+                
+                if let initial = weakSelf.region?.initials {
+                    //Get filtered tournaments for each region
+                    self?.tournaments = weakSelf.tournamentsByContinent(initial, tournamentList: weakSelf.tournaments)
+                }
+                
+                self?.activityView.hidden = true
+                self?.tableView.reloadData()
+                self?.activityIndicator.layer.hidden = true
+                self?.activityIndicator.stopAnimating()
+            }
+        }
+     
+        if let region = region {
+            regionImageView.image = region.image
+            regionLabel.text = region.description
+            regionLabel.textColor = UIColor.eSports_MediumGray()
+            regionInitialsLabel.text = "\(region.initials)|"
+        }
+    }
     
     func tournamentsByContinent(continent:String, tournamentList: [Tournament]) -> [Tournament] {
-        
-        return tournamentList.filter { (tournament) -> Bool in
+        return tournamentList.filter { tournament in
             if let country = tournament.country {
-//                print("\(country) -- \(continent) = \(countryDictionary[continent]!.contains(country))")
                 return continentDictionary[continent]!.contains(country)
             }
             return false
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    
+    func readContinentsJSON() {
         let url = NSBundle.mainBundle().URLForResource("Countries+Continents", withExtension: "json")
         let data = NSData(contentsOfURL: url!)
         
         do {
             let object = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
-                let json = JSON(object)
+            let json = JSON(object)
             
-                for (_,subJson):(String, JSON) in json {
-                    
-                    if subJson["continent"].stringValue == "NA" {
-                        continentDictionary["NA"]!.append(subJson["country"].stringValue)
-                    }
-                    if subJson["continent"].stringValue == "EU" {
-                        continentDictionary["EU"]!.append(subJson["country"].stringValue)
-                    }
-                    if subJson["continent"].stringValue == "AS" {
-                        continentDictionary["AS"]!.append(subJson["country"].stringValue)
-                    }
-                    if subJson["continent"].stringValue == "AF" {
-                        continentDictionary["AF"]!.append(subJson["country"].stringValue)
-                    }
-                    if subJson["continent"].stringValue == "SA" {
-                        continentDictionary["SA"]!.append(subJson["country"].stringValue)
-                    }
-                    
+            for (_,subJson):(String, JSON) in json {
+                
+                if subJson["continent"].stringValue == "NA" {
+                    continentDictionary["NA"]!.append(subJson["country"].stringValue)
                 }
+                else if subJson["continent"].stringValue == "EU" {
+                    continentDictionary["EU"]!.append(subJson["country"].stringValue)
+                }
+                else if subJson["continent"].stringValue == "AS" {
+                    continentDictionary["AS"]!.append(subJson["country"].stringValue)
+                }
+                else if subJson["continent"].stringValue == "AF" {
+                    continentDictionary["AF"]!.append(subJson["country"].stringValue)
+                }
+                else if subJson["continent"].stringValue == "SA" {
+                    continentDictionary["SA"]!.append(subJson["country"].stringValue)
+                }
+            }
             
         } catch {
-            // Handle Error
-        }
-        
-        activityIndicator.color = UIColor.eSports_DarkBlue()
-        activityIndicator.layer.hidden = false
-        activityIndicator.startAnimating()
-        
-        regionLabel.textColor = UIColor.eSports_MediumGray()
-        
-        let currentDate = "\(NSDate().year)-\(NSDate().month)-\(NSDate().day)"
-//        print(currentDate)
-        
-        if let discipline = discipline {
-            toornamentClient.getTournaments(discipline.id, beforeStart: currentDate, sort: "date_desc") { [weak self] result in
-                if let tournaments = result.value {
-                    self?.tournaments = tournaments
-                }
-                
-                if let initial = self!.region?.initials, tournaments = self?.tournaments {
-//                    print(initial)
-//                    print(tournaments.count)
-                    let x = self?.tournamentsByContinent(initial, tournamentList: tournaments)
-                    
-//                    print(x?.count)
-                    
-                    self?.tournaments = x!
-                }
-                
-                
-                self?.activityView.hidden = true
-                self?.tableView.reloadData()
-                self?.activityIndicator.layer.hidden = true
-                self?.activityIndicator.stopAnimating()
-                
-            }
-        }
-        
-        
-     
-        if let region = region {
-            regionImageView.image = region.image
-            regionLabel.text = region.description
-            regionInitialsLabel.text = "\(region.initials)|"
+            print("Error to read Continents JSON")
         }
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "matchSegue" {
@@ -159,7 +143,4 @@ extension TournamentsViewController: UITableViewDataSource, UITableViewDelegate 
         performSegueWithIdentifier("matchSegue", sender: indexPath.row)
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
-    
-    
 }
-

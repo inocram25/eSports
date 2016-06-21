@@ -20,10 +20,6 @@ class MenuGamesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        
         let group = dispatch_group_create()
         
         dispatch_group_enter(group)
@@ -66,16 +62,13 @@ class MenuGamesViewController: UIViewController {
             vc?.discipline = cell?.currentGame
         }
     }
-
 }
-
 
 extension MenuGamesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
-    
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return disciplines.count > 3 ? 3 : disciplines.count

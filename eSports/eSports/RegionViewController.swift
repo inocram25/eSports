@@ -22,7 +22,7 @@ class RegionViewController: UIViewController {
     var discipline: Discipline?
     var participants = [Participant]()
     
-    let regions = [Region.NorthAmerica, Region.Europe, Region.Asia, Region.Africa, Region.SouthAmerica, Region.Oceania]
+    private let regions = [Region.NorthAmerica, Region.Europe, Region.Asia, Region.Africa, Region.SouthAmerica, Region.Oceania]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="0YF-bo-Imd">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="0YF-bo-Imd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -413,7 +413,7 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="br" translatesAutoresizingMaskIntoConstraints="NO" id="UeF-oS-Iml">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultTeam" translatesAutoresizingMaskIntoConstraints="NO" id="UeF-oS-Iml">
                                                             <rect key="frame" x="20" y="15" width="160" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="9cu-Kw-pnf"/>
@@ -446,7 +446,7 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pain-gaming" translatesAutoresizingMaskIntoConstraints="NO" id="FtF-Mk-fY8">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultTeamRed" translatesAutoresizingMaskIntoConstraints="NO" id="FtF-Mk-fY8">
                                                             <rect key="frame" x="655" y="15" width="160" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="160" id="G82-K7-CGb"/>
@@ -583,8 +583,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beI-fi-jVI" customClass="ReverseTrapeziumView" customModule="eSports" customModuleProvider="target">
                                 <rect key="frame" x="1132" y="160" width="768" height="170"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXt-Dz-eMa">
-                                        <rect key="frame" x="75" y="55" width="303" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabum" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXt-Dz-eMa">
+                                        <rect key="frame" x="90" y="55" width="288" height="60"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                         <color key="textColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -593,10 +593,10 @@
                                 <color key="backgroundColor" red="1" green="0.32047435337894742" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="AXt-Dz-eMa" firstAttribute="centerY" secondItem="beI-fi-jVI" secondAttribute="centerY" id="KEf-0O-9oN"/>
-                                    <constraint firstItem="AXt-Dz-eMa" firstAttribute="leading" secondItem="beI-fi-jVI" secondAttribute="leading" constant="75" id="SSp-aw-mzl"/>
+                                    <constraint firstItem="AXt-Dz-eMa" firstAttribute="leading" secondItem="beI-fi-jVI" secondAttribute="leading" constant="90" id="SSp-aw-mzl"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kabum" translatesAutoresizingMaskIntoConstraints="NO" id="qi3-bK-gBM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultTeamRed" translatesAutoresizingMaskIntoConstraints="NO" id="qi3-bK-gBM">
                                 <rect key="frame" x="1520" y="90" width="320" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Cza-9Z-WgU"/>
@@ -607,7 +607,7 @@
                                 <rect key="frame" x="20" y="160" width="768" height="170"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RCA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLE-CZ-ul8">
-                                        <rect key="frame" x="390" y="55" width="303" height="60"/>
+                                        <rect key="frame" x="390" y="55" width="288" height="60"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
                                         <color key="textColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -616,7 +616,7 @@
                                 <color key="backgroundColor" red="0.67169744320000002" green="0.071986917380000001" blue="0.1132549269" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="dLE-CZ-ul8" firstAttribute="centerY" secondItem="DfN-H5-bOT" secondAttribute="centerY" id="9Ps-Y8-0WV"/>
-                                    <constraint firstAttribute="trailing" secondItem="dLE-CZ-ul8" secondAttribute="trailing" constant="75" id="oQe-K5-bkd"/>
+                                    <constraint firstAttribute="trailing" secondItem="dLE-CZ-ul8" secondAttribute="trailing" constant="90" id="oQe-K5-bkd"/>
                                     <constraint firstAttribute="height" constant="170" id="tvv-8Z-5Ed"/>
                                 </constraints>
                             </view>
@@ -732,7 +732,7 @@
                                     <outlet property="delegate" destination="Mh0-mM-AGW" id="UW8-2j-KAy"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-canids" translatesAutoresizingMaskIntoConstraints="NO" id="Fzp-aC-quI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultTeam" translatesAutoresizingMaskIntoConstraints="NO" id="Fzp-aC-quI">
                                 <rect key="frame" x="80" y="90" width="320" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="S8n-KJ-z25"/>
@@ -849,14 +849,13 @@
     </scenes>
     <resources>
         <image name="CS:GO_logo" width="2897" height="668"/>
+        <image name="DefaultTeam" width="445" height="500"/>
+        <image name="DefaultTeamRed" width="445" height="500"/>
         <image name="EU" width="781" height="416"/>
         <image name="Europe" width="552" height="266"/>
         <image name="br" width="1600" height="1120"/>
         <image name="csgo_poster" width="810" height="1080"/>
         <image name="dota2_poster" width="752" height="1063"/>
-        <image name="kabum" width="400" height="320"/>
-        <image name="pain-gaming" width="377" height="377"/>
-        <image name="red-canids" width="400" height="320"/>
         <image name="se" width="1600" height="1000"/>
         <image name="so" width="1600" height="1067"/>
     </resources>
