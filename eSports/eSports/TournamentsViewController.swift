@@ -26,6 +26,23 @@ class TournamentsViewController: UIViewController {
     
     var discipline: Discipline?
     var region: Region?
+    
+    let countryDictionary = ["NA":["AG","AI","AN","AW","BB","BL","BM","BS","BZ","CA","CR","CU","DM","DO","GD","GL","GP","GT","HN","HT","JM","KN","KY","LC","MF","MQ","MS","MX","NI","PM","PR","SV","TC","TT","VC","VG","VI","PA","US"],
+                             "EU":["AL","AT","AX","BA","BG","BY","CZ","DE","DK","EE","EU","FI","FO","FR","FX","GB","GG","GR","HR","IE","IM","IT","JE","LI","LU","LV","MD","ME","MK","MT","NL","PL","RO","RU","SI","SK","SM","TR","UA","VA","AD","LT","MC","NO","BE","PT","CH","PY","RS","SE","SJ","ES","GI","HU","IS"],
+                             "AS":["AE","AF","AM","AP","AZ","BD","BH","BN","BT","CC","CN","CX","CY","GE","HK","ID","IL","IN","IO","IQ","IR","JO","JP","KG","KH","KP","KR","KW","KZ","LA","LB","LK","MM","MN","MO","MV","MY","NP","OM","PH","PK","PS","QA","SA","SG","SY","TH","TJ","TL","TM","TW","UZ","VN","YE"],
+                             "AF":["AO","BF","BI","BJ","BW","CD","CF","CG","CI","CM","CV","DJ","DZ","EG","EH","ER","ET","GA","GH","GM","GN","GQ","GW","KE","KM","LR","LS","LY","MA","MG","ML","MR","MU","MW","MZ","NA","NE","NG","RE","RW","SC","SD","SH","SL","SN","SO","ST","SZ","TD","TG","TN","TZ","UG","YT","ZA","ZW","ZM"],
+                             "OC":["AS","AU","CK","FJ","FM","GU","KI","MH","MP","NC","NF","NR","NU","NZ","PF","PG","PN","PW","SB","TK","TO","TV","UM","VU","WF","WS"]]
+    
+    func tournamentsByContinent(continent:String, tournamentList: [Tournament]) -> [Tournament] {
+        
+        return tournamentList.filter { (tournament) -> Bool in
+            if let country = tournament.country {
+                print("\(country) -- \(continent) = \(countryDictionary[continent]!.contains(country))")
+                return countryDictionary[continent]!.contains(country)
+            }
+            return false
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +62,24 @@ class TournamentsViewController: UIViewController {
                     self?.tournaments = tournaments
                 }
                 
+                if let initial = self!.region?.initials, tournaments = self?.tournaments {
+                    let x = self?.tournamentsByContinent(initial, tournamentList: tournaments)
+                    
+                    print(x?.count)
+                    
+                    self?.tournaments = x!
+                }
+                
+                
                 self?.activityView.hidden = true
                 self?.tableView.reloadData()
                 self?.activityIndicator.layer.hidden = true
                 self?.activityIndicator.stopAnimating()
+                
             }
         }
+        
+        
      
         if let region = region {
             regionImageView.image = region.image
