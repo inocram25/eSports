@@ -48,7 +48,7 @@ class MatchViewController: UIViewController {
                 let endDay = dateEnd.componentsSeparatedByString("-")[2]
                 let endM = Month(rawValue: Int(endMonth)!)!.description
                 
-                tournamentDateLabel.text = "\(day) of \(m) a \(endDay) of \(endM) \(endYear)"
+                tournamentDateLabel.text = "\(day) of \(m) to \(endDay) of \(endM) \(endYear)"
             }
             
             if let location = tournament.location, country = tournament.country {

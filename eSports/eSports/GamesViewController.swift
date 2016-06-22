@@ -198,7 +198,7 @@ extension GamesViewController: UITableViewDataSource, UITableViewDelegate {
         }
         else {
             let cell = tableView.dequeueReusableCellWithIdentifier(ResultTableReuseIdentifier) as? GameResultCell
-            cell?.configureCell(games[indexPath.row])
+            cell?.configureCell(games[indexPath.row], discipline: match?.discipline)
             return cell!
         }
     }

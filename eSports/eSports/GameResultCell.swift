@@ -17,19 +17,55 @@ class GameResultCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    func configureCell(game: Game) {
-        gameCountLabel.text = "Game \(game.number)"
+    func configureCell(game: Game, discipline: String?) {
+        
+        var resultA = 2
+        var resultB = 2
         
         if let result = game.opponents[0].result {
-            leftResultLabel.text = gameResult(rawValue: result)!.description
-            leftResultLabel.textColor = gameResult(rawValue: result)!.color
+            resultA = result
         }
         
         if let result = game.opponents[1].result {
-            rightResultLabel.text = gameResult(rawValue: result)!.description
-            rightResultLabel.textColor = gameResult(rawValue: result)!.color
+            resultB = result
         }
-
+        
+        leftResultLabel.textColor = gameResult(rawValue: resultA)!.color
+        rightResultLabel.textColor = gameResult(rawValue: resultB)!.color
+        
+        if let discipline = discipline {
+            if discipline == "counterstrike_go" {
+                if let map = game.map {
+                    gameCountLabel.text = map
+                }
+                else {
+                    gameCountLabel.text = "Game \(game.number)"
+                }
+                
+                if let score = game.opponents[0].score {
+                    leftResultLabel.text = "\(score)"
+                }
+                else {
+                    leftResultLabel.text = gameResult(rawValue: resultA)!.description
+                }
+                
+                if let score = game.opponents[1].score {
+                    rightResultLabel.text = "\(score)"
+                }
+                else {
+                    rightResultLabel.text = gameResult(rawValue: resultB)!.description
+                }
+            }
+            else {
+                gameCountLabel.text = "Game \(game.number)"
+            }
+        }
+        else {
+            gameCountLabel.text = "Game \(game.number)"
+            leftResultLabel.text = gameResult(rawValue: resultA)!.description
+            rightResultLabel.text = gameResult(rawValue: resultB)!.description
+        }
+    
     }
 
 }
