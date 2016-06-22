@@ -39,15 +39,16 @@ class MatchViewController: UIViewController {
             print(tournament.name)
             
             if let dateStart = tournament.dateStart, dateEnd = tournament.dateEnd {
-                let year = dateStart.componentsSeparatedByString("-")[0]
                 let month = dateStart.componentsSeparatedByString("-")[1]
                 let day = dateStart.componentsSeparatedByString("-")[2]
+                let m = Month(rawValue: Int(month)!)!.description
                 
                 let endYear = dateEnd.componentsSeparatedByString("-")[0]
                 let endMonth = dateEnd.componentsSeparatedByString("-")[1]
                 let endDay = dateEnd.componentsSeparatedByString("-")[2]
+                let endM = Month(rawValue: Int(endMonth)!)!.description
                 
-                tournamentDateLabel.text = "\(day) de junho a \(endDay) de junho \(endYear)"
+                tournamentDateLabel.text = "\(day) of \(m) a \(endDay) of \(endM) \(endYear)"
             }
             
             if let location = tournament.location, country = tournament.country {
