@@ -39,7 +39,15 @@ class MatchViewController: UIViewController {
             print(tournament.name)
             
             if let dateStart = tournament.dateStart, dateEnd = tournament.dateEnd {
-                tournamentDateLabel.text = "\(dateStart) - \(dateEnd)"
+                let year = dateStart.componentsSeparatedByString("-")[0]
+                let month = dateStart.componentsSeparatedByString("-")[1]
+                let day = dateStart.componentsSeparatedByString("-")[2]
+                
+                let endYear = dateEnd.componentsSeparatedByString("-")[0]
+                let endMonth = dateEnd.componentsSeparatedByString("-")[1]
+                let endDay = dateEnd.componentsSeparatedByString("-")[2]
+                
+                tournamentDateLabel.text = "\(day) de junho a \(endDay) de junho \(endYear)"
             }
             
             if let location = tournament.location, country = tournament.country {
@@ -74,8 +82,8 @@ class MatchViewController: UIViewController {
         headerView.layer.shadowOpacity = 0.8
         headerView.layer.shadowRadius = 10
         
-        tournamentCityLabel.tintColor = UIColor.eSports_LightGray()
-        tournamentDateLabel.tintColor = UIColor.eSports_LightGray()
+        tournamentCityLabel.textColor = UIColor.eSports_ExtraLightGray()
+        tournamentDateLabel.textColor = UIColor.eSports_ExtraLightGray()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

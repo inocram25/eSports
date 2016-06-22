@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="0YF-bo-Imd">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="0YF-bo-Imd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -512,7 +512,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 jun - 30 jun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIW-6l-PBM">
                                         <rect key="frame" x="454" y="164" width="222" height="46"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sao Paulo - Brasil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKC-nk-B9Q">
@@ -756,20 +756,20 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="－" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jn5-9r-6tA">
-                                                    <rect key="frame" x="294" y="65" width="17" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="－" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jn5-9r-6tA">
+                                                    <rect key="frame" x="294" y="74" width="17" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-hp-WdT">
-                                                    <rect key="frame" x="376" y="52" width="95" height="48"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNA-hp-WdT">
+                                                    <rect key="frame" x="376" y="61" width="95" height="48"/>
                                                     <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgr-Co-AgI">
-                                                    <rect key="frame" x="151" y="52" width="78" height="48"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgr-Co-AgI">
+                                                    <rect key="frame" x="151" y="61" width="78" height="48"/>
                                                     <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                                     <color key="textColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -798,6 +798,18 @@
                                     <outlet property="delegate" destination="Mh0-mM-AGW" id="Dpp-KI-tdh"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hke-6j-4gU">
+                                <rect key="frame" x="921" y="256" width="78" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dom 08/08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNw-Fw-J0W">
+                                <rect key="frame" x="882" y="211" width="157" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="DfN-H5-bOT" firstAttribute="leading" secondItem="1Ll-CH-YjM" secondAttribute="leadingMargin" id="0gb-P2-ha1"/>
@@ -808,10 +820,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="beI-fi-jVI" secondAttribute="trailing" id="8Tx-RJ-0ki"/>
                             <constraint firstItem="dLE-CZ-ul8" firstAttribute="leading" secondItem="Fzp-aC-quI" secondAttribute="trailing" constant="10" id="9Pb-xX-8o0"/>
                             <constraint firstItem="beI-fi-jVI" firstAttribute="top" secondItem="DfN-H5-bOT" secondAttribute="top" id="Cec-uj-fD6"/>
+                            <constraint firstItem="nNw-Fw-J0W" firstAttribute="centerY" secondItem="Fzp-aC-quI" secondAttribute="centerY" id="EOa-tP-SDo"/>
                             <constraint firstItem="Fzp-aC-quI" firstAttribute="leading" secondItem="1Ll-CH-YjM" secondAttribute="leadingMargin" constant="60" id="F20-R8-QhN"/>
                             <constraint firstItem="ejN-Hm-bZy" firstAttribute="leading" secondItem="Pvt-5v-Ra6" secondAttribute="trailing" constant="100" id="FQ1-ah-P7A"/>
                             <constraint firstItem="yTF-yf-WhE" firstAttribute="top" secondItem="Pvt-5v-Ra6" secondAttribute="bottom" constant="60" id="Gxy-Wd-EeU"/>
                             <constraint firstItem="Fzp-aC-quI" firstAttribute="top" secondItem="Kx5-r1-ggT" secondAttribute="bottom" constant="90" id="KYm-M6-2Yb"/>
+                            <constraint firstItem="Hke-6j-4gU" firstAttribute="centerX" secondItem="nNw-Fw-J0W" secondAttribute="centerX" id="L8c-HA-5fy"/>
                             <constraint firstItem="NYz-94-YQu" firstAttribute="width" secondItem="Pvt-5v-Ra6" secondAttribute="width" id="MGi-ht-495"/>
                             <constraint firstItem="ejN-Hm-bZy" firstAttribute="top" secondItem="Pvt-5v-Ra6" secondAttribute="top" id="UEW-Lv-Juy"/>
                             <constraint firstItem="Pvt-5v-Ra6" firstAttribute="leading" secondItem="1Ll-CH-YjM" secondAttribute="leadingMargin" id="VBr-pH-WQn"/>
@@ -823,14 +837,18 @@
                             <constraint firstItem="Pvt-5v-Ra6" firstAttribute="top" secondItem="DfN-H5-bOT" secondAttribute="bottom" constant="90" id="m9I-9Y-0qQ"/>
                             <constraint firstItem="qi3-bK-gBM" firstAttribute="top" secondItem="Kx5-r1-ggT" secondAttribute="bottom" constant="90" id="n3W-L2-5Yp"/>
                             <constraint firstItem="yTF-yf-WhE" firstAttribute="top" secondItem="ejN-Hm-bZy" secondAttribute="bottom" constant="60" id="nGo-AJ-NxO"/>
+                            <constraint firstItem="nNw-Fw-J0W" firstAttribute="centerX" secondItem="1Ll-CH-YjM" secondAttribute="centerX" id="vOU-7E-jI1"/>
                             <constraint firstItem="wCV-9l-NgE" firstAttribute="centerX" secondItem="1Ll-CH-YjM" secondAttribute="centerX" id="wUn-jq-L46"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qi3-bK-gBM" secondAttribute="trailing" constant="60" id="xiy-Jh-Rk4"/>
+                            <constraint firstItem="Hke-6j-4gU" firstAttribute="top" secondItem="nNw-Fw-J0W" secondAttribute="bottom" constant="8" id="xo9-dO-uey"/>
                             <constraint firstItem="DfN-H5-bOT" firstAttribute="top" secondItem="Kx5-r1-ggT" secondAttribute="bottom" constant="160" id="zDw-sW-Rst"/>
                             <constraint firstItem="beI-fi-jVI" firstAttribute="width" secondItem="DfN-H5-bOT" secondAttribute="width" id="zYc-mK-QgL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="wCV-9l-NgE" id="OCj-aF-OZ7"/>
+                        <outlet property="dateLabel" destination="nNw-Fw-J0W" id="7ZB-Ii-t7m"/>
+                        <outlet property="hourLabel" destination="Hke-6j-4gU" id="qsm-fA-49J"/>
                         <outlet property="leftBackView" destination="DfN-H5-bOT" id="X5H-G6-cC8"/>
                         <outlet property="leftLogoImageView" destination="Fzp-aC-quI" id="LZt-k1-icD"/>
                         <outlet property="leftTeamLabel" destination="dLE-CZ-ul8" id="WXu-aL-SJ5"/>

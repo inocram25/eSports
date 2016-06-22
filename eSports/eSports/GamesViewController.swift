@@ -55,6 +55,8 @@ class GamesViewController: UIViewController {
     @IBOutlet weak var tableViewRight: UITableView!
     @IBOutlet weak var tableViewMiddle: UITableView!
     
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var hourLabel: UILabel!
 
     //Team A
     @IBOutlet weak var leftBackView: TrapeziumView!
