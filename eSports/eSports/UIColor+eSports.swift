@@ -29,6 +29,10 @@ extension UIColor {
     
     
     //Blue
+    class func eSports_HeaderBlue() -> Self {
+        return self.init(red: 14.0 / 255.0, green: 58.0 / 255.0, blue: 232.0 / 255.0, alpha: 1.0)
+    }
+    
     class func eSports_DarkBlue() -> Self {
         return self.init(red: 0 / 255.0, green: 114 / 255.0, blue: 188 / 255.0, alpha: 1.0)
     }

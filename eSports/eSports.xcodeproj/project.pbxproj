@@ -33,7 +33,6 @@
 		9A33783A1D0B27DC00C21D79 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3378391D0B27DC00C21D79 /* RegionViewController.swift */; };
 		9A69C4331D13193C009B6206 /* NSDate+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69C4321D13193C009B6206 /* NSDate+Components.swift */; };
 		9A69C4351D132248009B6206 /* ReverseTrapeziumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69C4341D132248009B6206 /* ReverseTrapeziumView.swift */; };
-		9A69C4371D1324AB009B6206 /* WeekDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69C4361D1324AB009B6206 /* WeekDayCell.swift */; };
 		9A69C4391D132622009B6206 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69C4381D132622009B6206 /* MatchCell.swift */; };
 		9A7263721D09DF410011DE8E /* BorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7263711D09DF410011DE8E /* BorderedView.swift */; };
 		9A9748BA1D107C36002972BD /* TrapeziumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9748B91D107C36002972BD /* TrapeziumView.swift */; };
@@ -42,6 +41,7 @@
 		9ACAC6F71D07404F00D160F8 /* MenuGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */; };
 		9ACAC6FB1D07430000D160F8 /* GamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACAC6FA1D07430000D160F8 /* GamesCollectionViewCell.swift */; };
 		9ACAC6FD1D0754F100D160F8 /* Discipline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACAC6FC1D0754F100D160F8 /* Discipline.swift */; };
+		9AD22ABD1D1B16CF0013C093 /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD22ABC1D1B16CF0013C093 /* WeekDay.swift */; };
 		B3F8549476DE6C77F0B5D9A6 /* Pods_eSports.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C6798CF8AD5CA26098DEE7 /* Pods_eSports.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,7 +88,6 @@
 		9A3378391D0B27DC00C21D79 /* RegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionViewController.swift; sourceTree = "<group>"; };
 		9A69C4321D13193C009B6206 /* NSDate+Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Components.swift"; sourceTree = "<group>"; };
 		9A69C4341D132248009B6206 /* ReverseTrapeziumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseTrapeziumView.swift; sourceTree = "<group>"; };
-		9A69C4361D1324AB009B6206 /* WeekDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekDayCell.swift; sourceTree = "<group>"; };
 		9A69C4381D132622009B6206 /* MatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		9A7263711D09DF410011DE8E /* BorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedView.swift; sourceTree = "<group>"; };
 		9A9748B91D107C36002972BD /* TrapeziumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrapeziumView.swift; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		9ACAC6F61D07404F00D160F8 /* MenuGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuGamesViewController.swift; sourceTree = "<group>"; };
 		9ACAC6FA1D07430000D160F8 /* GamesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9ACAC6FC1D0754F100D160F8 /* Discipline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Discipline.swift; sourceTree = "<group>"; };
+		9AD22ABC1D1B16CF0013C093 /* WeekDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
 		9C3C10A1BFE179B6BFCC0141 /* Pods-eSports.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSports.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eSports/Pods-eSports.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,6 +213,7 @@
 				7FA1C5851D0F1FBD00CBA914 /* Participant.swift */,
 				9A9748BB1D1087EB002972BD /* Region.swift */,
 				7F6E84121D1885A30031A2F6 /* Continent.swift */,
+				9AD22ABC1D1B16CF0013C093 /* WeekDay.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -226,7 +227,6 @@
 				9A9748B91D107C36002972BD /* TrapeziumView.swift */,
 				7FD88E261D11A35F009F6FD2 /* TournamentCell.swift */,
 				9A69C4341D132248009B6206 /* ReverseTrapeziumView.swift */,
-				9A69C4361D1324AB009B6206 /* WeekDayCell.swift */,
 				9A69C4381D132622009B6206 /* MatchCell.swift */,
 				7F9780081D146FAF0025B9FE /* ParticipantACell.swift */,
 				7F97800A1D147DCE0025B9FE /* ParticipantBCell.swift */,
@@ -420,6 +420,7 @@
 				7FA1C5841D0F1E0F00CBA914 /* GamesViewController.swift in Sources */,
 				9AA18E621D09D4FE001C87AA /* ToornamentController.swift in Sources */,
 				7F00E2F91D0885D700B875E8 /* UIImage+Color.swift in Sources */,
+				9AD22ABD1D1B16CF0013C093 /* WeekDay.swift in Sources */,
 				9ACAC6F71D07404F00D160F8 /* MenuGamesViewController.swift in Sources */,
 				9A0975B81D05EE1A000C78F5 /* AppDelegate.swift in Sources */,
 				7FA1C58A1D0F3C4000CBA914 /* RegionCell.swift in Sources */,
@@ -436,7 +437,6 @@
 				9ACAC6FD1D0754F100D160F8 /* Discipline.swift in Sources */,
 				9A69C4351D132248009B6206 /* ReverseTrapeziumView.swift in Sources */,
 				9A3378341D09EAEC00C21D79 /* Match.swift in Sources */,
-				9A69C4371D1324AB009B6206 /* WeekDayCell.swift in Sources */,
 				7F545C281D0E402C0001260B /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

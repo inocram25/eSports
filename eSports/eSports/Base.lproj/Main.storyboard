@@ -702,7 +702,7 @@
                                         <rect key="frame" x="1152" y="104" width="768" height="170"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabum" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXt-Dz-eMa">
-                                                <rect key="frame" x="90" y="55" width="288" height="60"/>
+                                                <rect key="frame" x="90" y="55" width="298" height="60"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                                 <color key="textColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -717,7 +717,7 @@
                                         <rect key="frame" x="0.0" y="104" width="768" height="170"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RCA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLE-CZ-ul8">
-                                                <rect key="frame" x="390" y="55" width="288" height="60"/>
+                                                <rect key="frame" x="380" y="55" width="298" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
                                                 <color key="textColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -730,8 +730,8 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hke-6j-4gU">
-                                        <rect key="frame" x="921" y="172" width="78" height="37"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <rect key="frame" x="902" y="186" width="115" height="51"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -746,8 +746,8 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dom 08/08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNw-Fw-J0W">
-                                        <rect key="frame" x="882" y="120" width="157" height="37"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <rect key="frame" x="846" y="120" width="228" height="51"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -765,7 +765,7 @@
                                     <constraint firstItem="beI-fi-jVI" firstAttribute="height" secondItem="DfN-H5-bOT" secondAttribute="height" id="RQ4-Y3-CTz"/>
                                     <constraint firstItem="qi3-bK-gBM" firstAttribute="centerY" secondItem="Mua-lC-BH1" secondAttribute="centerY" id="RQp-qu-4nV"/>
                                     <constraint firstItem="Hke-6j-4gU" firstAttribute="centerX" secondItem="nNw-Fw-J0W" secondAttribute="centerX" id="Rwb-zs-98x"/>
-                                    <constraint firstItem="dLE-CZ-ul8" firstAttribute="leading" secondItem="Fzp-aC-quI" secondAttribute="trailing" constant="10" id="VU8-bG-rON"/>
+                                    <constraint firstItem="dLE-CZ-ul8" firstAttribute="leading" secondItem="Fzp-aC-quI" secondAttribute="trailing" id="VU8-bG-rON"/>
                                     <constraint firstItem="dLE-CZ-ul8" firstAttribute="centerY" secondItem="Fzp-aC-quI" secondAttribute="centerY" id="a6y-3Q-WqK"/>
                                     <constraint firstItem="AXt-Dz-eMa" firstAttribute="centerY" secondItem="qi3-bK-gBM" secondAttribute="centerY" id="ddb-F4-rq2"/>
                                     <constraint firstItem="DfN-H5-bOT" firstAttribute="leading" secondItem="Mua-lC-BH1" secondAttribute="leading" id="ftc-NX-gep"/>
@@ -774,7 +774,7 @@
                                     <constraint firstAttribute="trailing" secondItem="beI-fi-jVI" secondAttribute="trailing" id="knx-tL-7ki"/>
                                     <constraint firstItem="DfN-H5-bOT" firstAttribute="width" secondItem="Mua-lC-BH1" secondAttribute="width" multiplier="0.4" id="mTc-yc-5Ed"/>
                                     <constraint firstItem="Fzp-aC-quI" firstAttribute="leading" secondItem="Mua-lC-BH1" secondAttribute="leading" constant="60" id="qVr-0a-vBM"/>
-                                    <constraint firstItem="qi3-bK-gBM" firstAttribute="leading" secondItem="AXt-Dz-eMa" secondAttribute="trailing" constant="10" id="tud-KU-4EH"/>
+                                    <constraint firstItem="qi3-bK-gBM" firstAttribute="leading" secondItem="AXt-Dz-eMa" secondAttribute="trailing" id="tud-KU-4EH"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="NYz-94-YQu">
@@ -856,6 +856,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="wCV-9l-NgE" id="OCj-aF-OZ7"/>
                         <outlet property="dateLabel" destination="nNw-Fw-J0W" id="7ZB-Ii-t7m"/>
+                        <outlet property="headerView" destination="Mua-lC-BH1" id="HrZ-uk-E9g"/>
                         <outlet property="hourLabel" destination="Hke-6j-4gU" id="qsm-fA-49J"/>
                         <outlet property="leftBackView" destination="DfN-H5-bOT" id="X5H-G6-cC8"/>
                         <outlet property="leftLogoImageView" destination="Fzp-aC-quI" id="LZt-k1-icD"/>

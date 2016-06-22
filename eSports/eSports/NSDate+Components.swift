@@ -28,8 +28,29 @@ extension NSDate {
         return "\(getComponentForUnit(.Year))"
     }
     
+    var hour: String {
+        return "\(getComponentForUnit(.Hour))"
+    }
+    
+    var minute: String {
+        return getComponentForUnit(.Minute) < 10 ? ("0\(getComponentForUnit(.Minute))") : "\(getComponentForUnit(.Minute))"
+    }
+    
+    var weekDay: Int {
+        return getComponentForUnit(.Weekday)
+    }
+    
     func getComponentForUnit(unit: NSCalendarUnit) -> Int {
         return NSCalendar.currentCalendar().component(unit, fromDate: self)
+    }
+    
+    public class func dateFromISOString(string: String) -> NSDate? {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        dateFormatter.timeZone = NSTimeZone.localTimeZone()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+
+        return dateFormatter.dateFromString(string)
     }
 
 }

@@ -51,26 +51,27 @@ class GamesViewController: UIViewController {
     var match: Match?
 
     
-    @IBOutlet weak var tableViewLeft: UITableView!
-    @IBOutlet weak var tableViewRight: UITableView!
-    @IBOutlet weak var tableViewMiddle: UITableView!
+    @IBOutlet private weak var tableViewLeft: UITableView!
+    @IBOutlet private weak var tableViewRight: UITableView!
+    @IBOutlet private weak var tableViewMiddle: UITableView!
     
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var hourLabel: UILabel!
-
+    @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var hourLabel: UILabel!
+    @IBOutlet private weak var headerView: UIView!
+    
     //Team A
-    @IBOutlet weak var leftBackView: TrapeziumView!
-    @IBOutlet weak var leftLogoImageView: UIImageView!
-    @IBOutlet weak var leftTeamLabel: UILabel!
+    @IBOutlet private weak var leftBackView: TrapeziumView!
+    @IBOutlet private weak var leftLogoImageView: UIImageView!
+    @IBOutlet private weak var leftTeamLabel: UILabel!
     
     var lineupA = [Lineup]()
     
     //Team B
-    @IBOutlet weak var rightBackView: ReverseTrapeziumView!
-    @IBOutlet weak var rightLogoImageView: UIImageView!
-    @IBOutlet weak var rightTeamLabel: UILabel!
+    @IBOutlet private weak var rightBackView: ReverseTrapeziumView!
+    @IBOutlet private weak var rightLogoImageView: UIImageView!
+    @IBOutlet private weak var rightTeamLabel: UILabel!
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     
     var lineupB = [Lineup]()
@@ -136,22 +137,40 @@ class GamesViewController: UIViewController {
     }
     
     func configureHeader() {
-        if let match = match {
-            leftTeamLabel.text = match.opponents[0].participantName
-            rightTeamLabel.text = match.opponents[1].participantName
-            
-            leftTeamLabel.numberOfLines = 1
-            leftTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
-            leftTeamLabel.adjustsFontSizeToFitWidth = true
-            leftTeamLabel.textColor = UIColor.whiteColor()
-            leftBackView.backgroundColor = UIColor.eSports_LogoBlue()
-            
-            rightTeamLabel.numberOfLines = 1
-            rightTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
-            rightTeamLabel.adjustsFontSizeToFitWidth = true
-            rightTeamLabel.textColor = UIColor.eSports_LogoYellow()
-            rightBackView.backgroundColor = UIColor.eSports_LogoRed()
+        
+        headerView.backgroundColor = UIColor.redColor()
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.colors = [UIColor.eSports_HeaderBlue().CGColor, UIColor.eSports_Black().CGColor, UIColor.eSports_DarkRed().CGColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+        gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradient.frame = headerView.frame
+        
+        headerView.layer.insertSublayer(gradient, atIndex: 0)
+        
+        guard let match = match else { return }
+        
+        if let date = match.date {
+            if let dateFormatted = NSDate.dateFromISOString(date) {
+                let weekday = WeekDay(rawValue: dateFormatted.weekDay)!.description
+                dateLabel.text = "\(weekday) \(dateFormatted.month)/\(dateFormatted.day)"
+                hourLabel.text = "\(dateFormatted.hour):\(dateFormatted.minute)"
+            }
         }
+            
+        leftTeamLabel.text = match.opponents[0].participantName
+        rightTeamLabel.text = match.opponents[1].participantName
+        
+        leftTeamLabel.numberOfLines = 1
+        leftTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
+        leftTeamLabel.adjustsFontSizeToFitWidth = true
+        leftTeamLabel.textColor = UIColor.whiteColor()
+        leftBackView.backgroundColor = UIColor.eSports_LogoBlue()
+        
+        rightTeamLabel.numberOfLines = 1
+        rightTeamLabel.minimumScaleFactor = (20.0 / leftTeamLabel.font.pointSize)
+        rightTeamLabel.adjustsFontSizeToFitWidth = true
+        rightTeamLabel.textColor = UIColor.eSports_LogoYellow()
+        rightBackView.backgroundColor = UIColor.eSports_LogoRed()
     }
 }
 
