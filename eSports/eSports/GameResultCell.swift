@@ -18,18 +18,8 @@ class GameResultCell: UITableViewCell {
     }
 
     func configureCell(game: Game, discipline: String?) {
-        
-        var resultA = 2
-        var resultB = 2
-        
-        if let result = game.opponents[0].result {
-            resultA = result
-        }
-        
-        if let result = game.opponents[1].result {
-            resultB = result
-        }
-        
+        guard let resultA = game.opponents[0].result, resultB = game.opponents[1].result else { return }
+
         leftResultLabel.textColor = gameResult(rawValue: resultA)!.color
         rightResultLabel.textColor = gameResult(rawValue: resultB)!.color
         
@@ -58,14 +48,10 @@ class GameResultCell: UITableViewCell {
             }
             else {
                 gameCountLabel.text = "Game \(game.number)"
+                leftResultLabel.text = gameResult(rawValue: resultA)!.description
+                rightResultLabel.text = gameResult(rawValue: resultB)!.description
             }
         }
-        else {
-            gameCountLabel.text = "Game \(game.number)"
-            leftResultLabel.text = gameResult(rawValue: resultA)!.description
-            rightResultLabel.text = gameResult(rawValue: resultB)!.description
-        }
-    
     }
 
 }

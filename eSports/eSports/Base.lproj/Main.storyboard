@@ -588,7 +588,7 @@
                                         <rect key="frame" x="0.0" y="54" width="538" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z0N-SH-Xnk" id="aMR-jb-i2K">
-                                            <rect key="frame" x="0.0" y="0.0" width="538" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="522" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcj-x9-mFv" customClass="TrapeziumView" customModule="eSports" customModuleProvider="target">
@@ -644,7 +644,7 @@
                                         <rect key="frame" x="0.0" y="54" width="604" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w04-iL-fxC" id="JPw-ql-qFH">
-                                            <rect key="frame" x="0.0" y="0.0" width="604" height="106"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="588" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvs-Fo-IfN">
@@ -754,7 +754,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hi-cf-hXk">
                                         <rect key="frame" x="860" y="10" width="201" height="359"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="300"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.12" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.25" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -793,7 +793,7 @@
                                         <rect key="frame" x="0.0" y="54" width="538" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qm1-Qh-EL5" id="rDN-EY-m1g">
-                                            <rect key="frame" x="0.0" y="0.0" width="538" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="522" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmJ-LL-lWD" customClass="ReverseTrapeziumView" customModule="eSports" customModuleProvider="target">
