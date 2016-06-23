@@ -588,7 +588,7 @@
                                         <rect key="frame" x="0.0" y="54" width="538" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z0N-SH-Xnk" id="aMR-jb-i2K">
-                                            <rect key="frame" x="0.0" y="0.0" width="522" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="538" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcj-x9-mFv" customClass="TrapeziumView" customModule="eSports" customModuleProvider="target">
@@ -644,7 +644,7 @@
                                         <rect key="frame" x="0.0" y="54" width="604" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w04-iL-fxC" id="JPw-ql-qFH">
-                                            <rect key="frame" x="0.0" y="0.0" width="588" height="106"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="604" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvs-Fo-IfN">
@@ -751,10 +751,17 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hi-cf-hXk">
+                                        <rect key="frame" x="860" y="10" width="201" height="359"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="300"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.12" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Fzp-aC-quI" firstAttribute="centerY" secondItem="Mua-lC-BH1" secondAttribute="centerY" id="2t1-Qn-SQC"/>
+                                    <constraint firstItem="2Hi-cf-hXk" firstAttribute="centerX" secondItem="Mua-lC-BH1" secondAttribute="centerX" id="3sw-h1-g7E"/>
                                     <constraint firstItem="DfN-H5-bOT" firstAttribute="centerY" secondItem="Mua-lC-BH1" secondAttribute="centerY" id="4j9-Vk-76o"/>
                                     <constraint firstItem="nNw-Fw-J0W" firstAttribute="centerX" secondItem="Mua-lC-BH1" secondAttribute="centerX" id="5uY-La-0Q0"/>
                                     <constraint firstItem="qi3-bK-gBM" firstAttribute="width" secondItem="Fzp-aC-quI" secondAttribute="width" id="5xX-9g-Viw"/>
@@ -767,6 +774,7 @@
                                     <constraint firstItem="Hke-6j-4gU" firstAttribute="centerX" secondItem="nNw-Fw-J0W" secondAttribute="centerX" id="Rwb-zs-98x"/>
                                     <constraint firstItem="dLE-CZ-ul8" firstAttribute="leading" secondItem="Fzp-aC-quI" secondAttribute="trailing" id="VU8-bG-rON"/>
                                     <constraint firstItem="dLE-CZ-ul8" firstAttribute="centerY" secondItem="Fzp-aC-quI" secondAttribute="centerY" id="a6y-3Q-WqK"/>
+                                    <constraint firstItem="2Hi-cf-hXk" firstAttribute="centerY" secondItem="Mua-lC-BH1" secondAttribute="centerY" id="dQB-fK-Cv5"/>
                                     <constraint firstItem="AXt-Dz-eMa" firstAttribute="centerY" secondItem="qi3-bK-gBM" secondAttribute="centerY" id="ddb-F4-rq2"/>
                                     <constraint firstItem="DfN-H5-bOT" firstAttribute="leading" secondItem="Mua-lC-BH1" secondAttribute="leading" id="ftc-NX-gep"/>
                                     <constraint firstItem="qi3-bK-gBM" firstAttribute="height" secondItem="Fzp-aC-quI" secondAttribute="height" id="fv4-zV-meK"/>
@@ -785,7 +793,7 @@
                                         <rect key="frame" x="0.0" y="54" width="538" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qm1-Qh-EL5" id="rDN-EY-m1g">
-                                            <rect key="frame" x="0.0" y="0.0" width="522" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="538" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmJ-LL-lWD" customClass="ReverseTrapeziumView" customModule="eSports" customModuleProvider="target">
